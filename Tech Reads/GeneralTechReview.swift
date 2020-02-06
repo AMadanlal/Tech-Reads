@@ -1,5 +1,5 @@
 //
-//  GeneralTechReviewController.swift
+//  GeneralTechReview.swift
 //  Tech Reads
 //
 //  Created by Akshar Madanlal on 2020/02/06.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class GeneralTechReviewController : UIViewController
+class GeneralTechReview : UIViewController
 {
-
+    
+    
+    
 }

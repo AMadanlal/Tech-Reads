@@ -25,19 +25,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainlabel: UILabel!
    
 //    this button takes the user to the search page
-    @IBAction func SearchButton(_ sender: Any) {
+    @IBAction func SearchButton(_ sender: Any)
+    {
+        performSegue(withIdentifier: "SearchNav", sender: self)
     }
     
 //    this button is to go to the preferences page
-    @IBAction func PreferencesBtn(_ sender: Any){
+    @IBAction func PreferencesBtn(_ sender: Any)
+    {
+        performSegue(withIdentifier: "PrefBranch", sender: self)
     }
     
 //    this button is to take the user to the general tech review page
-    @IBAction func GenTEchReviewBtn(_ sender: Any) {
+    @IBAction func GenTEchReviewBtn(_ sender: Any)
+    {
+        performSegue(withIdentifier: "TechRevBranch", sender: self)
     }
     
 //    this button takes the user to the general game review pages
-    @IBAction func GenGameReviewBtn(_ sender: Any) {
+    @IBAction func GenGameReviewBtn(_ sender: Any)
+    {
+        performSegue(withIdentifier: "GameRevBranch", sender: self)
     }
     
 }

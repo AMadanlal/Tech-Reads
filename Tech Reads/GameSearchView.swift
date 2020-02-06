@@ -11,5 +11,6 @@ import UIKit
 class GameSearchView : UITableViewController
 {
 
+    @IBOutlet var SearchBtn: UITableView!
 }
 
