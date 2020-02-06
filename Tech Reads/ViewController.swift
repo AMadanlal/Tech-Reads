@@ -21,31 +21,23 @@ class ViewController: UIViewController {
 //    this is the source on how a divider is created: https://www.dev.com/how-to-draw-rectangle-view-use-swift-in-ios-app/
     }
 
-//    this is a scroll view for the review of the game
-    @IBOutlet weak var SrollResultView: UIScrollView!
-
     //    this is the app name label
     @IBOutlet weak var mainlabel: UILabel!
+   
+//    this button takes the user to the search page
+    @IBAction func SearchButton(_ sender: Any) {
+    }
     
-//    this is the searchbar
-    @IBOutlet weak var SearchBar: UISearchBar!
-    
-//    this button is to change the user preferences
+//    this button is to go to the preferences page
     @IBAction func PreferencesBtn(_ sender: Any){
     }
     
-//    this button is to change what is shown to the user
+//    this button is to take the user to the general tech review page
     @IBAction func GenTEchReviewBtn(_ sender: Any) {
     }
     
-//    this button is to change what is shown to the user
+//    this button takes the user to the general game review pages
     @IBAction func GenGameReviewBtn(_ sender: Any) {
     }
     
-//    this is a view that shows the game trailer
-    @IBOutlet weak var GametrailerView: UIView!
-    
-//    this is to show the text for the actual game review in a dynamic way.
-    @IBOutlet weak var GameReviewText: UITextView!
 }
-
