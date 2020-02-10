@@ -51,6 +51,14 @@ class UserPreferencesController : UIViewController, UIPickerViewDelegate, UIPick
         performSegue(withIdentifier: "GenreBranch", sender: self)
     }
     
+//    this button is used to save the user preferences and go back to the previous page
+    @IBAction func btnSave(_ sender: UIButton)
+    {
+//check if this button still has function as it is accociated to a unwind segue
+        
+    }
+    
+
 }
 
 
@@ -60,6 +68,8 @@ class AddGenre :  UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     override func viewDidLoad()
     {
         genrelbl.font=UIFont.italicSystemFont(ofSize: 35)
+        genrelist.delegate = self
+        genrelist.dataSource = self
     }
     
     
@@ -73,6 +83,9 @@ class AddGenre :  UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         return genre.count
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return genre[row]
+    }
     
     @IBOutlet weak var genrelbl: UILabel!
     @IBOutlet weak var genrelist: UIPickerView!

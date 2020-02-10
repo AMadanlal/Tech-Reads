@@ -27,7 +27,7 @@ class ViewController: UIViewController {
 //    this button takes the user to the search page
     @IBAction func SearchButton(_ sender: Any)
     {
-        performSegue(withIdentifier: "SearchNav", sender: self)
+        performSegue(withIdentifier: "SearchBranch", sender: self)
     }
     
 //    this button is to go to the preferences page
@@ -46,6 +46,12 @@ class ViewController: UIViewController {
     @IBAction func GenGameReviewBtn(_ sender: Any)
     {
         performSegue(withIdentifier: "GameRevBranch", sender: self)
+    }
+    
+//    this function is to perform the unwind segue
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue)
+    {
+        
     }
     
 }
