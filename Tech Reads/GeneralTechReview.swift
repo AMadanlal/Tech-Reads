@@ -8,19 +8,15 @@
 
 import UIKit
 
-class GeneralTechReview : UIViewController
-{
-    
+class GeneralTechReview: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    
 //    this button goes back to the previous page
     @IBAction func btnCancel(_ sender: UIButton) {
     }
-    
-//   this button is for going to the next suggested tech and should only be visible if the user clicked on general tech reviews.
+//   this button is for going to the next suggested tech and should only be
+//    visible if the user clicked on general tech reviews.
     @IBAction func btnNext(_ sender: UIButton) {
     }
 }
