@@ -8,16 +8,11 @@
 
 import UIKit
 
-class GameSearchView : UIViewController
-{
+class GameSearchView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    @IBAction func btnSearch(_ sender: UIButton)
-    {
-        
+    @IBAction func btnSearch(_ sender: UIButton) {
     }
-    
 }
-
