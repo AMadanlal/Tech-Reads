@@ -21,31 +21,37 @@ class ViewController: UIViewController {
 //    this is the source on how a divider is created: https://www.dev.com/how-to-draw-rectangle-view-use-swift-in-ios-app/
     }
 
-//    this is a scroll view for the review of the game
-    @IBOutlet weak var SrollResultView: UIScrollView!
-
     //    this is the app name label
     @IBOutlet weak var mainlabel: UILabel!
-    
-//    this is the searchbar
-    @IBOutlet weak var SearchBar: UISearchBar!
-    
-//    this button is to change the user preferences
-    @IBAction func PreferencesBtn(_ sender: Any){
+   
+//    this button takes the user to the search page
+    @IBAction func SearchButton(_ sender: Any)
+    {
+        performSegue(withIdentifier: "SearchBranch", sender: self)
     }
     
-//    this button is to change what is shown to the user
-    @IBAction func GenTEchReviewBtn(_ sender: Any) {
+//    this button is to go to the preferences page
+    @IBAction func PreferencesBtn(_ sender: Any)
+    {
+        performSegue(withIdentifier: "PrefBranch", sender: self)
     }
     
-//    this button is to change what is shown to the user
-    @IBAction func GenGameReviewBtn(_ sender: Any) {
+//    this button is to take the user to the general tech review page
+    @IBAction func GenTEchReviewBtn(_ sender: Any)
+    {
+        performSegue(withIdentifier: "TechRevBranch", sender: self)
     }
     
-//    this is a view that shows the game trailer
-    @IBOutlet weak var GametrailerView: UIView!
+//    this button takes the user to the general game review pages
+    @IBAction func GenGameReviewBtn(_ sender: Any)
+    {
+        performSegue(withIdentifier: "GameRevBranch", sender: self)
+    }
     
-//    this is to show the text for the actual game review in a dynamic way.
-    @IBOutlet weak var GameReviewText: UITextView!
+//    this function is to perform the unwind segue
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue)
+    {
+        
+    }
+    
 }
-
