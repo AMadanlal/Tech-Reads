@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        mainlabel.font=UIFont.italicSystemFont(ofSize: 100) //change the font of the main label
-        mainlabel.numberOfLines = 2
-        mainlabel.center.x = self.view.center.x
+       // mainlabel.font=UIFont.italicSystemFont(ofSize: 100) //change the font of the main label
+      //  mainlabel.numberOfLines = 2
+      //  mainlabel.center.x = self.view.center.x
 
 //    this is the source on how a divider is created:
 //        https://www.dev.com/how-to-draw-rectangle-view-use-swift-in-ios-app/
