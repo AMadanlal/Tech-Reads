@@ -12,7 +12,6 @@ class GameSearchView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
     @IBAction func btnSearch(_ sender: UIButton) {
     }
 }
