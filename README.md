@@ -4,5 +4,3 @@ It is a game and tech review application that allows a user to read or watch gam
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b24eb58a4206417caba990c2638897c9)](https://app.codacy.com/manual/AMadanlal/Tech-Reads?utm_source=github.com&utm_medium=referral&utm_content=AMadanlal/Tech-Reads&utm_campaign=Badge_Grade_Settings)
 [![Build Status](https://app.bitrise.io/app/ec3388ff1e084b74/status.svg?token=S1vcbiIIsvsG54n9LiU2eQ)](https://app.bitrise.io/app/ec3388ff1e084b74)
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f3ae05f73ad749aaad68c997a80ffb73)](https://www.codacy.com/manual/AMadanlal/Tech-Reads?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AMadanlal/Tech-Reads&amp;utm_campaign=Badge_Grade)
