@@ -27,16 +27,16 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
          mainPrefLabel.center.x = self.view.center.x
          pickerView.delegate = self
          pickerView.dataSource = self
-//        check saved preferences file for gaming medium and display it in a label.
+/*      check saved preferences file for gaming medium and display it in a label.
         if let filepath = Bundle.main.path(forResource: "output", ofType: "txt") {
             do {
                 let contents = try String(contentsOfFile: filepath)
                 lblCurrentMedium.text = contents
             } catch {
-//            do error handling for reading from the file
+          do error handling for reading from the file
                 print("error while reading: \(error).")
             }
-        } else {lblCurrentMedium.text="You have not saved preferences yet"}
+        } else {lblCurrentMedium.text="You have not saved preferences yet"}     */
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -47,28 +47,29 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return consoles[row]
     }
-    @IBAction func addGenBtn(_ sender: Any) {
-        performSegue(withIdentifier: "GenreBranch", sender: self)
-    }
+  @IBAction func btnGenreAdd(_ sender: UIButton) {
+     performSegue(withIdentifier: "genrepopup", sender: self)
+  }
 //    this is a helper function that finds the URL path to where the app can store data
     func getDocumentsDirectory() -> URL {
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return path[0]
     }
 //    this button is used to save the user preferences and go back to the previous page
-    @IBAction func btnSave(_ sender: UIButton) {
-//        this line to go get the string value from the pickerview
-        let answer: String = consoles[pickerView.selectedRow(inComponent: 0)]
-        print(answer)  //just to test if the collected string is correct
-        let filename = getDocumentsDirectory().appendingPathComponent("output.txt")
-        do {
-            try answer.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
-        } catch {
-//            do error handling to make sure program does not crash.
-            print("error while reading: \(error).")
+  @IBAction func btnSavePref(_ sender: UIButton) {
+    //        this line to go get the string value from the pickerview
+            let answer: String = consoles[pickerView.selectedRow(inComponent: 0)]
+            print(answer)  //just to test if the collected string is correct
+          lblCurrentMedium.text = answer
+            let filename = getDocumentsDirectory().appendingPathComponent("output.txt")
+            do {
+                try answer.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
+            } catch {
+    //            do error handling to make sure program does not crash.
+                print("error while reading: \(error).")
+            }
         }
-    }
-}
+  }
 
 class AddGenre: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var genrelbl: UILabel!
