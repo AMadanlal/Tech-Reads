@@ -17,6 +17,7 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var genreLbl: UILabel!
     @IBOutlet weak var lblCurrentMedium: UILabel!
+  let file = "UserMedium.txt" //this is the name of the file
     override func viewDidLoad() {
          super.viewDidLoad()
          // Do any additional setup after loading the view.
@@ -27,16 +28,17 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
          mainPrefLabel.center.x = self.view.center.x
          pickerView.delegate = self
          pickerView.dataSource = self
-/*      check saved preferences file for gaming medium and display it in a label.
-        if let filepath = Bundle.main.path(forResource: "output", ofType: "txt") {
-            do {
-                let contents = try String(contentsOfFile: filepath)
-                lblCurrentMedium.text = contents
-            } catch {
-          do error handling for reading from the file
-                print("error while reading: \(error).")
-            }
-        } else {lblCurrentMedium.text="You have not saved preferences yet"}     */
+      pickerView.setValue(UIColor.blue, forKey: "textColor")
+//      this is to load the data from the file
+      if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+          let fileurl = dir.appendingPathComponent(file)
+          do {
+            let datafromfile = try String(contentsOf: fileurl, encoding: .utf8)
+             lblCurrentMedium.text = datafromfile
+          } catch {
+            print(error)
+          }
+        }
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -61,24 +63,37 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
             let answer: String = consoles[pickerView.selectedRow(inComponent: 0)]
             print(answer)  //just to test if the collected string is correct
           lblCurrentMedium.text = answer
-            let filename = getDocumentsDirectory().appendingPathComponent("output.txt")
-            do {
-                try answer.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
-            } catch {
-    //            do error handling to make sure program does not crash.
-                print("error while reading: \(error).")
-            }
-        }
+    if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+      let fileurl = dir.appendingPathComponent(file)
+      do {
+        try answer.write(to: fileurl, atomically: false, encoding: .utf8)
+      } catch {
+        print(error)
+      }
+    }
   }
+}
 
 class AddGenre: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var genrelbl: UILabel!
      @IBOutlet weak var genrelist: UIPickerView!
      @IBOutlet weak var savedgenre: UITextView!
+  let file = "UserGenres.txt" //this is the name of the file
     override func viewDidLoad() {
         genrelbl.font=UIFont.italicSystemFont(ofSize: 35)
         genrelist.delegate = self
         genrelist.dataSource = self
+      genrelist.setValue(UIColor.blue, forKey: "textColor")
+      if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+        let fileurl = dir.appendingPathComponent(file)
+        do {
+          let datafromfile = try String(contentsOf: fileurl, encoding: .utf8)
+           savedgenre.text = datafromfile
+        } catch {
+          print(error)
+          savedgenre.text = "List of Genre's: "
+        }
+      }
     }
      let genre = ["Any", "FPS", "Racing", "TPS", "RPG", "Action", "Horror", "Hack-and-Slash"]
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -90,4 +105,17 @@ class AddGenre: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return genre[row]
     }
+  @IBAction func btnAddGen(_ sender: UIButton) {
+    var answer = genre[genrelist.selectedRow(inComponent: 0)]
+     answer += " ,"
+    savedgenre.text.append(answer)
+   if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+        let fileurl = dir.appendingPathComponent(file)
+        do {
+          try savedgenre.text.write(to: fileurl, atomically: false, encoding: .utf8)
+        } catch {
+          print(error)
+        }
+      }
+  }
 }
