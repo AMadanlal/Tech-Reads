@@ -13,40 +13,30 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        mainlabel.font=UIFont.italicSystemFont(ofSize: 50) //change the font of the main label
+//         Do any additional setup after loading the view.
 
-        //    this is the source on how the following divider was created: https://www.dev.com/how-to-draw-rectangle-view-use-swift-in-ios-app/
-        
-//        the following is the starting co-ordinates of the rectangle/divider
-        let xcoordinate = 20
-        let ycoordinate = 285
-//        the sizes of the rectangle/divider
-        let rectanglewidth = 374
-        let rectangleheight = 1
-        
-//        now creating the object used to render the rectangle/divider
-        let divider : CGRect = CGRect(x : CGFloat(xcoordinate), y : CGFloat(ycoordinate), width : CGFloat(rectanglewidth), height: CGFloat(rectangleheight))
-        let dividerview=UIView(frame: divider)
-        dividerview.backgroundColor = UIColor.systemGray
-        self.view.addSubview(dividerview)
-        
+//    this is the source on how a divider is created:
+//        https://www.dev.com/how-to-draw-rectangle-view-use-swift-in-ios-app/
     }
-
-    @IBOutlet weak var ResultView: UIView!
-    
+    //    this is the app name label
     @IBOutlet weak var mainlabel: UILabel!
-    
-    @IBOutlet weak var SearchBar: UISearchBar!
-    
-    @IBAction func PreferencesBtn(_ sender: Any){
+//    this button takes the user to the search page
+  @IBAction func btnSearch(_ sender: UIButton) {
+     performSegue(withIdentifier: "SearchBranch", sender: self)
+  }
+//    this button is to go to the preferences page
+  @IBAction func btnPref(_ sender: UIButton) {
+     performSegue(withIdentifier: "PrefBranch", sender: self)
+  }
+  //    this button is to take the user to the general tech review page
+  @IBAction func btnTechReview(_ sender: UIButton) {
+     performSegue(withIdentifier: "TechRevBranch", sender: self)
+  }
+//    this button takes the user to the general game review pages
+  @IBAction func btnGameReview(_ sender: UIButton) {
+    performSegue(withIdentifier: "GameRevBranch", sender: self)
+  }
+//    this function is to perform the unwind segue
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
     }
-    
-    @IBAction func GenTEchReviewBtn(_ sender: Any) {
-    }
-    
-    @IBAction func GenGameReviewBtn(_ sender: Any) {
-    }
-    
 }
-

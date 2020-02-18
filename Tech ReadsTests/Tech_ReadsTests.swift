@@ -9,7 +9,7 @@
 import XCTest
 @testable import Tech_Reads
 
-class Tech_ReadsTests: XCTestCase {
+class TechReadsTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
