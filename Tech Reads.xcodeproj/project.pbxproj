@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D33999B523FBC33A009E1811 /* SearchResultsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33999B423FBC33A009E1811 /* SearchResultsTable.swift */; };
+		D33999B723FC059B009E1811 /* ChickenCoopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33999B623FC059B009E1811 /* ChickenCoopAPI.swift */; };
 		D368A43823EBF5130090A80F /* GameReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43723EBF5130090A80F /* GameReviewController.swift */; };
 		D368A43A23EBF6730090A80F /* GameSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43923EBF6730090A80F /* GameSearchView.swift */; };
 		D368A43E23EBF80E0090A80F /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43D23EBF80E0090A80F /* UserPreferences.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D33999B423FBC33A009E1811 /* SearchResultsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTable.swift; sourceTree = "<group>"; };
+		D33999B623FC059B009E1811 /* ChickenCoopAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenCoopAPI.swift; sourceTree = "<group>"; };
 		D368A43723EBF5130090A80F /* GameReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReviewController.swift; sourceTree = "<group>"; };
 		D368A43923EBF6730090A80F /* GameSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSearchView.swift; sourceTree = "<group>"; };
 		D368A43D23EBF80E0090A80F /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				D368A43923EBF6730090A80F /* GameSearchView.swift */,
 				D368A43D23EBF80E0090A80F /* UserPreferences.swift */,
 				D368A43F23EC363D0090A80F /* GeneralTechReview.swift */,
+				D33999B423FBC33A009E1811 /* SearchResultsTable.swift */,
+				D33999B623FC059B009E1811 /* ChickenCoopAPI.swift */,
 			);
 			path = "Tech Reads";
 			sourceTree = "<group>";
@@ -295,7 +301,9 @@
 				D368A43E23EBF80E0090A80F /* UserPreferences.swift in Sources */,
 				D3DBEC6D23E98180003EBFDC /* ViewController.swift in Sources */,
 				D368A44023EC363D0090A80F /* GeneralTechReview.swift in Sources */,
+				D33999B523FBC33A009E1811 /* SearchResultsTable.swift in Sources */,
 				D3DBEC6923E98180003EBFDC /* AppDelegate.swift in Sources */,
+				D33999B723FC059B009E1811 /* ChickenCoopAPI.swift in Sources */,
 				D368A43823EBF5130090A80F /* GameReviewController.swift in Sources */,
 				D368A43A23EBF6730090A80F /* GameSearchView.swift in Sources */,
 				D3DBEC6B23E98180003EBFDC /* SceneDelegate.swift in Sources */,

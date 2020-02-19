@@ -13,8 +13,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//         Do any additional setup after loading the view.
-
 //    this is the source on how a divider is created:
 //        https://www.dev.com/how-to-draw-rectangle-view-use-swift-in-ios-app/
     }

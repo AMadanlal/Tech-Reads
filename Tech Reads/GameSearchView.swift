@@ -10,12 +10,18 @@ import UIKit
 
 class GameSearchView: UIViewController, UITextViewDelegate {
   @IBOutlet weak var txtFieldSearch: UITextField!
+  var num: Int = 10 //this is just a test variable
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if segue.identifier == "searchsegue" {
+          if let destinationTC = segue.destination as? SearchResultsTable {
+            destinationTC.itemcount = num
+          }
+      }
+  }
     @IBAction func btnSearch(_ sender: UIButton) {
+      performSegue(withIdentifier: "searchsegue", sender: self)
     }
-  //func textViewDidBeginEditing(_ textView: UITextView) {
-    //UIView.setcontentoff
-  //}
 }

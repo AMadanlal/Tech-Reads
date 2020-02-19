@@ -8,7 +8,6 @@
 
 import UIKit
 
-//need to change the normal class declaration to support the UIPicker protocall.
 class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 //    Array of consoles that the user is most likely to use
     let consoles = ["Any", "PC", "XBOX ONE", "PS4", "NINTENDO SWITCH", "MOBILE"]
