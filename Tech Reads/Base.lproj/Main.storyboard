@@ -298,6 +298,16 @@
                                                             <outlet property="delegate" destination="LE4-e1-cxl" id="6Lt-po-VHm"/>
                                                         </connections>
                                                     </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25H-iZ-Jlx">
+                                                        <rect key="frame" x="132" y="219" width="118" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="test game details"/>
+                                                        <connections>
+                                                            <segue destination="8FQ-EX-Gbr" kind="popoverPresentation" identifier="gamesearch" popoverAnchorView="25H-iZ-Jlx" id="cq7-30-bmq">
+                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                            </segue>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.59807103872299194" green="0.79568344354629517" blue="0.9192776083946228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -369,20 +379,20 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="8FQ-EX-Gbr" customClass="GameReviewController" customModule="Tech_Reads" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="acp-84-LIA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cXr-w2-bPI">
-                                <rect key="frame" x="16" y="60" width="382" height="786"/>
+                                <rect key="frame" x="16" y="16" width="382" height="776"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S3m-Pg-MNy">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="378"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="373"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yq3-Sy-qIq">
-                                                <rect key="frame" x="8.6666666666666572" y="0.0" width="364.66666666666674" height="70"/>
+                                                <rect key="frame" x="8.6666666666666572" y="0.0" width="364.66666666666674" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s00-5c-3R8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="178.33333333333334" height="70"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="178.33333333333334" height="65"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="The Name of the Game">
                                                                 <attributes>
@@ -395,10 +405,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jVz-L4-qNe">
-                                                        <rect key="frame" x="291.66666666666663" y="0.0" width="73" height="70"/>
+                                                        <rect key="frame" x="291.66666666666663" y="0.0" width="73" height="65"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEi-r1-PF0">
-                                                                <rect key="frame" x="0.0" y="0.0" width="73" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="73" height="27.666666666666668"/>
                                                                 <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <state key="normal" title="Back">
                                                                     <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -414,7 +424,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9K-Vy-66N">
-                                                                <rect key="frame" x="0.0" y="40" width="73" height="30"/>
+                                                                <rect key="frame" x="0.0" y="37.666666666666664" width="73" height="27.333333333333336"/>
                                                                 <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <state key="normal" title="Next Story">
                                                                     <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -433,8 +443,19 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPV-55-Idm">
-                                                <rect key="frame" x="0.0" y="167" width="382" height="211"/>
+                                                <rect key="frame" x="0.0" y="162" width="382" height="211"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bof-se-xse">
+                                                        <rect key="frame" x="16" y="16" width="350" height="179"/>
+                                                    </imageView>
+                                                </subviews>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="bof-se-xse" firstAttribute="leading" secondItem="hPV-55-Idm" secondAttribute="leading" constant="16" id="BiN-YA-Krs"/>
+                                                    <constraint firstAttribute="bottom" secondItem="bof-se-xse" secondAttribute="bottom" constant="16" id="fCk-iJ-atX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bof-se-xse" secondAttribute="trailing" constant="16" id="fcV-oO-9jx"/>
+                                                    <constraint firstItem="bof-se-xse" firstAttribute="top" secondItem="hPV-55-Idm" secondAttribute="top" constant="16" id="pUf-3C-z2a"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="15"/>
@@ -450,14 +471,14 @@
                                         </constraints>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-Dv-fYn">
-                                        <rect key="frame" x="0.0" y="408" width="382" height="378"/>
+                                        <rect key="frame" x="0.0" y="403" width="382" height="373"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <attributes>
                                                     <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <font key="NSFont" metaFont="menu" size="14"/>
+                                                    <font key="NSFont" metaFont="system" size="14"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -482,6 +503,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ShY-ta-e1V"/>
                     </view>
+                    <connections>
+                        <outlet property="gameReviewText" destination="gOa-Dv-fYn" id="J52-eu-YLw"/>
+                        <outlet property="imageplace" destination="bof-se-xse" id="SgY-mD-m1K"/>
+                        <outlet property="lblMain" destination="s00-5c-3R8" id="xmV-b4-fpr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1UH-VN-GNx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="uIz-FG-8cY" userLabel="Exit" sceneMemberID="exit"/>
@@ -753,5 +779,8 @@
             <point key="canvasLocation" x="3351" y="870"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cq7-30-bmq"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
