@@ -10,12 +10,13 @@ import UIKit
 
 class GameSearchView: UIViewController, UITextViewDelegate {
   @IBOutlet weak var txtFieldSearch: UITextField!
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad() {
+      super.viewDidLoad()
+  }
+  @IBAction func btngamedetails(_ sender: UIButton) {
+  performSegue(withIdentifier: "gamesearch", sender: self)
+  }
+  @IBAction func btnSearch(_ sender: UIButton) {
+      performSegue(withIdentifier: "searchsegue", sender: self)
     }
-    @IBAction func btnSearch(_ sender: UIButton) {
-    }
-  //func textViewDidBeginEditing(_ textView: UITextView) {
-    //UIView.setcontentoff
-  //}
 }
