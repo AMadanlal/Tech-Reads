@@ -389,15 +389,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="373"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yq3-Sy-qIq">
-                                                <rect key="frame" x="8.6666666666666572" y="0.0" width="364.66666666666674" height="65"/>
+                                                <rect key="frame" x="8.6666666666666572" y="0.0" width="364.66666666666674" height="70"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s00-5c-3R8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="178.33333333333334" height="65"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s00-5c-3R8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="178.33333333333334" height="70"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="The Name of the Game">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.091803856194019318" green="0.18693625926971436" blue="0.48673385381698608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" metaFont="system" size="19"/>
+                                                                    <font key="NSFont" metaFont="system" size="24"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -405,10 +405,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jVz-L4-qNe">
-                                                        <rect key="frame" x="291.66666666666663" y="0.0" width="73" height="65"/>
+                                                        <rect key="frame" x="291.66666666666663" y="0.0" width="73" height="70"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEi-r1-PF0">
-                                                                <rect key="frame" x="0.0" y="0.0" width="73" height="27.666666666666668"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="73" height="30"/>
                                                                 <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <state key="normal" title="Back">
                                                                     <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -424,7 +424,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9K-Vy-66N">
-                                                                <rect key="frame" x="0.0" y="37.666666666666664" width="73" height="27.333333333333336"/>
+                                                                <rect key="frame" x="0.0" y="40" width="73" height="30"/>
                                                                 <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <state key="normal" title="Next Story">
                                                                     <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -443,10 +443,10 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPV-55-Idm">
-                                                <rect key="frame" x="0.0" y="162" width="382" height="211"/>
+                                                <rect key="frame" x="0.0" y="140" width="382" height="233"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bof-se-xse">
-                                                        <rect key="frame" x="16" y="16" width="350" height="179"/>
+                                                        <rect key="frame" x="16" y="16" width="350" height="201"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -467,7 +467,7 @@
                                             <constraint firstItem="Yq3-Sy-qIq" firstAttribute="leading" secondItem="S3m-Pg-MNy" secondAttribute="leading" constant="8.6666666666666572" id="1bq-Bb-y8v"/>
                                             <constraint firstItem="hPV-55-Idm" firstAttribute="leading" secondItem="S3m-Pg-MNy" secondAttribute="leadingMargin" id="6Vj-x2-dSO"/>
                                             <constraint firstAttribute="trailing" secondItem="Yq3-Sy-qIq" secondAttribute="trailing" constant="8.6666666666666288" id="L1n-VW-1EV"/>
-                                            <constraint firstItem="hPV-55-Idm" firstAttribute="top" secondItem="Yq3-Sy-qIq" secondAttribute="bottom" constant="97" id="tyf-Gx-8jo"/>
+                                            <constraint firstItem="hPV-55-Idm" firstAttribute="top" secondItem="Yq3-Sy-qIq" secondAttribute="bottom" constant="70" id="tyf-Gx-8jo"/>
                                         </constraints>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-Dv-fYn">
@@ -478,7 +478,7 @@
                                                 <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <attributes>
                                                     <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <font key="NSFont" metaFont="system" size="14"/>
+                                                    <font key="NSFont" metaFont="menu" size="14"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>

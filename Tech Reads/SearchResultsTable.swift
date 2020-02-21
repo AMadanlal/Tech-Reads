@@ -13,7 +13,28 @@ class SearchResultsTable: UITableViewController {
   //function for instructions as soon as view is called
   override func viewDidLoad() {
     super.viewDidLoad()
-    thingstodisplay = ["BMW M3", "M4 ASSAULT", "COMPUTER", "GAMES", "METAL MUSIC", "MAX"]
+    thingstodisplay = [String]()
+  }
+  override func viewDidAppear(_ animated: Bool) {
+    if thingstodisplay.count == 0 {
+      let gamelist = ChickenCoopAPI(searched: "Pokemon", platform: "pc")
+        var gameListvariable = gamelist.gamelist
+          gamelist.getGameList { result in
+          switch result {
+          case .failure(let error):
+              print(error)
+          case.success(let details):
+              gameListvariable = details
+              print(details)
+                DispatchQueue.main.async {
+                  for item in gameListvariable.result {
+                    self.thingstodisplay.append(item.title)
+                    self.tableView.reloadData()
+                  }
+              }
+            }
+          }
+      }
   }
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return thingstodisplay.count

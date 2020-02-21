@@ -13,8 +13,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//    this is the source on how a divider is created:
-//        https://www.dev.com/how-to-draw-rectangle-view-use-swift-in-ios-app/
     }
     //    this is the app name label
     @IBOutlet weak var mainlabel: UILabel!

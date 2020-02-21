@@ -48,62 +48,62 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return consoles[row]
     }
-  @IBAction func btnGenreAdd(_ sender: UIButton) {
-     performSegue(withIdentifier: "genrepopup", sender: self)
-  }
+    @IBAction func btnGenreAdd(_ sender: UIButton) {
+      performSegue(withIdentifier: "genrepopup", sender: self)
+    }
 //    this is a helper function that finds the URL path to where the app can store data
     func getDocumentsDirectory() -> URL {
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return path[0]
     }
 //    this button is used to save the user preferences and go back to the previous page
-  @IBAction func btnSavePref(_ sender: UIButton) {
-    //        this line to go get the string value from the pickerview
-            let answer: String = consoles[pickerView.selectedRow(inComponent: 0)]
-            print(answer)  //just to test if the collected string is correct
-          lblCurrentMedium.text = answer
-    if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-      let fileurl = dir.appendingPathComponent(file)
-      do {
-        try answer.write(to: fileurl, atomically: false, encoding: .utf8)
-      } catch {
-        print(error)
+    @IBAction func btnSavePref(_ sender: UIButton) {
+      //        this line to go get the string value from the pickerview
+              let answer: String = consoles[pickerView.selectedRow(inComponent: 0)]
+              print(answer)  //just to test if the collected string is correct
+            lblCurrentMedium.text = answer
+      if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+        let fileurl = dir.appendingPathComponent(file)
+        do {
+          try answer.write(to: fileurl, atomically: false, encoding: .utf8)
+        } catch {
+          print(error)
+        }
       }
     }
-  }
 }
 
 class AddGenre: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var genrelbl: UILabel!
-     @IBOutlet weak var genrelist: UIPickerView!
-     @IBOutlet weak var savedgenre: UITextView!
-  let file = "UserGenres.txt" //this is the name of the file
-    override func viewDidLoad() {
-        genrelbl.font=UIFont.italicSystemFont(ofSize: 35)
-        genrelist.delegate = self
-        genrelist.dataSource = self
-      genrelist.setValue(UIColor.blue, forKey: "textColor")
-      if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-        let fileurl = dir.appendingPathComponent(file)
-        do {
-          let datafromfile = try String(contentsOf: fileurl, encoding: .utf8)
-           savedgenre.text = datafromfile
-        } catch {
-          print(error)
-          savedgenre.text = "List of Genre's: "
-        }
+    @IBOutlet weak var genrelist: UIPickerView!
+    @IBOutlet weak var savedgenre: UITextView!
+    let file = "UserGenres.txt" //this is the name of the file
+    let genre = ["Any", "FPS", "Racing", "TPS", "RPG", "Action", "Horror", "Hack-and-Slash"]
+  override func viewDidLoad() {
+      genrelbl.font=UIFont.italicSystemFont(ofSize: 35)
+      genrelist.delegate = self
+      genrelist.dataSource = self
+    genrelist.setValue(UIColor.blue, forKey: "textColor")
+    if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+      let fileurl = dir.appendingPathComponent(file)
+      do {
+        let datafromfile = try String(contentsOf: fileurl, encoding: .utf8)
+         savedgenre.text = datafromfile
+      } catch {
+        print(error)
+        savedgenre.text = "List of Genre's: "
       }
     }
-     let genre = ["Any", "FPS", "Racing", "TPS", "RPG", "Action", "Horror", "Hack-and-Slash"]
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return genre.count
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return genre[row]
-    }
+  }
+  func numberOfComponents(in pickerView: UIPickerView) -> Int {
+      return 1
+  }
+  func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+      return genre.count
+  }
+  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+      return genre[row]
+  }
   @IBAction func btnAddGen(_ sender: UIButton) {
     var answer = genre[genrelist.selectedRow(inComponent: 0)]
      answer += " ,"
