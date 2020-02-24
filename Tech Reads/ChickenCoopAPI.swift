@@ -46,7 +46,7 @@ class ChickenCoopAPI {
 }
 //  class variables
   var searchItem: String = ""
-  var gamePlatform: String = ""
+  public var gamePlatform: String = "pc" //this is made public in order for the other class to modify it
   var gamedetails = Game(title: "", releaseDate: "", description: "",
                          genre: [""], image: "", score: 0, developer: "", publisher: [""], rating: "",
                          alsoAvailableOn: [""])
@@ -55,9 +55,8 @@ class ChickenCoopAPI {
   let headers = ["x-rapidapi-host": "chicken-coop.p.rapidapi.com",
                   "x-rapidapi-key": "20e0c6a126msh31a394fe35837d8p1d97f3jsn9bf6099a1b56"]
 
-  init(searched: String, platform: String) {
+  init(searched: String) {
     searchItem = searched
-    gamePlatform = platform
   }
 
 //  this gets the individual game information
@@ -93,10 +92,10 @@ class ChickenCoopAPI {
 //  this function gets the list of games
   func getGameList(completionHandler: @escaping(Result<GameList, Gameinfoerror>) -> Void) {
 //    remember to format the search item to support spaces in url format
-//    var titleurlconversion = URLQueryItem(name: "title", value: "searchItem One")
     let request = NSMutableURLRequest(url: NSURL(string:
                                       "https://chicken-coop.p.rapidapi.com/games?title=\(searchItem)")! as URL,
                                       cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+    print(searchItem)
     request.httpMethod = "GET"
     request.allHTTPHeaderFields = headers
     let session = URLSession.shared

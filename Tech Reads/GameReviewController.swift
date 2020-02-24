@@ -26,7 +26,7 @@ class GameReviewController: UIViewController {
      self.gameReviewText.text = "Loading..."
     }
     override func viewDidAppear(_ animated: Bool) {
-              let gamedetail = ChickenCoopAPI(searched: "Bulletstorm", platform: "pc")
+              let gamedetail = ChickenCoopAPI(searched: "Bulletstorm")
               var gameinfo = gamedetail.gamedetails
               gamedetail.getGameInfo { result in
               switch result {
