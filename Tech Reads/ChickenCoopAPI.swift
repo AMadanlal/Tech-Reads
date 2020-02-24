@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import structPod
 
 class ChickenCoopAPI {
 // enum for errors
@@ -14,43 +15,11 @@ class ChickenCoopAPI {
     case noDataAvailable
     case canNotProcessData
   }
-//  struct for the gamelist items
-  struct GameListItem: Decodable {
-    var title: String
-    var platform: String
-  }
-//  struct for the gamelist
-  struct GameList: Decodable {
-    var query: String
-    var executionTime: Double
-    var result = [GameListItem]()
-    var countResult: Int
-  }
-  struct Gameresponse: Decodable {
-  var query: String
-  var executionTime: Double
-  var result: Game
-  }
-//  this is a struct to store the individual game data
-  struct Game: Decodable {
-  var title: String
-  var releaseDate: String
-  var description: String
-  var genre = [String]()
-  var image: String
-  var score: Int
-  var developer: String
-  var publisher = [String]()
-  var rating: String
-  var alsoAvailableOn = [String]()
-}
 //  class variables
   var searchItem: String = ""
   var gamePlatform: String = ""
-  var gamedetails = Game(title: "", releaseDate: "", description: "",
-                         genre: [""], image: "", score: 0, developer: "", publisher: [""], rating: "",
-                         alsoAvailableOn: [""])
-  var gamelist = GameList(query: "", executionTime: 0, countResult: 0)
+  var gamedetails = Game()
+  var gamelist = GameList()
 //  this is the headers that include the host and the unique key given to a user to access the api
   let headers = ["x-rapidapi-host": "chicken-coop.p.rapidapi.com",
                   "x-rapidapi-key": "20e0c6a126msh31a394fe35837d8p1d97f3jsn9bf6099a1b56"]

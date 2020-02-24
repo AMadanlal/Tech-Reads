@@ -6,6 +6,7 @@
 //  Copyright © 2020 Akshar Madanlal. All rights reserved.
 //
 
+import structPod
 import UIKit
 
 class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {

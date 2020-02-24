@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import structPod
 
 class GameReviewController: UIViewController {
 //  this is the main game label
@@ -41,7 +42,7 @@ class GameReviewController: UIViewController {
             }
         }
     }
-    func todisplay(gamemodel: ChickenCoopAPI.Game) {
+    func todisplay(gamemodel: Game) {
       self.lblMain.text = gamemodel.title
   //this part formats the different string arrays better
       var simplifiedgenrestring = ""
