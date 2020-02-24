@@ -1,0 +1,16 @@
+PODS:
+  - structPod (0.1.0)
+
+DEPENDENCIES:
+  - structPod (from `/Users/amadanlal/Desktop/Tech-Reads/structPod`)
+
+EXTERNAL SOURCES:
+  structPod:
+    :path: "/Users/amadanlal/Desktop/Tech-Reads/structPod"
+
+SPEC CHECKSUMS:
+  structPod: fa75a983f8c3f68017e0ebe58993d3f95be2daf9
+
+PODFILE CHECKSUM: 3be7487dd6ed68d50bc30d302d6140df5c72b894
+
+COCOAPODS: 1.8.4

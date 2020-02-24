@@ -1,0 +1,22 @@
+{
+  "name": "structPod",
+  "version": "0.1.0",
+  "summary": "A short description of structPod.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/AMadanlal/structPod",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "AMadanlal": "AMadanlal@jhb.dvt.co.za"
+  },
+  "source": {
+    "git": "https://github.com/AMadanlal/structPod.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "structPod/Classes/**/*"
+}

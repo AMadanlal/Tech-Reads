@@ -1,0 +1,6 @@
+framework module Pods_Tech_ReadsTests {
+  umbrella header "Pods-Tech ReadsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module structPod {
+  umbrella header "structPod-umbrella.h"
+
+  export *
+  module * { export * }
+}
