@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TechReadsPod
 
 class SearchResultsTable: UITableViewController {
   var searchString = ""

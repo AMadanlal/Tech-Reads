@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3C02EACB36F73D53C3DF0CDA /* Pods_Tech_ReadsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEC631F48AC76F911FF7134 /* Pods_Tech_ReadsTests.framework */; };
 		AD6881A2AC040CCFC015268E /* Pods_Tech_Reads_Tech_ReadsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F139C5C768083C8F0A9D654A /* Pods_Tech_Reads_Tech_ReadsUITests.framework */; };
 		D33999B523FBC33A009E1811 /* SearchResultsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33999B423FBC33A009E1811 /* SearchResultsTable.swift */; };
-		D33999B723FC059B009E1811 /* ChickenCoopAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33999B623FC059B009E1811 /* ChickenCoopAPI.swift */; };
 		D368A43823EBF5130090A80F /* GameReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43723EBF5130090A80F /* GameReviewController.swift */; };
 		D368A43A23EBF6730090A80F /* GameSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43923EBF6730090A80F /* GameSearchView.swift */; };
 		D368A43E23EBF80E0090A80F /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43D23EBF80E0090A80F /* UserPreferences.swift */; };
@@ -53,7 +52,6 @@
 		BFEC631F48AC76F911FF7134 /* Pods_Tech_ReadsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tech_ReadsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F52E7C75835E75AB1CCCCC /* Pods-Tech Reads.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech Reads.release.xcconfig"; path = "Target Support Files/Pods-Tech Reads/Pods-Tech Reads.release.xcconfig"; sourceTree = "<group>"; };
 		D33999B423FBC33A009E1811 /* SearchResultsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTable.swift; sourceTree = "<group>"; };
-		D33999B623FC059B009E1811 /* ChickenCoopAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenCoopAPI.swift; sourceTree = "<group>"; };
 		D368A43723EBF5130090A80F /* GameReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReviewController.swift; sourceTree = "<group>"; };
 		D368A43923EBF6730090A80F /* GameSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSearchView.swift; sourceTree = "<group>"; };
 		D368A43D23EBF80E0090A80F /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				4876DC61CF60FE6E165ED9F4 /* Pods-Tech ReadsTests.debug.xcconfig */,
 				AB4CDB57344142BD044D57C8 /* Pods-Tech ReadsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -154,7 +151,6 @@
 				D368A43D23EBF80E0090A80F /* UserPreferences.swift */,
 				D368A43F23EC363D0090A80F /* GeneralTechReview.swift */,
 				D33999B423FBC33A009E1811 /* SearchResultsTable.swift */,
-				D33999B623FC059B009E1811 /* ChickenCoopAPI.swift */,
 			);
 			path = "Tech Reads";
 			sourceTree = "<group>";
@@ -449,7 +445,6 @@
 				D368A44023EC363D0090A80F /* GeneralTechReview.swift in Sources */,
 				D33999B523FBC33A009E1811 /* SearchResultsTable.swift in Sources */,
 				D3DBEC6923E98180003EBFDC /* AppDelegate.swift in Sources */,
-				D33999B723FC059B009E1811 /* ChickenCoopAPI.swift in Sources */,
 				D368A43823EBF5130090A80F /* GameReviewController.swift in Sources */,
 				D368A43A23EBF6730090A80F /* GameSearchView.swift in Sources */,
 				D3DBEC6B23E98180003EBFDC /* SceneDelegate.swift in Sources */,
