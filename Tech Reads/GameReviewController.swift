@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TechReadsPod
 
 class GameReviewController: UIViewController {
 //  this is the main game label
@@ -42,7 +41,7 @@ class GameReviewController: UIViewController {
             }
         }
     }
-    func todisplay(gamemodel: Game) {
+    func todisplay(gamemodel: ChickenCoopAPI.Game) {
       self.lblMain.text = gamemodel.title
   //this part formats the different string arrays better
       var simplifiedgenrestring = ""
