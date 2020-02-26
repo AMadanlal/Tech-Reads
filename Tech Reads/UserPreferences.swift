@@ -29,20 +29,8 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
          pickerView.delegate = self
          pickerView.dataSource = self
       pickerView.setValue(UIColor.blue, forKey: "textColor")
-      let fm = FileManagement()
-      /*
-//      this is to load the data from the file
-      if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-          let fileurl = dir.appendingPathComponent(file)
-          do {
-            let datafromfile = try String(contentsOf: fileurl, encoding: .utf8)
-             lblCurrentMedium.text = datafromfile
-          } catch {
-            print(error)
-          }
-        }
-      */
-      
+//      this function is from the pod
+      lblCurrentMedium.text = loadmedium()
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -64,20 +52,10 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
 //    this button is used to save the user preferences and go back to the previous page
     @IBAction func btnSavePref(_ sender: UIButton) {
       //        this line to go get the string value from the pickerview
-              let answer: String = consoles[pickerView.selectedRow(inComponent: 0)]
-            lblCurrentMedium.text = answer
-      
-      /*
-      if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-        let fileurl = dir.appendingPathComponent(file)
-        do {
-          try answer.write(to: fileurl, atomically: false, encoding: .utf8)
-        } catch {
-          print(error)
-        }
-      }
-      */
-      
+          let answer: String = consoles[pickerView.selectedRow(inComponent: 0)]
+          lblCurrentMedium.text = answer
+//      saving the medium using a function from the pod
+          savemedium(medium: answer)
     }
 }
 
@@ -91,21 +69,9 @@ class AddGenre: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
       genrelbl.font=UIFont.italicSystemFont(ofSize: 35)
       genrelist.delegate = self
       genrelist.dataSource = self
-    genrelist.setValue(UIColor.blue, forKey: "textColor")
-    
-    
-    /* if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-      let fileurl = dir.appendingPathComponent(file)
-      do {
-        let datafromfile = try String(contentsOf: fileurl, encoding: .utf8)
-         savedgenre.text = datafromfile
-      } catch {
-        print(error)
-        savedgenre.text = "List of Genre's: "
-      }
-    }*/
-     
-    
+      genrelist.setValue(UIColor.blue, forKey: "textColor")
+    //      loading the genre using a function from the pod
+      savedgenre.text = loadGenre()
   }
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
       return 1
@@ -118,18 +84,10 @@ class AddGenre: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
   }
   @IBAction func btnAddGen(_ sender: UIButton) {
     var answer = genre[genrelist.selectedRow(inComponent: 0)]
-     answer += " ,"
+    answer += " ,"
+    var stringtosave = ""
     savedgenre.text.append(answer)
-    
-    /*
-   if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-        let fileurl = dir.appendingPathComponent(file)
-        do {
-          try savedgenre.text.write(to: fileurl, atomically: false, encoding: .utf8)
-        } catch {
-          print(error)
-        }
-      }*/
-    
+    stringtosave = savedgenre.text
+    saveGenre(genretosave: stringtosave)
   }
 }
