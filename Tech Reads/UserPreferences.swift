@@ -16,7 +16,7 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var genreLbl: UILabel!
     @IBOutlet weak var lblCurrentMedium: UILabel!
-  let file = "UserMedium.txt" //this is the name of the file
+  //let file = "UserMedium.txt" //this is the name of the file
     override func viewDidLoad() {
          super.viewDidLoad()
          // Do any additional setup after loading the view.
@@ -28,6 +28,8 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
          pickerView.delegate = self
          pickerView.dataSource = self
       pickerView.setValue(UIColor.blue, forKey: "textColor")
+      
+      /*
 //      this is to load the data from the file
       if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
           let fileurl = dir.appendingPathComponent(file)
@@ -38,6 +40,8 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
             print(error)
           }
         }
+      */
+      
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -60,8 +64,9 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBAction func btnSavePref(_ sender: UIButton) {
       //        this line to go get the string value from the pickerview
               let answer: String = consoles[pickerView.selectedRow(inComponent: 0)]
-              print(answer)  //just to test if the collected string is correct
             lblCurrentMedium.text = answer
+      
+      /*
       if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
         let fileurl = dir.appendingPathComponent(file)
         do {
@@ -70,6 +75,8 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
           print(error)
         }
       }
+      */
+      
     }
 }
 
@@ -77,14 +84,16 @@ class AddGenre: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var genrelbl: UILabel!
     @IBOutlet weak var genrelist: UIPickerView!
     @IBOutlet weak var savedgenre: UITextView!
-    let file = "UserGenres.txt" //this is the name of the file
+    //let file = "UserGenres.txt" //this is the name of the file
     let genre = ["Any", "FPS", "Racing", "TPS", "RPG", "Action", "Horror", "Hack-and-Slash"]
   override func viewDidLoad() {
       genrelbl.font=UIFont.italicSystemFont(ofSize: 35)
       genrelist.delegate = self
       genrelist.dataSource = self
     genrelist.setValue(UIColor.blue, forKey: "textColor")
-    if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+    
+    
+    /* if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
       let fileurl = dir.appendingPathComponent(file)
       do {
         let datafromfile = try String(contentsOf: fileurl, encoding: .utf8)
@@ -93,7 +102,9 @@ class AddGenre: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         print(error)
         savedgenre.text = "List of Genre's: "
       }
-    }
+    }*/
+     
+    
   }
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
       return 1
@@ -108,6 +119,8 @@ class AddGenre: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     var answer = genre[genrelist.selectedRow(inComponent: 0)]
      answer += " ,"
     savedgenre.text.append(answer)
+    
+    /*
    if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
         let fileurl = dir.appendingPathComponent(file)
         do {
@@ -115,6 +128,7 @@ class AddGenre: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         } catch {
           print(error)
         }
-      }
+      }*/
+    
   }
 }
