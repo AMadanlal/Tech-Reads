@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TechReadsPod
 
 class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 //    Array of consoles that the user is most likely to use
@@ -28,7 +29,7 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
          pickerView.delegate = self
          pickerView.dataSource = self
       pickerView.setValue(UIColor.blue, forKey: "textColor")
-      
+      let fm = FileManagement()
       /*
 //      this is to load the data from the file
       if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
