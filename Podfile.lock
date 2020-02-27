@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   TechReadsPod:
-    :commit: 41c83ad02d9629a03d145f5819bc0c09dc2cfd9c
+    :commit: b7e7f66cbe5179d5dbb80d5a1ce62157655bd768
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 SPEC CHECKSUMS:

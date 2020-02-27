@@ -37,7 +37,8 @@ class GameReviewController: UIViewController {
                   gameinfo = details
                   print(details)
                     DispatchQueue.main.async {
-                  todisplay(gamemodel: gameinfo)
+                    todisplay(gamemodel: gameinfo, titlelabel: self.lblMain,
+                              textview: self.gameReviewText, imageplace: self.imageplace)
                   }
             }
         }
