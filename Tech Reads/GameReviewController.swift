@@ -37,12 +37,12 @@ class GameReviewController: UIViewController {
                   gameinfo = details
                   print(details)
                     DispatchQueue.main.async {
-                  self.todisplay(gamemodel: gameinfo)
+                  todisplay(gamemodel: gameinfo)
                   }
             }
         }
     }
-    func todisplay(gamemodel: Game) {
+ /*   func todisplay(gamemodel: Game) {
       self.lblMain.text = gamemodel.title
   //this part formats the different string arrays better
       var simplifiedgenrestring = ""
@@ -90,7 +90,7 @@ class GameReviewController: UIViewController {
           }
       }
       self.gameReviewText.text = fulltext
-    }
+    }*/
     @IBAction func btnCancel(_ sender: UIButton) {
     }
     @IBAction func btnNext(_ sender: UIButton) {
