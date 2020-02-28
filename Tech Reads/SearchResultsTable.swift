@@ -11,7 +11,10 @@ import TechReadsPod
 
 class SearchResultsTable: UITableViewController {
   var searchString = ""
+  var gplatform: String = ""
   var thingstodisplay = [String]()
+  var itemstosend = [String]()
+  var itemplatform = [String]()
   //function for instructions as soon as view is called
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,6 +35,8 @@ class SearchResultsTable: UITableViewController {
                 DispatchQueue.main.async {
                   for item in gameListvariable.result {
                     self.thingstodisplay.append(item.title + " , on console: \(item.platform)" )
+                    self.itemstosend.append(item.title)
+                    self.itemplatform.append(item.platform)
                     self.tableView.reloadData()
                   }
               }
@@ -46,5 +51,17 @@ class SearchResultsTable: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath)
     cell.textLabel?.text = thingstodisplay[indexPath.row]
     return cell
+  }
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  if segue.identifier == "detailsegue" {
+    let segueDest = segue.destination as? GameReviewController
+    segueDest?.searcheditem = searchString
+    segueDest?.gameplatform = gplatform
+      }
+    }
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    searchString = itemstosend[indexPath.row]
+     gplatform = itemplatform[indexPath.row]
+    self.performSegue(withIdentifier: "detailsegue", sender: self)
   }
 }

@@ -20,6 +20,8 @@ class GameReviewController: UIViewController {
   @IBOutlet weak var gameReviewText: UITextView!
 //  this is the place where to put the image
   @IBOutlet weak var imageplace: UIImageView!
+  var searcheditem: String = "Bulletstorm"
+  var gameplatform: String = "pc"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,7 @@ class GameReviewController: UIViewController {
      self.gameReviewText.text = "Loading..."
     }
     override func viewDidAppear(_ animated: Bool) {
-              let gamedetail = ChickenCoopAPI(searched: "Bulletstorm")
+      let gamedetail = ChickenCoopAPI(searched: searcheditem, platform: gameplatform)
               var gameinfo = gamedetail.gamedetails
               gamedetail.getGameInfo { result in
               switch result {
