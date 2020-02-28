@@ -9,6 +9,7 @@
 import UIKit
 
 class SearchResultsTable: UITableViewController {
+  var searchString = ""
   var thingstodisplay = [String]()
   //function for instructions as soon as view is called
   override func viewDidLoad() {
@@ -17,7 +18,8 @@ class SearchResultsTable: UITableViewController {
   }
   override func viewDidAppear(_ animated: Bool) {
     if thingstodisplay.count == 0 {
-      let gamelist = ChickenCoopAPI(searched: "Pokemon", platform: "pc")
+      print(searchString)
+      let gamelist = ChickenCoopAPI(searched: searchString)
         var gameListvariable = gamelist.gamelist
           gamelist.getGameList { result in
           switch result {

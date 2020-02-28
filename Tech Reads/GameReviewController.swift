@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TechReadsPod
 
 class GameReviewController: UIViewController {
 //  this is the main game label
@@ -26,7 +27,7 @@ class GameReviewController: UIViewController {
      self.gameReviewText.text = "Loading..."
     }
     override func viewDidAppear(_ animated: Bool) {
-              let gamedetail = ChickenCoopAPI(searched: "Bulletstorm", platform: "pc")
+              let gamedetail = ChickenCoopAPI(searched: "Bulletstorm")
               var gameinfo = gamedetail.gamedetails
               gamedetail.getGameInfo { result in
               switch result {
@@ -41,7 +42,7 @@ class GameReviewController: UIViewController {
             }
         }
     }
-    func todisplay(gamemodel: ChickenCoopAPI.Game) {
+    func todisplay(gamemodel: Game) {
       self.lblMain.text = gamemodel.title
   //this part formats the different string arrays better
       var simplifiedgenrestring = ""

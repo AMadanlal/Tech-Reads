@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import TechReadsPod
 
 class ChickenCoopAPI {
 // enum for errors
@@ -14,50 +15,18 @@ class ChickenCoopAPI {
     case noDataAvailable
     case canNotProcessData
   }
-//  struct for the gamelist items
-  struct GameListItem: Decodable {
-    var title: String
-    var platform: String
-  }
-//  struct for the gamelist
-  struct GameList: Decodable {
-    var query: String
-    var executionTime: Double
-    var result = [GameListItem]()
-    var countResult: Int
-  }
-  struct Gameresponse: Decodable {
-  var query: String
-  var executionTime: Double
-  var result: Game
-  }
-//  this is a struct to store the individual game data
-  struct Game: Decodable {
-  var title: String
-  var releaseDate: String
-  var description: String
-  var genre = [String]()
-  var image: String
-  var score: Int
-  var developer: String
-  var publisher = [String]()
-  var rating: String
-  var alsoAvailableOn = [String]()
-}
+
 //  class variables
   var searchItem: String = ""
-  var gamePlatform: String = ""
-  var gamedetails = Game(title: "", releaseDate: "", description: "",
-                         genre: [""], image: "", score: 0, developer: "", publisher: [""], rating: "",
-                         alsoAvailableOn: [""])
-  var gamelist = GameList(query: "", executionTime: 0, countResult: 0)
+  public var gamePlatform: String = "pc" //this is made public in order for the other class to modify it
+  var gamedetails = Game()
+  var gamelist = GameList()
 //  this is the headers that include the host and the unique key given to a user to access the api
   let headers = ["x-rapidapi-host": "chicken-coop.p.rapidapi.com",
                   "x-rapidapi-key": "20e0c6a126msh31a394fe35837d8p1d97f3jsn9bf6099a1b56"]
 
-  init(searched: String, platform: String) {
+  init(searched: String) {
     searchItem = searched
-    gamePlatform = platform
   }
 
 //  this gets the individual game information
@@ -93,10 +62,10 @@ class ChickenCoopAPI {
 //  this function gets the list of games
   func getGameList(completionHandler: @escaping(Result<GameList, Gameinfoerror>) -> Void) {
 //    remember to format the search item to support spaces in url format
-//    var titleurlconversion = URLQueryItem(name: "title", value: "searchItem One")
     let request = NSMutableURLRequest(url: NSURL(string:
                                       "https://chicken-coop.p.rapidapi.com/games?title=\(searchItem)")! as URL,
                                       cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+    print(searchItem)
     request.httpMethod = "GET"
     request.allHTTPHeaderFields = headers
     let session = URLSession.shared

@@ -1,0 +1,21 @@
+PODS:
+  - TechReadsPod (0.0.1)
+
+DEPENDENCIES:
+  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`)
+
+EXTERNAL SOURCES:
+  TechReadsPod:
+    :git: https://github.com/AMadanlal/TechReadsPod.git
+
+CHECKOUT OPTIONS:
+  TechReadsPod:
+    :commit: 1e133b16137f1c28718d4bdefe647c4703722cf7
+    :git: https://github.com/AMadanlal/TechReadsPod.git
+
+SPEC CHECKSUMS:
+  TechReadsPod: 9ebb7f753fbcc497aee49615bc5ea428400b7047
+
+PODFILE CHECKSUM: 32428b91327e2aa1dc9afc3f34038e5f42344505
+
+COCOAPODS: 1.8.4
