@@ -2,20 +2,21 @@ PODS:
   - TechReadsPod (0.0.1)
 
 DEPENDENCIES:
-  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`)
+  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/PodRefactor`)
 
 EXTERNAL SOURCES:
   TechReadsPod:
+    :branch: Feature/PodRefactor
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 CHECKOUT OPTIONS:
   TechReadsPod:
-    :commit: 1e133b16137f1c28718d4bdefe647c4703722cf7
+    :commit: b7e7f66cbe5179d5dbb80d5a1ce62157655bd768
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 SPEC CHECKSUMS:
   TechReadsPod: 9ebb7f753fbcc497aee49615bc5ea428400b7047
 
-PODFILE CHECKSUM: 32428b91327e2aa1dc9afc3f34038e5f42344505
+PODFILE CHECKSUM: c9c1b4459d49bc183bbb7e577e35b9129394131b
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.0
