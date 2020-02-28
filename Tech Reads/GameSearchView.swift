@@ -14,9 +14,7 @@ class GameSearchView: UIViewController, UITextViewDelegate {
   override func viewDidLoad() {
       super.viewDidLoad()
   }
-  @IBAction func btngamedetails(_ sender: UIButton) {
-  performSegue(withIdentifier: "gamesearch", sender: self)
-  }
+
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "searchsegue" {
       let segueDest = segue.destination as? SearchResultsTable

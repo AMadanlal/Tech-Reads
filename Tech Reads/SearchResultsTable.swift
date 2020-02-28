@@ -31,7 +31,7 @@ class SearchResultsTable: UITableViewController {
               print(details)
                 DispatchQueue.main.async {
                   for item in gameListvariable.result {
-                    self.thingstodisplay.append(item.title)
+                    self.thingstodisplay.append(item.title + " , on console: \(item.platform)" )
                     self.tableView.reloadData()
                   }
               }
