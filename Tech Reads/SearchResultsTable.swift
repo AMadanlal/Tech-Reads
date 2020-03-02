@@ -22,8 +22,7 @@ class SearchResultsTable: UITableViewController {
   }
   override func viewDidAppear(_ animated: Bool) {
     if thingstodisplay.count == 0 {
-      print(searchString)
-      let gamelist = ChickenCoopAPI(searched: searchString)
+      let gamelist = ChickenCoopAPI(searched: searchString, platform: "")
         var gameListvariable = gamelist.gamelist
           gamelist.getGameList { result in
           switch result {
@@ -31,7 +30,6 @@ class SearchResultsTable: UITableViewController {
               print(error)
           case.success(let details):
               gameListvariable = details
-              print(details)
                 DispatchQueue.main.async {
                   for item in gameListvariable.result {
                     self.thingstodisplay.append(item.title + " , on console: \(item.platform)" )
@@ -61,7 +59,9 @@ class SearchResultsTable: UITableViewController {
     }
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     searchString = itemstosend[indexPath.row]
-     gplatform = itemplatform[indexPath.row]
+     gplatform = itemplatform[indexPath.row].lowercased()
+    print(searchString)
+    print(gplatform)
     self.performSegue(withIdentifier: "detailsegue", sender: self)
   }
 }
