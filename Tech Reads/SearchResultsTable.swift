@@ -11,7 +11,7 @@ import TechReadsPod
 
 class SearchResultsTable: UITableViewController {
   var searchString = ""
-  var gplatform: String = ""
+  var gplatform = ""
   var thingstodisplay = [String]()
   var itemstosend = [String]()
   var itemplatform = [String]()
@@ -22,7 +22,7 @@ class SearchResultsTable: UITableViewController {
   }
   override func viewDidAppear(_ animated: Bool) {
     if thingstodisplay.count == 0 {
-      let gamelist = ChickenCoopAPI(searched: searchString, platform: "")
+      let gamelist = ChickenCoopAPI(searched: searchString, platform: gplatform)
         var gameListvariable = gamelist.gamelist
           gamelist.getGameList { result in
           switch result {
@@ -50,18 +50,16 @@ class SearchResultsTable: UITableViewController {
     cell.textLabel?.text = thingstodisplay[indexPath.row]
     return cell
   }
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    searchString = itemstosend[indexPath.row]
+    gplatform = itemplatform[indexPath.row]
+    self.performSegue(withIdentifier: "detailsegue", sender: UITableViewCell.self) //check out if the different sender makes a difference
+  }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
   if segue.identifier == "detailsegue" {
     let segueDest = segue.destination as? GameReviewController
     segueDest?.searcheditem = searchString
-    segueDest?.gameplatform = gplatform
+    segueDest?.gameplatform = gplatform//this is being called before it is being assigned
       }
     }
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    searchString = itemstosend[indexPath.row]
-     gplatform = itemplatform[indexPath.row].lowercased()
-    print(searchString)
-    print(gplatform)
-    self.performSegue(withIdentifier: "detailsegue", sender: self)
-  }
 }
