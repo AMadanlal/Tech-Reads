@@ -15,7 +15,6 @@ class SearchResultsTable: UITableViewController {
   var thingstodisplay = [String]()
   var itemstosend = [String]()
   var itemplatform = [String]()
-  //function for instructions as soon as view is called
   override func viewDidLoad() {
     super.viewDidLoad()
     thingstodisplay = [String]()
@@ -36,7 +35,7 @@ class SearchResultsTable: UITableViewController {
                     self.itemstosend.append(item.title)
                     self.itemplatform.append(item.platform)
                     self.tableView.reloadData()
-                  }
+                }
               }
             }
           }
@@ -53,13 +52,13 @@ class SearchResultsTable: UITableViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     searchString = itemstosend[indexPath.row]
     gplatform = itemplatform[indexPath.row].lowercased()
-    self.performSegue(withIdentifier: "detailsegue", sender: self) //check out if the different sender makes a difference
+    self.performSegue(withIdentifier: "detailsegue", sender: self)
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
   if segue.identifier == "detailsegue" {
     let segueDest = segue.destination as? GameReviewController
     segueDest?.searcheditem = searchString
-    segueDest?.gameplatform = gplatform//this is being called before it is being assigned
+    segueDest?.gameplatform = gplatform
       }
     }
 }
