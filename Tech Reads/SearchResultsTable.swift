@@ -51,7 +51,7 @@ class SearchResultsTable: UITableViewController {
   }
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     searchString = itemstosend[indexPath.row]
-    gplatform = itemplatform[indexPath.row].lowercased()
+    gplatform = itemplatform[indexPath.row]
     self.performSegue(withIdentifier: "detailsegue", sender: self)
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
