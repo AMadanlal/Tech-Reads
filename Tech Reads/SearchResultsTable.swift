@@ -48,6 +48,8 @@ class SearchResultsTable: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath)
     tableView.backgroundColor = UIColor.init(red: 153/255, green: 203/255, blue: 234/255, alpha: 1)
     cell.backgroundColor = UIColor.init(red: 153/255, green: 203/255, blue: 234/255, alpha: 1)
+    cell.textLabel?.textColor = UIColor.blue// check this value
+    cell.textLabel?.numberOfLines = 0
     cell.textLabel?.text = thingstodisplay[indexPath.row]
     return cell
   }
