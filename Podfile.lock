@@ -2,21 +2,21 @@ PODS:
   - TechReadsPod (0.0.1)
 
 DEPENDENCIES:
-  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/searchtablecall`)
+  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/UnitTests`)
 
 EXTERNAL SOURCES:
   TechReadsPod:
-    :branch: Feature/searchtablecall
+    :branch: Feature/UnitTests
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 CHECKOUT OPTIONS:
   TechReadsPod:
-    :commit: abc88fedfd0ec76a15b9f762df947db361f4f228
+    :commit: 3f9747319756e401c9f3d019e907926a7f5c0de0
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 SPEC CHECKSUMS:
   TechReadsPod: 9ebb7f753fbcc497aee49615bc5ea428400b7047
 
-PODFILE CHECKSUM: 964aa6a8fb386a8cee6f4e0981c00b4317d73364
+PODFILE CHECKSUM: 9e9f375eb1992ac0e4df1f2ce4aabbee87373f98
 
 COCOAPODS: 1.9.0
