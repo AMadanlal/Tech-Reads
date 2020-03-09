@@ -1,0 +1,180 @@
+    1|       |//
+    2|       |//  TechReadsPodTests.swift
+    3|       |//  TechReadsPodTests
+    4|       |//
+    5|       |//  Created by Akshar Madanlal on 2020/03/05.
+    6|       |//  Copyright © 2020 DVT. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import XCTest
+   10|       |@testable import TechReadsPod
+   11|       |
+   12|       |class APITests: XCTestCase {
+   13|       |  var gamemodel: Game!
+   14|       |  weak var titlelabel: UILabel!
+   15|       |  weak var textview: UITextView!
+   16|       |  weak var imageplace: UIImageView!
+   17|       |  var APIClass: ChickenCoopAPI!
+   18|       |
+   19|     18|    override func setUp() {
+   20|     18|        // Put setup code here. This method is called before the invocation of each test method in the class.
+   21|     18|      gamemodel = Game()
+   22|     18|      APIClass = ChickenCoopAPI(searched: "Mock Game", platform: "Any")
+   23|     18|      gamemodel.title = "Mock Game"
+   24|     18|      gamemodel.releaseDate = "22/03/1987"
+   25|     18|      gamemodel.description = "A Mock GAme used for testing"
+   26|     18|      gamemodel.genre = [String]()
+   27|     18|      gamemodel.image = "Insert URL of image here"
+   28|     18|      gamemodel.score = 50
+   29|     18|      gamemodel.developer = "Myself"
+   30|     18|      gamemodel.publisher = [String]()
+   31|     18|      gamemodel.rating = "E"
+   32|     18|      gamemodel.alsoAvailableOn = [String]()
+   33|     18|    }
+   34|     18|  func testFormatPlatformStringPC() {
+   35|     18|//    GIVEN
+   36|     18|    let platform = "PC"
+   37|      1|//    WHEN
+   38|      1|    let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+   39|      1|//    THEN
+   40|      1|    XCTAssertEqual(formattedplatform, "pc")
+   41|      1|  }
+   42|      1|  func testFormatPlatformStringPS4() {
+   43|      1|    //    GIVEN
+   44|      1|        let platform = "PS4"
+   45|      1|    //    WHEN
+   46|      1|        let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+   47|      1|    //    THEN
+   48|      1|        XCTAssertEqual(formattedplatform, "playstation-4")
+   49|      1|  }
+   50|      1|  func testFormatPlatformStringXONE() {
+   51|      1|    //    GIVEN
+   52|      1|        let platform = "XONE"
+   53|      1|    //    WHEN
+   54|      1|        let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+   55|      1|    //    THEN
+   56|      1|        XCTAssertEqual(formattedplatform, "xbox-one")
+   57|      1|  }
+   58|      1|  func testFormatPlatformStringSTADIA() {
+   59|      1|    //    GIVEN
+   60|      1|           let platform = "Stadia"
+   61|      1|       //    WHEN
+   62|      1|           let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+   63|      1|       //    THEN
+   64|      1|           XCTAssertEqual(formattedplatform, "stadia")
+   65|      1|  }
+   66|      1|  func testFormatPlatformStringSWITCH() {
+   67|      1|    //    GIVEN
+   68|      1|           let platform = "Switch"
+   69|      1|       //    WHEN
+   70|      1|           let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+   71|      1|       //    THEN
+   72|      1|           XCTAssertEqual(formattedplatform, "switch")
+   73|      1|  }
+   74|      1|  func testFormatPlatformString3DS() {
+   75|      1|    //    GIVEN
+   76|      1|           let platform = "3DS"
+   77|      1|       //    WHEN
+   78|      1|           let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+   79|      1|       //    THEN
+   80|      1|           XCTAssertEqual(formattedplatform, "3ds")
+   81|      1|  }
+   82|      1|  func testFormatPlatformStringX360() {
+   83|      1|    //    GIVEN
+   84|      1|           let platform = "X360"
+   85|      1|       //    WHEN
+   86|      1|           let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+   87|      1|       //    THEN
+   88|      1|           XCTAssertEqual(formattedplatform, "xbox360")
+   89|      1|  }
+   90|      1|  func testFormatPlatformStringWIIU() {
+   91|      1|    //    GIVEN
+   92|      1|           let platform = "WIIU"
+   93|      1|       //    WHEN
+   94|      1|           let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+   95|      1|       //    THEN
+   96|      1|           XCTAssertEqual(formattedplatform, "wii-u")
+   97|      1|  }
+   98|      1|  func testFormatPlatformStringVITA() {
+   99|      1|    //    GIVEN
+  100|      1|           let platform = "VITA"
+  101|      1|       //    WHEN
+  102|      1|           let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+  103|      1|       //    THEN
+  104|      1|           XCTAssertEqual(formattedplatform, "playstation-vita")
+  105|      1|  }
+  106|      1|  func testFormatPlatformStringPSP() {
+  107|      1|    //    GIVEN
+  108|      1|           let platform = "PSP"
+  109|      1|       //    WHEN
+  110|      1|           let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+  111|      1|       //    THEN
+  112|      1|           XCTAssertEqual(formattedplatform, "psp")
+  113|      1|  }
+  114|      1|  func testFormatPlatformStringGBA() {
+  115|      1|    //    GIVEN
+  116|      1|           let platform = "GBA"
+  117|      1|       //    WHEN
+  118|      1|           let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+  119|      1|       //    THEN
+  120|      1|           XCTAssertEqual(formattedplatform, "game-boy-advance")
+  121|      1|  }
+  122|      1|  func testFormatPlatformStringPS2() {
+  123|      1|    //    GIVEN
+  124|      1|           let platform = "PS2"
+  125|      1|       //    WHEN
+  126|      1|           let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+  127|      1|       //    THEN
+  128|      1|           XCTAssertEqual(formattedplatform, "playstation-2")
+  129|      1|  }
+  130|      1|  func testFormatPlatformStringPS3() {
+  131|      1|    //    GIVEN
+  132|      1|           let platform = "PS3"
+  133|      1|       //    WHEN
+  134|      1|           let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+  135|      1|       //    THEN
+  136|      1|           XCTAssertEqual(formattedplatform, "playstation-3")
+  137|      1|  }
+  138|      1|  func testFormatPlatformStringDS() {
+  139|      1|    //    GIVEN
+  140|      1|           let platform = "DS"
+  141|      1|       //    WHEN
+  142|      1|           let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+  143|      1|       //    THEN
+  144|      1|           XCTAssertEqual(formattedplatform, "ds")
+  145|      1|  }
+  146|      1|  func testFormatPlatformStringIOS() {
+  147|      1|    //    GIVEN
+  148|      1|           let platform = "iOS"
+  149|      1|       //    WHEN
+  150|      1|           let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+  151|      1|       //    THEN
+  152|      1|           XCTAssertEqual(formattedplatform, "ios")
+  153|      1|  }
+  154|      1|  func testFormatPlatformStringDEFAULT() {
+  155|      1|    //    GIVEN
+  156|      1|           let platform = "Any"
+  157|      1|       //    WHEN
+  158|      1|           let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+  159|      1|       //    THEN
+  160|      1|           XCTAssertEqual(formattedplatform, "Any")
+  161|      1|  }
+  162|      1|
+  163|      1|    override func tearDown() {
+  164|      1|        // Put teardown code here. This method is called after the invocation of each test method in the class.
+  165|       |      gamemodel = nil
+  166|     18|      titlelabel = nil
+  167|     18|      textview = nil
+  168|     18|      imageplace = nil
+  169|     18|      APIClass = nil
+  170|     18|    }
+  171|     18|
+  172|     18|    func testPerformanceExample() {
+  173|       |        // This is an example of a performance test case.
+  174|      1|//        measure {
+  175|      1|//            // Put the code you want to measure the time of here.
+  176|      1|//        }
+  177|      1|    }
+  178|       |
+  179|      1|}
+
