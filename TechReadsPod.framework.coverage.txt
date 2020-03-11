@@ -25,21 +25,21 @@
    24|       |    public var executionTime: Double
    25|       |    public var result = [GameListItem]()
    26|       |    public var countResult: Int
-   27|     18|    public init() {
-   28|     18|      query = ""
-   29|     18|      executionTime = 0
-   30|     18|      countResult = 0
-   31|     18|    }
+   27|     17|    public init() {
+   28|     17|      query = ""
+   29|     17|      executionTime = 0
+   30|     17|      countResult = 0
+   31|     17|    }
    32|       |  }
    33|       |
    34|       |  public struct Gameresponse: Decodable {
    35|       |    public var query: String
    36|       |    public var executionTime: Double
    37|       |    public var result = Game()
-   38|      0|    public init() {
-   39|      0|      query = ""
-   40|      0|      executionTime = 0
-   41|      0|    }
+   38|      1|    public init() {
+   39|      1|      query = ""
+   40|      1|      executionTime = 0
+   41|      1|    }
    42|       |  }
    43|       |
    44|       |//  this is a struct to store the individual game data
@@ -54,15 +54,15 @@
    53|       |    public var publisher = [String]()
    54|       |    public var rating: String
    55|       |    public var alsoAvailableOn = [String]()
-   56|     36|    public init() {
-   57|     36|      title = ""
-   58|     36|      releaseDate = ""
-   59|     36|      description = ""
-   60|     36|      image = ""
-   61|     36|      score = 0
-   62|     36|      developer = ""
-   63|     36|      rating = ""
-   64|     36|    }
+   56|     20|    public init() {
+   57|     20|      title = ""
+   58|     20|      releaseDate = ""
+   59|     20|      description = ""
+   60|     20|      image = ""
+   61|     20|      score = 0
+   62|     20|      developer = ""
+   63|     20|      rating = ""
+   64|     20|    }
    65|       |}
 
 /Users/amadanlal/Desktop/TechReadsPod/TechReadsPod/viewModel/ChickenCoopAPI.swift:
@@ -76,144 +76,139 @@
     8|       |
     9|       |import Foundation
    10|       |
-   11|       |public class ChickenCoopAPI {
-   12|       |// enum for errors
-   13|       |  public enum Gameinfoerror: Error {
-   14|       |    case noDataAvailable
-   15|       |    case canNotProcessData
-   16|       |  }
-   17|       |
-   18|       |//  class variables
-   19|       |  public var searchItem: String = ""
-   20|       |  public var gamePlatform: String = "pc" //this is made public in order for the other class to modify it
-   21|       |  public var gamedetails = Game()
-   22|       |  public var gamelist = GameList()
-   23|       |//  this is the headers that include the host and the unique key given to a user to access the api
-   24|       |  let headers = ["x-rapidapi-host": "chicken-coop.p.rapidapi.com",
-   25|       |                  "x-rapidapi-key": "20e0c6a126msh31a394fe35837d8p1d97f3jsn9bf6099a1b56"]
+   11|       |public class ChickenCoopAPI: APICallsProtocol {
+   12|       |
+   13|       |//  class variables
+   14|       |  public var searchItem: String = ""
+   15|       |  public var gamePlatform: String = "pc" //this is made public in order for the other class to modify it
+   16|       |  public var gamedetails = Game()
+   17|       |  public var gamelist = GameList()
+   18|       |//  this is the headers that include the host and the unique key given to a user to access the api
+   19|       |  let headers = ["x-rapidapi-host": "chicken-coop.p.rapidapi.com",
+   20|       |                  "x-rapidapi-key": "20e0c6a126msh31a394fe35837d8p1d97f3jsn9bf6099a1b56"]
+   21|       |
+   22|     17|  public init(searched: String, platform: String) {
+   23|     17|    searchItem = searched
+   24|     17|    gamePlatform = platform
+   25|     17|  }
    26|       |
-   27|     18|  public init(searched: String, platform: String) {
-   28|     18|    searchItem = searched
-   29|     18|    gamePlatform = platform
-   30|     18|  }
-   31|       |
-   32|       |// swiftlint:disable cyclomatic_complexity
-   33|     16|  func formatplatformstring(stringtoformat: String) -> String {
-   34|     16|    /* here we will have to create a switch ststement for the different consoles in the format origtext -> apicalltext
-   35|     16|          PC -> pc
-   36|     16|          PlayStation 4 -> playstation-4
-   37|     16|          Xbox One -> xbox-one
-   38|     16|          Stadia -> stadia
-   39|     16|          Switch -> switch
-   40|     16|          3DS -> 3ds
-   41|     16|          X360 -> xbox360
-   42|     16|          WIIU -> wii-u
-   43|     16|          VITA -> playstation-vita
-   44|     16|          PSP -> psp
-   45|     16|          GBA -> game-boy-advance
-   46|     16|          PS2 -> playstation-2
-   47|     16|          PS3 -> playstation-3
-   48|     16|          DS -> ds
-   49|     16|       */
-   50|     16|       switch stringtoformat {
-   51|     16|       case "PC":
-   52|      1|       return "pc"
-   53|     16|       case "PS4":
-   54|      1|         return "playstation-4"
-   55|     16|       case "XONE":
-   56|      1|         return "xbox-one"
-   57|     16|       case "Stadia":
-   58|      1|         return "stadia"
-   59|     16|       case "Switch":
-   60|      1|         return "switch"
-   61|     16|       case "3DS":
-   62|      1|         return "3ds"
-   63|     16|       case "X360":
-   64|      1|         return "xbox360"
-   65|     16|       case "WIIU":
-   66|      1|         return "wii-u"
-   67|     16|       case "VITA":
-   68|      1|         return "playstation-vita"
-   69|     16|       case "PSP":
-   70|      1|         return "psp"
-   71|     16|       case "GBA":
-   72|      1|         return "game-boy-advance"
-   73|     16|       case "PS2":
-   74|      1|         return "playstation-2"
-   75|     16|       case "PS3":
-   76|      1|         return "playstation-3"
-   77|     16|       case "DS":
-   78|      1|         return "ds"
-   79|     16|       case "iOS":
-   80|      1|       return "ios"
-   81|     16|       default:
-   82|      1|         print(gamePlatform)
-   83|      1|        return gamePlatform
-   84|     16|     }
-   85|     16|//    swiftlint was disabled in this function as it displayed a warning saying the switch statement is too complex
-   86|     16|    // swiftlint:enable cyclomatic_complexity
-   87|     16|  }
-   88|       |//  this gets the individual game information
-   89|      0|   public func getGameInfo( completionHandler: @escaping( Result<Game, Gameinfoerror>) -> Void) {
-   90|      0|//    create the initial request for the data using API documentation
-   91|      0|    let formattedplatform = formatplatformstring(stringtoformat: gamePlatform)
-   92|      0|    let request = NSMutableURLRequest(url: NSURL(
-   93|      0|      string: "https://chicken-coop.p.rapidapi.com/games" +
-   94|      0|      "/\(searchItem.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")" +
-   95|      0|        "?platform=\(formattedplatform.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")" +
-   96|      0|      "")! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
-   97|      0|    request.httpMethod = "GET"
-   98|      0|    request.allHTTPHeaderFields = headers
-   99|      0|//    create the session
-  100|      0|    let session = URLSession.shared
-  101|      0|//    make the call an get the data
-  102|      0|    let dataTask = session.dataTask(with: request as URLRequest) { data, _, _ in
-  103|      0|      guard let jsonData = data else {
-  104|      0|        completionHandler(.failure(.noDataAvailable))
-  105|      0|        return
-  106|      0|      }
-  107|      0|      do {
-  108|      0|        let decoder = JSONDecoder()
-  109|      0|        let gameresponse = try decoder.decode(Gameresponse.self, from: jsonData)
-  110|      0|//        gameresponsedetails contain all the information of the game
-  111|      0|        let gameresponsedetails = gameresponse.result
-  112|      0|        completionHandler(.success(gameresponsedetails))
-  113|      0|        //the previous line allows values obtained when doing async instructions to be returned
-  114|      0|        } catch {
-  115|      0|          print(jsonData)
-  116|      0|          completionHandler(.failure(.canNotProcessData))
-  117|      0|        }
-  118|      0|      }
-  119|      0|    dataTask.resume()
-  120|      0|  }
-  121|       |
-  122|       |//  this function gets the list of games
-  123|      0|   public func getGameList(completionHandler: @escaping(Result<GameList, Gameinfoerror>) -> Void) {
-  124|      0|//    remember to format the search item to support spaces in url format
-  125|      0|    let request = NSMutableURLRequest(url: NSURL(string:
-  126|      0|    "https://chicken-coop.p.rapidapi.com/games?title=" +
-  127|      0|      "\(searchItem.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")" +
-  128|      0|      "")! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
-  129|      0|    request.httpMethod = "GET"
-  130|      0|    request.allHTTPHeaderFields = headers
-  131|      0|    let session = URLSession.shared
-  132|      0|    let dataTask = session.dataTask(with: request as URLRequest) { data, _, _ in
-  133|      0|      guard let jsonData = data else {
-  134|      0|        completionHandler(.failure(.noDataAvailable))
-  135|      0|        return
-  136|      0|      }
-  137|      0|      do {
-  138|      0|        let decoder = JSONDecoder()
-  139|      0|        let gamelistresponse = try decoder.decode(GameList.self, from: jsonData)
-  140|      0|        completionHandler(.success(gamelistresponse))
-  141|      0|      } catch {
-  142|      0|        print(jsonData)
-  143|      0|        completionHandler(.failure(.canNotProcessData))
-  144|      0|      }
-  145|      0|    }
-  146|      0|    dataTask.resume()
-  147|      0|  }
-  148|       |}
+   27|       |// swiftlint:disable cyclomatic_complexity
+   28|     16|  func formatplatformstring(stringtoformat: String) -> String {
+   29|     16|    /* here we will have to create a switch ststement for the different consoles in the format origtext -> apicalltext
+   30|     16|          PC -> pc
+   31|     16|          PlayStation 4 -> playstation-4
+   32|     16|          Xbox One -> xbox-one
+   33|     16|          Stadia -> stadia
+   34|     16|          Switch -> switch
+   35|     16|          3DS -> 3ds
+   36|     16|          X360 -> xbox360
+   37|     16|          WIIU -> wii-u
+   38|     16|          VITA -> playstation-vita
+   39|     16|          PSP -> psp
+   40|     16|          GBA -> game-boy-advance
+   41|     16|          PS2 -> playstation-2
+   42|     16|          PS3 -> playstation-3
+   43|     16|          DS -> ds
+   44|     16|       */
+   45|     16|       switch stringtoformat {
+   46|     16|       case "PC":
+   47|      1|       return "pc"
+   48|     16|       case "PS4":
+   49|      1|         return "playstation-4"
+   50|     16|       case "XONE":
+   51|      1|         return "xbox-one"
+   52|     16|       case "Stadia":
+   53|      1|         return "stadia"
+   54|     16|       case "Switch":
+   55|      1|         return "switch"
+   56|     16|       case "3DS":
+   57|      1|         return "3ds"
+   58|     16|       case "X360":
+   59|      1|         return "xbox360"
+   60|     16|       case "WIIU":
+   61|      1|         return "wii-u"
+   62|     16|       case "VITA":
+   63|      1|         return "playstation-vita"
+   64|     16|       case "PSP":
+   65|      1|         return "psp"
+   66|     16|       case "GBA":
+   67|      1|         return "game-boy-advance"
+   68|     16|       case "PS2":
+   69|      1|         return "playstation-2"
+   70|     16|       case "PS3":
+   71|      1|         return "playstation-3"
+   72|     16|       case "DS":
+   73|      1|         return "ds"
+   74|     16|       case "iOS":
+   75|      1|       return "ios"
+   76|     16|       default:
+   77|      1|         print(gamePlatform)
+   78|      1|        return gamePlatform
+   79|     16|     }
+   80|     16|//    swiftlint was disabled in this function as it displayed a warning saying the switch statement is too complex
+   81|     16|    // swiftlint:enable cyclomatic_complexity
+   82|     16|  }
+   83|       |//  this gets the individual game information
+   84|      0|   public func getGameInfo( completionHandler: @escaping( Result<Game, Gameinfoerror>) -> Void) {
+   85|      0|//    create the initial request for the data using API documentation
+   86|      0|    let formattedplatform = formatplatformstring(stringtoformat: gamePlatform)
+   87|      0|    let request = NSMutableURLRequest(url: NSURL(
+   88|      0|      string: "https://chicken-coop.p.rapidapi.com/games" +
+   89|      0|      "/\(searchItem.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")" +
+   90|      0|        "?platform=\(formattedplatform.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")" +
+   91|      0|      "")! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+   92|      0|    request.httpMethod = "GET"
+   93|      0|    request.allHTTPHeaderFields = headers
+   94|      0|//    create the session
+   95|      0|    let session = URLSession.shared
+   96|      0|//    make the call an get the data
+   97|      0|    let dataTask = session.dataTask(with: request as URLRequest) { data, _, _ in
+   98|      0|      guard let jsonData = data else {
+   99|      0|        completionHandler(.failure(.noDataAvailable))
+  100|      0|        return
+  101|      0|      }
+  102|      0|      do {
+  103|      0|        let decoder = JSONDecoder()
+  104|      0|        let gameresponse = try decoder.decode(Gameresponse.self, from: jsonData)
+  105|      0|//        gameresponsedetails contain all the information of the game
+  106|      0|        let gameresponsedetails = gameresponse.result
+  107|      0|        completionHandler(.success(gameresponsedetails))
+  108|      0|        //the previous line allows values obtained when doing async instructions to be returned
+  109|      0|        } catch {
+  110|      0|          print(jsonData)
+  111|      0|          completionHandler(.failure(.canNotProcessData))
+  112|      0|        }
+  113|      0|      }
+  114|      0|    dataTask.resume()
+  115|      0|  }
+  116|       |
+  117|       |//  this function gets the list of games
+  118|      0|   public func getGameList(completionHandler: @escaping(Result<GameList, Gameinfoerror>) -> Void) {
+  119|      0|//    remember to format the search item to support spaces in url format
+  120|      0|    let request = NSMutableURLRequest(url: NSURL(string:
+  121|      0|    "https://chicken-coop.p.rapidapi.com/games?title=" +
+  122|      0|      "\(searchItem.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")" +
+  123|      0|      "")! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+  124|      0|    request.httpMethod = "GET"
+  125|      0|    request.allHTTPHeaderFields = headers
+  126|      0|    let session = URLSession.shared
+  127|      0|    let dataTask = session.dataTask(with: request as URLRequest) { data, _, _ in
+  128|      0|      guard let jsonData = data else {
+  129|      0|        completionHandler(.failure(.noDataAvailable))
+  130|      0|        return
+  131|      0|      }
+  132|      0|      do {
+  133|      0|        let decoder = JSONDecoder()
+  134|      0|        let gamelistresponse = try decoder.decode(GameList.self, from: jsonData)
+  135|      0|        completionHandler(.success(gamelistresponse))
+  136|      0|      } catch {
+  137|      0|        print(jsonData)
+  138|      0|        completionHandler(.failure(.canNotProcessData))
+  139|      0|      }
+  140|      0|    }
+  141|      0|    dataTask.resume()
+  142|      0|  }
+  143|       |}
 
 /Users/amadanlal/Desktop/TechReadsPod/TechReadsPod/viewModel/GameInfoProcess.swift:
     1|       |//
@@ -226,46 +221,46 @@
     8|       |import UIKit
     9|       |import Foundation
    10|       |
-   11|      0|public func todisplay(gamemodel: Game, titlelabel: UILabel, textview: UITextView, imageplace: UIImageView) {
-   12|      0|     titlelabel.text = gamemodel.title
-   13|      0| //this part formats the different string arrays better
-   14|      0|     var simplifiedgenrestring = ""
-   15|      0|     for gen in gamemodel.genre {
-   16|      0|       if gen == gamemodel.genre[gamemodel.genre.count-1] {
-   17|      0|           simplifiedgenrestring += gen
-   18|      0|         } else {
-   19|      0|           simplifiedgenrestring += gen + ", "
-   20|      0|         }
-   21|      0|       }
-   22|      0|     var simplifiedpublisherstring = ""
-   23|      0|     for pub in gamemodel.publisher {
-   24|      0|     if pub == gamemodel.publisher[gamemodel.publisher.count-1] {
-   25|      0|         simplifiedpublisherstring += pub
-   26|      0|       } else {
-   27|      0|         simplifiedpublisherstring += pub + ", "
-   28|      0|       }
-   29|      0|     }
-   30|      0|     var simplifiedconsolestring = ""
-   31|      0|     for console in gamemodel.alsoAvailableOn {
-   32|      0|     if console == gamemodel.alsoAvailableOn[gamemodel.alsoAvailableOn.count-1] {
-   33|      0|         simplifiedconsolestring += console
-   34|      0|       } else {
-   35|      0|         simplifiedconsolestring += console + ", "
-   36|      0|       }
-   37|      0|     }
-   38|      0| //the next string contains the content to be shown to the user in a specific format
-   39|      0|     let fulltext = """
-   40|      0|     Release Date: \(gamemodel.releaseDate)
-   41|      0|     Genres: \(simplifiedgenrestring)
-   42|      0|     Developer: \(gamemodel.developer)
-   43|      0|     Publisher: \(simplifiedpublisherstring)
-   44|      0|     Also Available on: \(simplifiedconsolestring)
-   45|      0|     Rating: \(gamemodel.rating)
-   46|      0|     Description: \(gamemodel.description)
-   47|      0|     Score: \(gamemodel.score)
-   48|      0|     """
-   49|      0| //    this is to load the image onto the page
-   50|      0|     guard let imageURL = URL(string: gamemodel.image) else { return }
+   11|      1|public func todisplay(gamemodel: Game, titlelabel: UILabel, textview: UITextView, imageplace: UIImageView) {
+   12|      1|     titlelabel.text = gamemodel.title
+   13|      1| //this part formats the different string arrays better
+   14|      1|     var simplifiedgenrestring = ""
+   15|      3|     for gen in gamemodel.genre {
+   16|      3|       if gen == gamemodel.genre[gamemodel.genre.count-1] {
+   17|      1|           simplifiedgenrestring += gen
+   18|      3|         } else {
+   19|      2|           simplifiedgenrestring += gen + ", "
+   20|      3|         }
+   21|      3|       }
+   22|      1|     var simplifiedpublisherstring = ""
+   23|      2|     for pub in gamemodel.publisher {
+   24|      2|     if pub == gamemodel.publisher[gamemodel.publisher.count-1] {
+   25|      1|         simplifiedpublisherstring += pub
+   26|      2|       } else {
+   27|      1|         simplifiedpublisherstring += pub + ", "
+   28|      2|       }
+   29|      2|     }
+   30|      1|     var simplifiedconsolestring = ""
+   31|      2|     for console in gamemodel.alsoAvailableOn {
+   32|      2|     if console == gamemodel.alsoAvailableOn[gamemodel.alsoAvailableOn.count-1] {
+   33|      1|         simplifiedconsolestring += console
+   34|      2|       } else {
+   35|      1|         simplifiedconsolestring += console + ", "
+   36|      2|       }
+   37|      2|     }
+   38|      1| //the next string contains the content to be shown to the user in a specific format
+   39|      1|     let fulltext = """
+   40|      1|     Release Date: \(gamemodel.releaseDate)
+   41|      1|     Genres: \(simplifiedgenrestring)
+   42|      1|     Developer: \(gamemodel.developer)
+   43|      1|     Publisher: \(simplifiedpublisherstring)
+   44|      1|     Also Available on: \(simplifiedconsolestring)
+   45|      1|     Rating: \(gamemodel.rating)
+   46|      1|     Description: \(gamemodel.description)
+   47|      1|     Score: \(gamemodel.score)
+   48|      1|     """
+   49|      1| //    this is to load the image onto the page
+   50|      1|     guard let imageURL = URL(string: gamemodel.image) else { return }
    51|      0|     DispatchQueue.global().async {
    52|      0|         guard let imageData = try? Data(contentsOf: imageURL) else { return }
    53|      0|         let image = UIImage(data: imageData)
