@@ -7,7 +7,35 @@
 		<key>Tech Reads.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Tech ReadsTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>4</integer>
+		</dict>
+		<key>Tech ReadsUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D3DBEC6423E98180003EBFDC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D3DBEC7A23E98180003EBFDC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D3DBEC8523E98180003EBFDC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
