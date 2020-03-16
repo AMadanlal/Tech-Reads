@@ -182,14 +182,13 @@
 		D3DBEC6723E98180003EBFDC /* Tech Reads */ = {
 			isa = PBXGroup;
 			children = (
+				D3F62E96241F5012002F5398 /* ProjectStoryboard */,
 				D3A451762418A2FF0017C53A /* TechReview */,
 				D3A451752418A2CD0017C53A /* SearchFunction */,
 				D3A451742418A2870017C53A /* Preferences */,
 				D3A451732418A25F0017C53A /* GameReview */,
 				D3DBEC6823E98180003EBFDC /* AppDelegate.swift */,
 				D3DBEC6A23E98180003EBFDC /* SceneDelegate.swift */,
-				D3DBEC6C23E98180003EBFDC /* ViewController.swift */,
-				D3DBEC6E23E98180003EBFDC /* Main.storyboard */,
 				D3DBEC7123E98180003EBFDC /* Assets.xcassets */,
 				D3DBEC7323E98180003EBFDC /* LaunchScreen.storyboard */,
 				D3DBEC7623E98180003EBFDC /* Info.plist */,
@@ -213,6 +212,15 @@
 				D3DBEC8C23E98180003EBFDC /* Info.plist */,
 			);
 			path = "Tech ReadsUITests";
+			sourceTree = "<group>";
+		};
+		D3F62E96241F5012002F5398 /* ProjectStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				D3DBEC6C23E98180003EBFDC /* ViewController.swift */,
+				D3DBEC6E23E98180003EBFDC /* Main.storyboard */,
+			);
+			path = ProjectStoryboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
