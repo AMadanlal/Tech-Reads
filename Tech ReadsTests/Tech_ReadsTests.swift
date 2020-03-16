@@ -20,7 +20,7 @@ class TechReadsTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testRetrievingURLPath() {
         // This is an example of a functional test case.
       let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
       let pathreturned = path[0]

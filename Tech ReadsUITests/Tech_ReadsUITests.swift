@@ -20,18 +20,33 @@ class TechReadsUITests: XCTestCase {
   func testGameReview() {
     application.launch()
     application.buttons["General game reviews"].tap()
-    sleep(5)
-    XCTAssert(application.buttons["Back"].exists)
+    sleep(7)
+    application.buttons["Back"].tap()
+    XCTAssert(application.buttons["General game reviews"].exists)
   }
 
-    func testExample() {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+  func testsearchingfunction() {
+    application.launch()
+    application.buttons["Search Game or Tech"].tap()
+    application.textFields["game or tech name"].tap()
+    application.keys["b"].tap()
+    application.keys["o"].tap()
+    application.keys["r"].tap()
+    application.keys["d"].tap()
+    application.keys["e"].tap()
+    application.keys["r"].tap()
+    application.keys["l"].tap()
+    application.keys["a"].tap()
+    application.keys["n"].tap()
+    application.keys["d"].tap()
+    application.keys["s"].tap()
+    application.buttons["Search"].tap()
+    sleep(7)
+    application.staticTexts["Borderlands 3 , on console: PS4"].tap()
+    sleep(7)
+    application.buttons["Back"].tap()
+    XCTAssert(application.buttons["Search Game or Tech"].exists)
+  }
 
 //    func testLaunchPerformance() {
 //        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
