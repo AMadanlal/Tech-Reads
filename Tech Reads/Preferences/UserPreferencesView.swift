@@ -45,7 +45,7 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
       performSegue(withIdentifier: "genrepopup", sender: self)
     }
 //    this is a helper function that finds the URL path to where the app can store data
-    func getDocumentsDirectory() -> URL {
+    public func getDocumentsDirectory() -> URL {
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return path[0]
     }

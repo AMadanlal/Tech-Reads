@@ -10,9 +10,10 @@ import XCTest
 @testable import Tech_Reads
 
 class TechReadsTests: XCTestCase {
-
+  var preferencesClass: UserPreferencesController!
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+      preferencesClass = UserPreferencesController()
     }
 
     override func tearDown() {
@@ -23,7 +24,8 @@ class TechReadsTests: XCTestCase {
         // This is an example of a functional test case.
       let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
       let pathreturned = path[0]
-        XCTAssertEqual(getDocumentsDirectory(), pathreturned)
+      let savepath = preferencesClass.getDocumentsDirectory()
+      XCTAssertEqual(savepath, pathreturned)
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
