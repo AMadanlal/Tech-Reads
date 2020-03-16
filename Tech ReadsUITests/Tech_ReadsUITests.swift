@@ -48,12 +48,11 @@ class TechReadsUITests: XCTestCase {
     XCTAssert(application.buttons["Search Game or Tech"].exists)
   }
 
-//    func testLaunchPerformance() {
-//        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-//            // This measures how long it takes to launch your application.
-//            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-//                XCUIApplication().launch()
-//            }
-//        }
-//    }
+  func testUserPreferences() {
+    application.launch()
+    application.buttons["User Preferences"].tap()
+    application.pickerWheels.element.adjust(toPickerWheelValue: "PC")
+    application.buttons["Save Preferences"].tap()
+    XCTAssertEqual(application.staticTexts.element(matching: .any, identifier: "lblpreference").label, "PC")
+  }
 }

@@ -21,7 +21,8 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
     override func viewDidLoad() {
          super.viewDidLoad()
          // Do any additional setup after loading the view.
-         mainPrefLabel.font=UIFont.italicSystemFont(ofSize: 35) //change the font of the main label
+      lblCurrentMedium.accessibilityIdentifier = "lblpreference"
+      mainPrefLabel.font=UIFont.italicSystemFont(ofSize: 35) //change the font of the main label
          mediumLbl.font = UIFont.italicSystemFont(ofSize: 20)
          genreLbl.font = UIFont.italicSystemFont(ofSize: 20)
          mainPrefLabel.numberOfLines = 2
