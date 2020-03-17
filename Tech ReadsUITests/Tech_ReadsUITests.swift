@@ -29,6 +29,7 @@ class TechReadsUITests: XCTestCase {
     application.launch()
     application.buttons["Search Game or Tech"].tap()
     application.textFields["game or tech name"].tap()
+    sleep(1)
     application.keys["b"].tap()
     application.keys["o"].tap()
     application.keys["r"].tap()
