@@ -9,36 +9,51 @@
 import XCTest
 
 class TechReadsUITests: XCTestCase {
-
+  var application: XCUIApplication!
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation
-//            - required for your tests before they run. The setUp method is a good place to do this.
+        application = XCUIApplication()
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+  func testGameReview() {
+    application.launch()
+    application.buttons["General game reviews"].tap()
+    sleep(7)
+    application.buttons["Back"].tap()
+    XCTAssert(application.buttons["General game reviews"].exists)
+  }
 
-    func testExample() {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
+  func testsearchingfunction() {
+    application.launch()
+    application.buttons["Search Game or Tech"].tap()
+    application.textFields["game or tech name"].tap()
+    application.textFields["game or tech name"].typeText("borderlands")
+//    application.keys["b"].tap()
+//    application.keys["o"].tap()
+//    application.keys["r"].tap()
+//    application.keys["d"].tap()
+//    application.keys["e"].tap()
+//    application.keys["r"].tap()
+//    application.keys["l"].tap()
+//    application.keys["a"].tap()
+//    application.keys["n"].tap()
+//    application.keys["d"].tap()
+//    application.keys["s"].tap()
+    application.buttons["Search"].tap()
+    sleep(7)
+    application.staticTexts["Borderlands 3 , on console: PS4"].tap()
+    sleep(7)
+    application.buttons["Back"].tap()
+    XCTAssert(application.buttons["Search Game or Tech"].exists)
+  }
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testLaunchPerformance() {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
-        }
-    }
+  func testUserPreferences() {
+    application.launch()
+    application.buttons["User Preferences"].tap()
+    application.pickerWheels.element.adjust(toPickerWheelValue: "PC")
+    application.buttons["Save Preferences"].tap()
+    XCTAssertEqual(application.staticTexts.element(matching: .any, identifier: "lblpreference").label, "PC")
+  }
 }

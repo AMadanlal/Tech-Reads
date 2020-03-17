@@ -21,7 +21,8 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
     override func viewDidLoad() {
          super.viewDidLoad()
          // Do any additional setup after loading the view.
-         mainPrefLabel.font=UIFont.italicSystemFont(ofSize: 35) //change the font of the main label
+      lblCurrentMedium.accessibilityIdentifier = "lblpreference"
+      mainPrefLabel.font=UIFont.italicSystemFont(ofSize: 35) //change the font of the main label
          mediumLbl.font = UIFont.italicSystemFont(ofSize: 20)
          genreLbl.font = UIFont.italicSystemFont(ofSize: 20)
          mainPrefLabel.numberOfLines = 2
@@ -45,7 +46,7 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
       performSegue(withIdentifier: "genrepopup", sender: self)
     }
 //    this is a helper function that finds the URL path to where the app can store data
-    func getDocumentsDirectory() -> URL {
+    public func getDocumentsDirectory() -> URL {
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return path[0]
     }
