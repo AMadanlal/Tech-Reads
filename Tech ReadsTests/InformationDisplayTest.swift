@@ -30,9 +30,9 @@ class InformationDisplayTest: XCTestCase {
                     print(error)
                   case.success(let details):
                       gameinfo = details
-                      print(details)
-                          todisplay(gamemodel: gameinfo, titlelabel: self.titlelabel, textview: self.textview,
-                                    imageplace: self.imageplace)
+                      let displayclass = DisplayClass(gameM: gameinfo, lbltitle: self.titlelabel,
+                                                      txtView: self.textview, imgView: self.imageplace)
+                      displayclass.todisplay()
                           XCTAssertEqual(self.titlelabel.text, gameinfo.title)
           }
         }
