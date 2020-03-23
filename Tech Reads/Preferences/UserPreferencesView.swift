@@ -70,7 +70,7 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
       //        this line to go get the string value from the pickerview
           let answer: String = consoles[pickerView.selectedRow(inComponent: 0)]
 //          lblCurrentMedium.text = answer
-//      saving the medium using a function from the pod and in obj-c
+//      saving the medium using a function from the pod in obj-c
         savemedium(medium: answer)
         switch loadmedium() {
         case "䅮":
