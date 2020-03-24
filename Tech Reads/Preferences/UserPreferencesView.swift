@@ -30,23 +30,24 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
          pickerView.delegate = self
          pickerView.dataSource = self
       pickerView.setValue(UIColor.blue, forKey: "textColor")
+       lblCurrentMedium.text = loadmedium()
 //      this function is from the pod
-       switch loadmedium() {
-       case "䅮":
-         lblCurrentMedium.text = "Any"
-       case "偃":
-         lblCurrentMedium.text = "PC"
-       case "塂佘⁏久":
-         lblCurrentMedium.text = "XBOX ONE"
-       case "偓":
-         lblCurrentMedium.text = "PS4"
-       case "义乔䕎䑏⁓坉呃":
-         lblCurrentMedium.text = "NINTENDO SWITCH"
-       case "䵏䉉䱅":
-         lblCurrentMedium.text = "MOBILE"
-       default:
-       print(loadmedium())
-  }
+//       switch loadmedium() {
+//       case "䅮":
+//         lblCurrentMedium.text = "Any"
+//       case "偃":
+//         lblCurrentMedium.text = "PC"
+//       case "塂佘⁏久":
+//         lblCurrentMedium.text = "XBOX ONE"
+//       case "偓":
+//         lblCurrentMedium.text = "PS4"
+//       case "义乔䕎䑏⁓坉呃":
+//         lblCurrentMedium.text = "NINTENDO SWITCH"
+//       case "䵏䉉䱅":
+//         lblCurrentMedium.text = "MOBILE"
+//       default:
+//       print(loadmedium())
+//  }
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -72,22 +73,23 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
 //          lblCurrentMedium.text = answer
 //      saving the medium using a function from the pod in obj-c
         savemedium(medium: answer)
-        switch loadmedium() {
-        case "䅮":
-          lblCurrentMedium.text = "Any"
-        case "偃":
-          lblCurrentMedium.text = "PC"
-        case "塂佘⁏久":
-          lblCurrentMedium.text = "XBOX ONE"
-        case "偓":
-          lblCurrentMedium.text = "PS4"
-        case "义乔䕎䑏⁓坉呃":
-          lblCurrentMedium.text = "NINTENDO SWITCH"
-        case "䵏䉉䱅":
-          lblCurrentMedium.text = "MOBILE"
-        default:
-        print(loadmedium())
-      }
+      lblCurrentMedium.text = loadmedium()
+//        switch loadmedium() {
+//        case "䅮":
+//          lblCurrentMedium.text = "Any"
+//        case "偃":
+//          lblCurrentMedium.text = "PC"
+//        case "塂佘⁏久":
+//          lblCurrentMedium.text = "XBOX ONE"
+//        case "偓":
+//          lblCurrentMedium.text = "PS4"
+//        case "义乔䕎䑏⁓坉呃":
+//          lblCurrentMedium.text = "NINTENDO SWITCH"
+//        case "䵏䉉䱅":
+//          lblCurrentMedium.text = "MOBILE"
+//        default:
+//        print(loadmedium())
+//      }
     }
 }
 
