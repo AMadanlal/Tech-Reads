@@ -54,6 +54,7 @@ class TechReadsUITests: XCTestCase {
     application.buttons["User Preferences"].tap()
     application.pickerWheels.element.adjust(toPickerWheelValue: "PC")
     application.buttons["Save Preferences"].tap()
+    sleep(1)
     XCTAssertEqual(application.staticTexts.element(matching: .any, identifier: "lblpreference").label, "PC")
   }
 }

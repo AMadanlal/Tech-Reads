@@ -17,7 +17,6 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var genreLbl: UILabel!
     @IBOutlet weak var lblCurrentMedium: UILabel!
-  //let file = "UserMedium.txt" //this is the name of the file
     override func viewDidLoad() {
          super.viewDidLoad()
          // Do any additional setup after loading the view.
@@ -30,8 +29,7 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
          pickerView.delegate = self
          pickerView.dataSource = self
       pickerView.setValue(UIColor.blue, forKey: "textColor")
-//      this function is from the pod
-      lblCurrentMedium.text = loadmedium()
+       lblCurrentMedium.text = loadmedium() //      this function is implemented in the pod in obj-c
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -53,10 +51,9 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
 //    this button is used to save the user preferences and go back to the previous page
     @IBAction func btnSavePref(_ sender: UIButton) {
       //        this line to go get the string value from the pickerview
-          let answer: String = consoles[pickerView.selectedRow(inComponent: 0)]
-          lblCurrentMedium.text = answer
-//      saving the medium using a function from the pod
-          savemedium(medium: answer)
+        let answer: String = consoles[pickerView.selectedRow(inComponent: 0)]
+        savemedium(medium: answer)
+      lblCurrentMedium.text = loadmedium()
     }
 }
 

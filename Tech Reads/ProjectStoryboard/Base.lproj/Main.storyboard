@@ -710,7 +710,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egp-aq-bKt">
                                                         <rect key="frame" x="0.0" y="20.333333333333371" width="382" height="20.333333333333329"/>
                                                         <attributedString key="attributedText">
-                                                            <fragment content="game medium here">
+                                                            <fragment content="PC">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.091803856194019318" green="0.18693625926971436" blue="0.48673385381698608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" metaFont="system" size="17"/>
@@ -771,7 +771,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLF-Vi-JLI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3351" y="870"/>
+            <point key="canvasLocation" x="3350.7246376811595" y="869.86607142857144"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
