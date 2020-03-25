@@ -11,38 +11,38 @@ import XCTest
 @testable import TechReadsPod
 
 class InformationDisplayTest: XCTestCase {
-  var titlelabel: UILabel!
-  var textview: UITextView!
-  var imageplace: UIImageView!
+  var titleLabel: UILabel!
+  var textView: UITextView!
+  var imagePlace: UIImageView!
 
   override func setUp() {
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    titlelabel = UILabel()
-    textview = UITextView()
-    imageplace = UIImageView()
+    titleLabel = UILabel()
+    textView = UITextView()
+    imagePlace = UIImageView()
   }
   func testDisplay() {
     let mockAPI = ChickenCoopMockAPI()
-    var gameinfo = Game()
+    var gameInfo = Game()
     mockAPI.getGameInfo { result in
                   switch result {
                   case .failure(let error):
                     print(error)
                   case.success(let details):
-                      gameinfo = details
-                      let displayclass = DisplayClass(gameM: gameinfo, lbltitle: self.titlelabel,
-                                                      txtView: self.textview, imgView: self.imageplace)
-                      displayclass.todisplay()
-                          XCTAssertEqual(self.titlelabel.text, gameinfo.title)
+                      gameInfo = details
+                      let displayClass = DisplayClass(gameM: gameInfo, lblTitle: self.titleLabel,
+                                                      txtView: self.textView, imgView: self.imagePlace)
+                      displayClass.todisplay()
+                          XCTAssertEqual(self.titleLabel.text, gameInfo.title)
           }
         }
       }
 
      override func tearDown() {
           // Put teardown code here. This method is called after the invocation of each test method in the class.
-      titlelabel = nil
-      textview = nil
-      imageplace = nil
+      titleLabel = nil
+      textView = nil
+      imagePlace = nil
       }
 
 }

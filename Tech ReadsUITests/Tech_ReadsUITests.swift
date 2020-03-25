@@ -12,7 +12,6 @@ class TechReadsUITests: XCTestCase {
   var application: XCUIApplication!
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         application = XCUIApplication()
     }
@@ -30,17 +29,6 @@ class TechReadsUITests: XCTestCase {
     application.buttons["Search Game or Tech"].tap()
     application.textFields["game or tech name"].tap()
     application.textFields["game or tech name"].typeText("borderlands")
-//    application.keys["b"].tap()
-//    application.keys["o"].tap()
-//    application.keys["r"].tap()
-//    application.keys["d"].tap()
-//    application.keys["e"].tap()
-//    application.keys["r"].tap()
-//    application.keys["l"].tap()
-//    application.keys["a"].tap()
-//    application.keys["n"].tap()
-//    application.keys["d"].tap()
-//    application.keys["s"].tap()
     application.buttons["Search"].tap()
     sleep(7)
     application.staticTexts["Borderlands 3 , on console: PS4"].tap()
