@@ -1,12 +1,13 @@
 //
 //  ChickenCoopMockAPI.swift
-//  Tech Reads
+//  Tech ReadsTests
 //
-//  Created by Akshar Madanlal on 2020/03/17.
+//  Created by Akshar Madanlal on 2020/03/26.
 //  Copyright © 2020 Akshar Madanlal. All rights reserved.
 //
 
 import Foundation
+import XCTest
 import TechReadsPod
 
 public class ChickenCoopMockAPI {
