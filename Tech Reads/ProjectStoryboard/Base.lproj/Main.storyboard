@@ -743,7 +743,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="btnSave:" destination="28g-Z8-DkQ" eventType="touchUpInside" id="7cM-t8-M8f"/>
-                                                    <action selector="btnSavePref:" destination="28g-Z8-DkQ" eventType="touchUpInside" id="Y2X-sc-l1g"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -765,7 +764,6 @@
                     <connections>
                         <outlet property="GenreLbl" destination="E89-OQ-4Z5" id="tsy-bk-7Ms"/>
                         <outlet property="MainPrefLabel" destination="RyC-Z7-UXk" id="676-nl-kou"/>
-                        <outlet property="btnSavePreferences" destination="2h3-vr-OaN" id="a75-7Q-e5K"/>
                         <outlet property="lblCurrentMedium" destination="egp-aq-bKt" id="gq3-u1-5QQ"/>
                         <outlet property="mediumLbl" destination="Gd3-dJ-TaT" id="jCe-aJ-jOZ"/>
                         <outlet property="pickerView" destination="GjS-bF-zS3" id="ahW-nA-rFs"/>

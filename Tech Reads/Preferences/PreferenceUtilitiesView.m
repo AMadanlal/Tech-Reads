@@ -29,9 +29,12 @@
   
 }
 
+//this function was ment to go to the add genre page
+//@IBAction func btnGenreAdd(_ sender: UIButton) {
+//     performSegue(withIdentifier: "genrepopup", sender: self)
+
 - (IBAction)btnSave:(UIButton *)sender {
-//   NSString *answer = self.consoles[pickerView.selectedRow(inComponent: 0)];
-    NSString *answer = @"Hello"; //just for testing
+  NSString *answer = self.consoles[[self.pickerView selectedRowInComponent:0]];
     PreferenceUtilities* utilities =  [[PreferenceUtilities alloc] init];
     [utilities saveMediumWithSavingPref:answer];
     self.lblCurrentMedium.text = [self.savingClass LoadMedium];

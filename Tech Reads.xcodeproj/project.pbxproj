@@ -16,7 +16,7 @@
 		D35FDA532420DB7700170B93 /* InformationDisplayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35FDA522420DB7700170B93 /* InformationDisplayTest.swift */; };
 		D368A43823EBF5130090A80F /* GameReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43723EBF5130090A80F /* GameReviewView.swift */; };
 		D368A43A23EBF6730090A80F /* GameSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43923EBF6730090A80F /* GameSearchView.swift */; };
-		D368A43E23EBF80E0090A80F /* UserPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43D23EBF80E0090A80F /* UserPreferencesView.swift */; };
+		D368A43E23EBF80E0090A80F /* AddGenreScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43D23EBF80E0090A80F /* AddGenreScene.swift */; };
 		D368A44023EC363D0090A80F /* GeneralTechReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43F23EC363D0090A80F /* GeneralTechReviewView.swift */; };
 		D3DBEC6923E98180003EBFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC6823E98180003EBFDC /* AppDelegate.swift */; };
 		D3DBEC6B23E98180003EBFDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC6A23E98180003EBFDC /* SceneDelegate.swift */; };
@@ -24,7 +24,6 @@
 		D3DBEC7023E98180003EBFDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DBEC6E23E98180003EBFDC /* Main.storyboard */; };
 		D3DBEC7223E98180003EBFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3DBEC7123E98180003EBFDC /* Assets.xcassets */; };
 		D3DBEC7523E98180003EBFDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DBEC7323E98180003EBFDC /* LaunchScreen.storyboard */; };
-		D3DBEC8023E98180003EBFDC /* Tech_ReadsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC7F23E98180003EBFDC /* Tech_ReadsTests.swift */; };
 		D3DBEC8B23E98180003EBFDC /* Tech_ReadsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC8A23E98180003EBFDC /* Tech_ReadsUITests.swift */; };
 		F8AFAA22CCCF51B7881916E5 /* Pods_Tech_ReadsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D47E4007AC267583CE279B /* Pods_Tech_ReadsTests.framework */; };
 		FACB67C45D519B26ADCCD2E5 /* Pods_Tech_Reads_Tech_ReadsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B13E60D858CFE31028503D /* Pods_Tech_Reads_Tech_ReadsUITests.framework */; };
@@ -66,7 +65,7 @@
 		D35FDA522420DB7700170B93 /* InformationDisplayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationDisplayTest.swift; sourceTree = "<group>"; };
 		D368A43723EBF5130090A80F /* GameReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReviewView.swift; sourceTree = "<group>"; };
 		D368A43923EBF6730090A80F /* GameSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSearchView.swift; sourceTree = "<group>"; };
-		D368A43D23EBF80E0090A80F /* UserPreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesView.swift; sourceTree = "<group>"; };
+		D368A43D23EBF80E0090A80F /* AddGenreScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGenreScene.swift; sourceTree = "<group>"; };
 		D368A43F23EC363D0090A80F /* GeneralTechReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTechReviewView.swift; sourceTree = "<group>"; };
 		D3DBEC6523E98180003EBFDC /* Tech Reads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tech Reads.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DBEC6823E98180003EBFDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +76,6 @@
 		D3DBEC7423E98180003EBFDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3DBEC7623E98180003EBFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3DBEC7B23E98180003EBFDC /* Tech ReadsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tech ReadsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3DBEC7F23E98180003EBFDC /* Tech_ReadsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tech_ReadsTests.swift; sourceTree = "<group>"; };
 		D3DBEC8123E98180003EBFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3DBEC8623E98180003EBFDC /* Tech ReadsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tech ReadsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DBEC8A23E98180003EBFDC /* Tech_ReadsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tech_ReadsUITests.swift; sourceTree = "<group>"; };
@@ -147,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				D32D0697242C8CA5002A8647 /* Tech Reads-Bridging-Header.h */,
-				D368A43D23EBF80E0090A80F /* UserPreferencesView.swift */,
+				D368A43D23EBF80E0090A80F /* AddGenreScene.swift */,
 				D32D0698242C8CA6002A8647 /* PreferenceUtilitiesView.m */,
 				D32D069A242C8CCC002A8647 /* PreferenceUtillitiesView.h */,
 			);
@@ -213,7 +211,6 @@
 		D3DBEC7E23E98180003EBFDC /* Tech ReadsTests */ = {
 			isa = PBXGroup;
 			children = (
-				D3DBEC7F23E98180003EBFDC /* Tech_ReadsTests.swift */,
 				D3DBEC8123E98180003EBFDC /* Info.plist */,
 				D305B7602420D484007C8F53 /* ChickenCoopMockAPI.swift */,
 				D35FDA502420D75400170B93 /* TextProcessingTests.swift */,
@@ -498,7 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D368A43E23EBF80E0090A80F /* UserPreferencesView.swift in Sources */,
+				D368A43E23EBF80E0090A80F /* AddGenreScene.swift in Sources */,
 				D3DBEC6D23E98180003EBFDC /* ViewController.swift in Sources */,
 				D368A44023EC363D0090A80F /* GeneralTechReviewView.swift in Sources */,
 				D33999B523FBC33A009E1811 /* SearchResultsTableView.swift in Sources */,
@@ -516,7 +513,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35FDA512420D75400170B93 /* TextProcessingTests.swift in Sources */,
-				D3DBEC8023E98180003EBFDC /* Tech_ReadsTests.swift in Sources */,
 				D305B7622420D484007C8F53 /* ChickenCoopMockAPI.swift in Sources */,
 				D35FDA532420DB7700170B93 /* InformationDisplayTest.swift in Sources */,
 			);
