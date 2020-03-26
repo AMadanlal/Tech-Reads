@@ -24,7 +24,6 @@ class TechReadsTests: XCTestCase {
     let pathreturned = path[0]
     let savepath = preferencesClass.getDocumentsDirectory()
     XCTAssertEqual(savepath, pathreturned)
-      // Use XCTAssert and related functions to verify your tests produce the correct results.
   }
 
     override func tearDown() {

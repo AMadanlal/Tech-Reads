@@ -39,7 +39,7 @@ class GameReviewController: UIViewController {
                   gameinfo = details
                   print(details)
                     DispatchQueue.main.async {
-                      let displayclass = DisplayClass(gameM: gameinfo, lbltitle: self.lblMain,
+                      let displayclass = FormattingDisplayClass(gameM: gameinfo, lblTitle: self.lblMain,
                                                       txtView: self.gameReviewText, imgView: self.imageplace )
                       displayclass.todisplay()
                   }

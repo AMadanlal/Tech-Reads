@@ -29,7 +29,7 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
          pickerView.delegate = self
          pickerView.dataSource = self
       pickerView.setValue(UIColor.blue, forKey: "textColor")
-       lblCurrentMedium.text = loadmedium() //      this function is implemented in the pod in obj-c
+       lblCurrentMedium.text = loadmedium()
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -61,14 +61,13 @@ class AddGenre: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var genrelbl: UILabel!
     @IBOutlet weak var genrelist: UIPickerView!
     @IBOutlet weak var savedgenre: UITextView!
-    //let file = "UserGenres.txt" //this is the name of the file
     let genre = ["Any", "FPS", "Racing", "TPS", "RPG", "Action", "Horror", "Hack-and-Slash"]
   override func viewDidLoad() {
       genrelbl.font=UIFont.italicSystemFont(ofSize: 35)
       genrelist.delegate = self
       genrelist.dataSource = self
       genrelist.setValue(UIColor.blue, forKey: "textColor")
-    //      loading the genre using a function from the pod
+    //      loading the genre
       savedgenre.text = loadGenre()
   }
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
