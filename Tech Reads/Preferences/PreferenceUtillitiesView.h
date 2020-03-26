@@ -20,7 +20,6 @@
 @property (nonatomic, weak) IBOutlet UIPickerView *pickerView;
 @property (nonatomic, strong)NSArray *consoles;
 @property SavingUtilities* savingClass;
-
 - (void)viewDidLoad;
 - (IBAction)btnSave:(UIButton *)sender;
 
