@@ -2,21 +2,21 @@ PODS:
   - TechReadsPod (0.0.1)
 
 DEPENDENCIES:
-  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/ObjetiveCWork`)
+  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/ObjCFeature`)
 
 EXTERNAL SOURCES:
   TechReadsPod:
-    :branch: Feature/ObjetiveCWork
+    :branch: Feature/ObjCFeature
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 CHECKOUT OPTIONS:
   TechReadsPod:
-    :commit: 856957f640bd53f226a02a690baae431e3c300d7
+    :commit: d631efb4b06f35d138b6368bb875e9e6075f66fb
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 SPEC CHECKSUMS:
   TechReadsPod: 0be01cbd7a3bec5f93b5f560c3040b49a68fa61e
 
-PODFILE CHECKSUM: f124a349c49fe07d29ecc623bc331c0cdc6686da
+PODFILE CHECKSUM: eedac901fafbc11215f21d07ceb624d4947ad841
 
 COCOAPODS: 1.9.0
