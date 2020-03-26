@@ -43,11 +43,13 @@ class UserPreferencesController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBAction func btnGenreAdd(_ sender: UIButton) {
       performSegue(withIdentifier: "genrepopup", sender: self)
     }
+
 //    this is a helper function that finds the URL path to where the app can store data
-    public func getDocumentsDirectory() -> URL {
-        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return path[0]
-    }
+//    public func getDocumentsDirectory() -> URL {
+//        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+//        return path[0]
+//    }
+
 //    this button is used to save the user preferences and go back to the previous page
     @IBAction func btnSavePref(_ sender: UIButton) {
       //        this line to go get the string value from the pickerview
