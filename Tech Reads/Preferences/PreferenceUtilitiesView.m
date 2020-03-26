@@ -31,9 +31,9 @@
 
 - (IBAction)btnSave:(UIButton *)sender {
 //   NSString *answer = self.consoles[pickerView.selectedRow(inComponent: 0)];
-  NSString *answer = @"Hello"; //just for testing
-//  PreferenceUtilities* put =  [[PreferenceUtilities alloc] init];
-//    savemedium(medium: answer);
+    NSString *answer = @"Hello"; //just for testing
+    PreferenceUtilities* utilities =  [[PreferenceUtilities alloc] init];
+//  [utilities saveMedium];
     self.lblCurrentMedium.text = [self.savingClass LoadMedium];
 }
 
