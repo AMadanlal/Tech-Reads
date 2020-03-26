@@ -33,7 +33,7 @@
 //   NSString *answer = self.consoles[pickerView.selectedRow(inComponent: 0)];
     NSString *answer = @"Hello"; //just for testing
     PreferenceUtilities* utilities =  [[PreferenceUtilities alloc] init];
-//  [utilities saveMedium];
+    [utilities saveMediumWithSavingPref:answer];
     self.lblCurrentMedium.text = [self.savingClass LoadMedium];
 }
 
