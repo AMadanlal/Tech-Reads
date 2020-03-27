@@ -730,6 +730,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "za.co.dvt.Tech-ReadsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tech Reads/Preferences/Tech Reads-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tech Reads.app/Tech Reads";
@@ -752,6 +753,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "za.co.dvt.Tech-ReadsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tech Reads/Preferences/Tech Reads-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tech Reads.app/Tech Reads";
@@ -772,6 +774,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "za.co.dvt.Tech-ReadsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tech Reads/Preferences/Tech Reads-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Tech Reads";
@@ -792,6 +795,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "za.co.dvt.Tech-ReadsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tech Reads/Preferences/Tech Reads-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Tech Reads";
