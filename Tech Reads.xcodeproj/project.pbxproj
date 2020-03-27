@@ -132,10 +132,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D3A451732418A25F0017C53A /* GameReview */ = {
+		D387DC60242DDD7D00F8A593 /* PreferenceUtilitiesView */ = {
+			isa = PBXGroup;
+			children = (
+				D32D069A242C8CCC002A8647 /* PreferenceUtillitiesView.h */,
+				D32D0698242C8CA6002A8647 /* PreferenceUtilitiesView.m */,
+				D368A43D23EBF80E0090A80F /* AddGenreScene.swift */,
+			);
+			path = PreferenceUtilitiesView;
+			sourceTree = "<group>";
+		};
+		D387DC62242DDDDA00F8A593 /* SearchFunctionViews */ = {
+			isa = PBXGroup;
+			children = (
+				D368A43923EBF6730090A80F /* GameSearchView.swift */,
+				D33999B423FBC33A009E1811 /* SearchResultsTableView.swift */,
+			);
+			path = SearchFunctionViews;
+			sourceTree = "<group>";
+		};
+		D387DC63242DDDFB00F8A593 /* GameReviewViews */ = {
 			isa = PBXGroup;
 			children = (
 				D368A43723EBF5130090A80F /* GameReviewView.swift */,
+			);
+			path = GameReviewViews;
+			sourceTree = "<group>";
+		};
+		D3A451732418A25F0017C53A /* GameReview */ = {
+			isa = PBXGroup;
+			children = (
+				D387DC63242DDDFB00F8A593 /* GameReviewViews */,
 			);
 			path = GameReview;
 			sourceTree = "<group>";
@@ -143,10 +170,8 @@
 		D3A451742418A2870017C53A /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
+				D387DC60242DDD7D00F8A593 /* PreferenceUtilitiesView */,
 				D32D0697242C8CA5002A8647 /* Tech Reads-Bridging-Header.h */,
-				D368A43D23EBF80E0090A80F /* AddGenreScene.swift */,
-				D32D0698242C8CA6002A8647 /* PreferenceUtilitiesView.m */,
-				D32D069A242C8CCC002A8647 /* PreferenceUtillitiesView.h */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -154,8 +179,7 @@
 		D3A451752418A2CD0017C53A /* SearchFunction */ = {
 			isa = PBXGroup;
 			children = (
-				D368A43923EBF6730090A80F /* GameSearchView.swift */,
-				D33999B423FBC33A009E1811 /* SearchResultsTableView.swift */,
+				D387DC62242DDDDA00F8A593 /* SearchFunctionViews */,
 			);
 			path = SearchFunction;
 			sourceTree = "<group>";
