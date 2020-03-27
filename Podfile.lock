@@ -2,21 +2,21 @@ PODS:
   - TechReadsPod (0.0.1)
 
 DEPENDENCIES:
-  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/ObjCFeature`)
+  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/Analytics`)
 
 EXTERNAL SOURCES:
   TechReadsPod:
-    :branch: Feature/ObjCFeature
+    :branch: Feature/Analytics
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 CHECKOUT OPTIONS:
   TechReadsPod:
-    :commit: 060377afb815965aa0cb4c1c7cffc4aef14a69c2
+    :commit: 1b6de4b88446c326771fc80aa19b16199da76711
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 SPEC CHECKSUMS:
   TechReadsPod: 0be01cbd7a3bec5f93b5f560c3040b49a68fa61e
 
-PODFILE CHECKSUM: eedac901fafbc11215f21d07ceb624d4947ad841
+PODFILE CHECKSUM: 44e70264754fe59a0a3094c7f02d8e8b093ea16a
 
 COCOAPODS: 1.9.0
