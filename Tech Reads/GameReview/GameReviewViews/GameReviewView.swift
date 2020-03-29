@@ -49,5 +49,7 @@ class GameReviewController: UIViewController {
     @IBAction func btnCancel(_ sender: UIButton) {
     }
     @IBAction func btnNext(_ sender: UIButton) {
+      let randomGameClass = RandomGameReview()
+      
     }
 }
