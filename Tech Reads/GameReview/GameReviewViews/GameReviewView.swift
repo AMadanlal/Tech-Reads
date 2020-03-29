@@ -29,36 +29,48 @@ class GameReviewController: UIViewController {
      self.gameReviewText.text = "Loading..."
     }
     override func viewDidAppear(_ animated: Bool) {
-      let gamedetail = ChickenCoopAPI(searched: searcheditem, platform: gameplatform)
-              var gameinfo = gamedetail.gamedetails
-              gamedetail.getGameInfo { result in
-              switch result {
-              case .failure(let error):
-                  print(error)
-              case.success(let details):
-                  gameinfo = details
-                  print(details)
-                    DispatchQueue.main.async {
-                      let displayclass = FormattingDisplayClass(gameM: gameinfo, lblTitle: self.lblMain,
-                                                      txtView: self.gameReviewText, imgView: self.imageplace )
-                      displayclass.todisplay()
-                  }
-            }
-        }
+          displayAllInformation()
     }
+
+  func displayAllInformation() {
+    let gamedetail = ChickenCoopAPI(searched: searcheditem, platform: gameplatform)
+                var gameinfo = gamedetail.gamedetails
+                gamedetail.getGameInfo { result in
+                switch result {
+                case .failure(let error):
+                    print(error)
+                case.success(let details):
+                    gameinfo = details
+                    print(details)
+                      DispatchQueue.main.async {
+                        let displayclass = FormattingDisplayClass(gameM: gameinfo, lblTitle: self.lblMain,
+                                                        txtView: self.gameReviewText, imgView: self.imageplace )
+                        displayclass.todisplay()
+                    }
+              }
+          }
+  }
+
     @IBAction func btnCancel(_ sender: UIButton) {
     }
-    @IBAction func btnNext(_ sender: UIButton) {
-      let randomGameClass = RandomGameReview()
-      randomGameClass.getRandomGameFromList { (listItem) in
-        self.searcheditem = listItem.title
-        self.gameplatform = listItem.platform
-        print(self.searcheditem)
-        print(self.gameplatform)
-        DispatchQueue.main.async {
-          print("Button Next Clicked")
-          super.viewDidAppear(false)
+
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  let randomGameClass = RandomGameReview()
+  randomGameClass.getRandomGameFromList { (listItem) in
+    DispatchQueue.main.async {
+      print("Button Next Clicked")
+        if segue.identifier == "reloadsegue" {
+          let segueDest = segue.destination as? GameReviewController
+          segueDest?.searcheditem = listItem.title
+          segueDest?.gameplatform = listItem.platform
+          segueDest?.displayAllInformation()
+          print("\(listItem.title) + \(listItem.platform)")
+         }
         }
+       }
       }
-    }
+
+    @IBAction func btnNext(_ sender: UIButton) {
+       self.performSegue(withIdentifier: "reloadsegue", sender: self)
+      }
 }
