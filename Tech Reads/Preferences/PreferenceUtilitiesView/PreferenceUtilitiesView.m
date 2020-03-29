@@ -14,7 +14,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  self.consoles = @[@"Any", @"PC", @"XBOX ONE", @"PS4", @"NINTENDO SWITCH", @"MOBILE"];
+  self.consoles = @[@"Any", @"PC", @"XONE", @"PS4", @"Switch", @"iOS"];
   self.pickerView.delegate = self;
   self.pickerView.dataSource = self;
   self.lblCurrentMedium.accessibilityIdentifier = @"lblpreference";

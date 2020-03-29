@@ -50,6 +50,15 @@ class GameReviewController: UIViewController {
     }
     @IBAction func btnNext(_ sender: UIButton) {
       let randomGameClass = RandomGameReview()
-      
+      randomGameClass.getRandomGameFromList { (listItem) in
+        self.searcheditem = listItem.title
+        self.gameplatform = listItem.platform
+        print(self.searcheditem)
+        print(self.gameplatform)
+        DispatchQueue.main.async {
+          print("Button Next Clicked")
+          super.viewDidAppear(false)
+        }
+      }
     }
 }
