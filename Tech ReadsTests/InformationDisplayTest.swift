@@ -24,20 +24,6 @@ class InformationDisplayTest: XCTestCase {
    }
 
    func testDisplay() {
-//     let mockAPI = ChickenCoopMockAPI()
-//     var gameInfo = Game()
-//     mockAPI.getGameInfo { result in
-//                   switch result {
-//                   case .failure(let error):
-//                     print(error)
-//                   case.success(let details):
-//                       gameInfo = details
-//                    let displayClass = FormattingDisplayClass(gameM: gameInfo, lblTitle: self.titleLabel,
-//                                                       txtView: self.textView, imgView: self.imagePlace)
-//                       displayClass.todisplay()
-//                           XCTAssertEqual(self.titleLabel.text, gameInfo.title)
-//           }
-//         }
      let APIClass = ChickenCoopAPI(searched: "Borderlands", platform: "pc")
     var gameinfo = Game()
     APIClass.getGameInfo {result in
@@ -47,23 +33,19 @@ class InformationDisplayTest: XCTestCase {
           case.success(let details):
               gameinfo = details
               XCTAssertEqual(gameinfo.title, "Borderlands")
-//                DispatchQueue.main.async {
-//
-//              }
         }
     }
   }
 
-//  need to build and check if this runs correctly
+
   func testRandomDisplay() {
     let randomGameClass = RandomGameReview()
     randomGameClass.getRandomGameFromList { (listItem) in
       XCTAssertNotNil(listItem.title)
     }
   }
-//  need to build and check if this runs correctly
+
   func testArrayFormatter() {
-//    let APIClass = ChickenCoopAPI(searched: "", platform: "")
     let gameInfo = Game()
     let displayClass = FormattingDisplayClass(gameM: gameInfo, lblTitle: self.titleLabel,
     txtView: self.textView, imgView: self.imagePlace)
