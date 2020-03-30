@@ -37,7 +37,6 @@ class InformationDisplayTest: XCTestCase {
     }
   }
 
-
   func testRandomDisplay() {
     let randomGameClass = RandomGameReview()
     randomGameClass.getRandomGameFromList { (listItem) in
