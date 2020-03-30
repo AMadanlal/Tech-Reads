@@ -7,7 +7,8 @@ target 'Tech Reads' do
 
   # Pods for Tech Reads
 	pod 'TechReadsPod', :git => 'https://github.com/AMadanlal/TechReadsPod.git', :branch => 'Feature/Analytics' 
-pod 'Firebase/Analytics'
+	
+	#pod 'Firebase/Analytics'
 
   target 'Tech ReadsTests' do
     inherit! :search_paths
