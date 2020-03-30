@@ -18,15 +18,10 @@
   self.pickerView.delegate = self;
   self.pickerView.dataSource = self;
   self.lblCurrentMedium.accessibilityIdentifier = @"lblpreference";
-  [self.mainPrefLabel setFont:[UIFont fontWithName:@"italicSystemFont" size:35]];
-  [self.mediumLbl setFont:[UIFont fontWithName:@"italicSystemFont" size:20]];
-  [self.genreLbl setFont:[UIFont fontWithName:@"italicSystemFont" size:20]];
-  [self.mainPrefLabel setNumberOfLines:2];
+  [self.mediumLbl setFont:[UIFont fontWithName:@"italicSystemFont" size:15]];
   [self.pickerView setValue:UIColor.blueColor forKey: @"textColor"];
-//  self.mainPrefLabel.center.x = self.view.center.x; TODO: Find the obj-c conversion of this line
   self.savingClass = [[SavingUtilities alloc] init];
   self.lblCurrentMedium.text = [self.savingClass LoadMedium];
-  
 }
 
 - (IBAction)btnSave:(UIButton *)sender {
