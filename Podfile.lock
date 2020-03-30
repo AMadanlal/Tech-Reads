@@ -65,7 +65,8 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
-  - TechReadsPod (0.0.1)
+  - TechReadsPod (0.0.1):
+    - Firebase/Analytics
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -93,7 +94,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   TechReadsPod:
-    :commit: 5d6d33f6fa2549b78a46f33de80a9b109308da65
+    :commit: 82874d90a24248f5b66eb6493fc1ddce9a9ecdbd
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 SPEC CHECKSUMS:
@@ -109,8 +110,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: ad0f3b691c67909d03a3327cc205222ab8f42e0e
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
-  TechReadsPod: 0be01cbd7a3bec5f93b5f560c3040b49a68fa61e
+  TechReadsPod: 14e6b0039660aec923a1036eb6ff7b8c0453e409
 
-PODFILE CHECKSUM: 04b265df2571e0a7e69ff74868048bdf7d942c95
+PODFILE CHECKSUM: 7a17d29ee922d7f706d12afe5943c422822de7fd
 
 COCOAPODS: 1.9.1
