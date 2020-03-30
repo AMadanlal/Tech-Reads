@@ -10,10 +10,12 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+  var window: UIWindow? //This line was requested by firebase
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//      let analyticClass = AnalyticsSetup()
+//      analyticClass.toConfigureFirebaseAPI()
         return true
     }
 

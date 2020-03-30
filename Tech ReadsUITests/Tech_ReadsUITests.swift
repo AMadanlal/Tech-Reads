@@ -45,4 +45,13 @@ class TechReadsUITests: XCTestCase {
     sleep(1)
     XCTAssertEqual(application.staticTexts.element(matching: .any, identifier: "lblpreference").label, "PC")
   }
+
+  func testNextgameButtonDoesNotShowBasicGame() {
+    application.launch()
+    application.buttons["General game reviews"].tap()
+    sleep(7)
+    application.buttons["Next Story"].tap()
+    sleep(7)
+    XCTAssertFalse(application.staticTexts["Bulletstorm"].exists)
+  }
 }

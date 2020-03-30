@@ -14,24 +14,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  self.consoles = @[@"Any", @"PC", @"XBOX ONE", @"PS4", @"NINTENDO SWITCH", @"MOBILE"];
+  self.consoles = @[@"Any", @"PC", @"XONE", @"PS4", @"Switch", @"iOS"];
   self.pickerView.delegate = self;
   self.pickerView.dataSource = self;
   self.lblCurrentMedium.accessibilityIdentifier = @"lblpreference";
-  [self.mainPrefLabel setFont:[UIFont fontWithName:@"italicSystemFont" size:35]];
-  [self.mediumLbl setFont:[UIFont fontWithName:@"italicSystemFont" size:20]];
-  [self.genreLbl setFont:[UIFont fontWithName:@"italicSystemFont" size:20]];
-  [self.mainPrefLabel setNumberOfLines:2];
+  [self.mediumLbl setFont:[UIFont fontWithName:@"italicSystemFont" size:15]];
   [self.pickerView setValue:UIColor.blueColor forKey: @"textColor"];
-//  self.mainPrefLabel.center.x = self.view.center.x; TODO: Find the obj-c conversion of this line
   self.savingClass = [[SavingUtilities alloc] init];
   self.lblCurrentMedium.text = [self.savingClass LoadMedium];
-  
 }
-
-//this function was ment to go to the add genre page
-//@IBAction func btnGenreAdd(_ sender: UIButton) {
-//     performSegue(withIdentifier: "genrepopup", sender: self)
 
 - (IBAction)btnSave:(UIButton *)sender {
   NSString *answer = self.consoles[[self.pickerView selectedRowInComponent:0]];

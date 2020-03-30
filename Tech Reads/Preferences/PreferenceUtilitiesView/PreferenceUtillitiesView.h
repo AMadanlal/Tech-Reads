@@ -15,7 +15,6 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *mediumLbl;
 @property (nonatomic, weak) IBOutlet UILabel *mainPrefLabel;
-@property (nonatomic, weak) IBOutlet UILabel *genreLbl;
 @property (nonatomic, weak) IBOutlet UILabel *lblCurrentMedium;
 @property (nonatomic, weak) IBOutlet UIPickerView *pickerView;
 @property (nonatomic, strong)NSArray *consoles;
