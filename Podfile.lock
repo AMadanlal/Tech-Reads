@@ -2,21 +2,21 @@ PODS:
   - TechReadsPod (0.0.1)
 
 DEPENDENCIES:
-  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/Analytics`)
+  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/RequestedChanges2`)
 
 EXTERNAL SOURCES:
   TechReadsPod:
-    :branch: Feature/Analytics
+    :branch: Feature/RequestedChanges2
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 CHECKOUT OPTIONS:
   TechReadsPod:
-    :commit: 03a9ba82ca6fe49a26e0e9ee74efcede898793e6
+    :commit: 6c7c876910cbff06e376722364823d804a5c1d70
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 SPEC CHECKSUMS:
   TechReadsPod: 0be01cbd7a3bec5f93b5f560c3040b49a68fa61e
 
-PODFILE CHECKSUM: 952f561bc9c23e499148d86dcd548b75cc4f44dc
+PODFILE CHECKSUM: 6e6d620376f2631b6cec076e7b7eb932c34aa293
 
 COCOAPODS: 1.9.1
