@@ -33,22 +33,22 @@ class GameReviewController: UIViewController {
     }
 
   func displayAllInformation() {
-    let gamedetail = ChickenCoopAPI(searched: searcheditem, platform: gameplatform)
-                var gameinfo = gamedetail.gamedetails
-                gamedetail.getGameInfo { result in
-                switch result {
-                case .failure(let error):
-                    print(error)
-                case.success(let details):
-                    gameinfo = details
-                    print(details)
-                      DispatchQueue.main.async {
-                        let displayclass = FormattingDisplayClass(gameM: gameinfo, lblTitle: self.lblMain,
-                                                        txtView: self.gameReviewText, imgView: self.imageplace )
-                        displayclass.todisplay()
-                    }
-              }
-          }
+   let gameDetail = ChickenCoopAPI(searched: searcheditem, platform: gameplatform)
+         var gameInfo = gameDetail.gamedetails
+         gameDetail.getGameInfo { result in
+         switch result {
+         case .failure(let error):
+             print(error)
+         case.success(let details):
+             gameInfo = details
+             print(details)
+               DispatchQueue.main.async {
+                 let displayClass = FormattingDisplayClass(gameM: gameInfo, lblTitle: self.lblMain,
+                                                 txtView: self.gameReviewText, imgView: self.imageplace )
+                 displayClass.todisplay()
+             }
+       }
+   }
   }
 
     @IBAction func btnCancel(_ sender: UIButton) {
