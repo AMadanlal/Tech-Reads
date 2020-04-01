@@ -29,7 +29,7 @@ class InformationDisplayTest: XCTestCase {
     APIClass.getGameInfo {result in
           switch result {
           case .failure(let error):
-              print(error)
+               XCTFail("The error is: \(error)")
           case.success(let details):
               gameinfo = details
               XCTAssertEqual(gameinfo.title, "Borderlands")
@@ -49,9 +49,9 @@ class InformationDisplayTest: XCTestCase {
     let displayClass = FormattingDisplayClass(gameM: gameInfo, lblTitle: self.titleLabel,
     txtView: self.textView, imgView: self.imagePlace)
     let exampleArray = ["MonkeysRule", "RemoveMe", "SwiftRules"]
-    let resultstring = displayClass.stringArrayFormatter(textArray: exampleArray)
-    let result = "MonkeysRule, RemoveMe, SwiftRules"
-    XCTAssertEqual(resultstring, result)
+    let actualResult = displayClass.stringArrayFormatter(textArray: exampleArray)
+    let expectedResult = "MonkeysRule, RemoveMe, SwiftRules"
+    XCTAssertEqual(actualResult, expectedResult)
   }
 
       override func tearDown() {

@@ -12,9 +12,6 @@ import XCTest
 
 class SaveLoadTest: XCTestCase {
 
-    override func setUp() {
-    }
-
   func testSavingAndLoading() {
     let prefUtilities = PreferenceUtilities()
     prefUtilities.saveMedium(savingPref: "PC")
@@ -22,8 +19,4 @@ class SaveLoadTest: XCTestCase {
     let loadedMedium = loadUtility.loadMedium()
     XCTAssertEqual(loadedMedium, "PC")
   }
-
-    override func tearDown() {
-    }
-
 }
