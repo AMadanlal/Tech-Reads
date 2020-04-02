@@ -7,7 +7,7 @@ target 'Tech Reads' do
 
   # Pods for Tech Reads
 	pod 'TechReadsPod', :git => 'https://github.com/AMadanlal/TechReadsPod.git', :branch => 'Feature/InstallingFirebase' 
-	
+	pod 'Firebase'
 	#pod 'Firebase/Analytics'
 
   target 'Tech ReadsTests' do

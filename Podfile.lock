@@ -1,22 +1,119 @@
 PODS:
-  - TechReadsPod (0.0.1)
+  - Firebase (6.21.0):
+    - Firebase/Core (= 6.21.0)
+  - Firebase/Analytics (6.21.0):
+    - Firebase/Core
+  - Firebase/Core (6.21.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 6.4.0)
+  - Firebase/CoreOnly (6.21.0):
+    - FirebaseCore (= 6.6.5)
+  - FirebaseAnalytics (6.4.0):
+    - FirebaseCore (~> 6.6)
+    - FirebaseInstallations (~> 1.1)
+    - GoogleAppMeasurement (= 6.4.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (= 0.3.9011)
+  - FirebaseCore (6.6.5):
+    - FirebaseCoreDiagnostics (~> 1.2)
+    - FirebaseCoreDiagnosticsInterop (~> 1.2)
+    - GoogleUtilities/Environment (~> 6.5)
+    - GoogleUtilities/Logger (~> 6.5)
+  - FirebaseCoreDiagnostics (1.2.2):
+    - FirebaseCoreDiagnosticsInterop (~> 1.2)
+    - GoogleDataTransportCCTSupport (~> 2.0)
+    - GoogleUtilities/Environment (~> 6.5)
+    - GoogleUtilities/Logger (~> 6.5)
+    - nanopb (~> 0.3.901)
+  - FirebaseCoreDiagnosticsInterop (1.2.0)
+  - FirebaseInstallations (1.1.1):
+    - FirebaseCore (~> 6.6)
+    - GoogleUtilities/UserDefaults (~> 6.5)
+    - PromisesObjC (~> 1.2)
+  - GoogleAppMeasurement (6.4.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (= 0.3.9011)
+  - GoogleDataTransport (5.1.0)
+  - GoogleDataTransportCCTSupport (2.0.1):
+    - GoogleDataTransport (~> 5.1)
+    - nanopb (~> 0.3.901)
+  - GoogleUtilities/AppDelegateSwizzler (6.5.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.5.2)
+  - GoogleUtilities/Logger (6.5.2):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.5.2):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.5.2):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.5.2)"
+  - GoogleUtilities/Reachability (6.5.2):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (6.5.2):
+    - GoogleUtilities/Logger
+  - nanopb (0.3.9011):
+    - nanopb/decode (= 0.3.9011)
+    - nanopb/encode (= 0.3.9011)
+  - nanopb/decode (0.3.9011)
+  - nanopb/encode (0.3.9011)
+  - PromisesObjC (1.2.8)
+  - TechReadsPod (0.0.1):
+    - Firebase/Analytics
 
 DEPENDENCIES:
-  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/RequestedChanges2`)
+  - Firebase
+  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/InstallingFirebase`)
+
+SPEC REPOS:
+  trunk:
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseCoreDiagnosticsInterop
+    - FirebaseInstallations
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleDataTransportCCTSupport
+    - GoogleUtilities
+    - nanopb
+    - PromisesObjC
 
 EXTERNAL SOURCES:
   TechReadsPod:
-    :branch: Feature/RequestedChanges2
+    :branch: Feature/InstallingFirebase
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 CHECKOUT OPTIONS:
   TechReadsPod:
-    :commit: 6c7c876910cbff06e376722364823d804a5c1d70
+    :commit: 3892281ae9b1dea6538fb0f962dc454511865d17
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 SPEC CHECKSUMS:
-  TechReadsPod: 0be01cbd7a3bec5f93b5f560c3040b49a68fa61e
+  Firebase: f378c80340dd41c0ad0914af740c021eb282a04b
+  FirebaseAnalytics: a1a0b3327ceb5cd5b4bacffdb293f6c909aa087d
+  FirebaseCore: 9f495d3afacb7b558711e6218ebb14b1c51b5802
+  FirebaseCoreDiagnostics: e9b4cd8ba60dee0f2d13347332e4b7898cca5b61
+  FirebaseCoreDiagnosticsInterop: 296e2c5f5314500a850ad0b83e9e7c10b011a850
+  FirebaseInstallations: acb3216eb9784d3b1d2d2d635ff74fa892cc0c44
+  GoogleAppMeasurement: 6e68a94d0eaeb1d73ef6b0ed4f7334e29d63ae29
+  GoogleDataTransport: b29a21d813e906014ca16c00897827e40e4a24ab
+  GoogleDataTransportCCTSupport: 6f15a89b0ca35d6fa523e1f752ef818588885988
+  GoogleUtilities: ad0f3b691c67909d03a3327cc205222ab8f42e0e
+  nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  TechReadsPod: 14e6b0039660aec923a1036eb6ff7b8c0453e409
 
-PODFILE CHECKSUM: 6e6d620376f2631b6cec076e7b7eb932c34aa293
+PODFILE CHECKSUM: 98c51479178daaf06c60261818a9ce708fb22f8e
 
 COCOAPODS: 1.9.1
