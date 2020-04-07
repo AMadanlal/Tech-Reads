@@ -3,11 +3,13 @@
 
 target 'Tech Reads' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  #use_frameworks!
 
   # Pods for Tech Reads
-	pod 'TechReadsPod', :git => 'https://github.com/AMadanlal/TechReadsPod.git', :branch => 'Feature/RequestedChanges2' 
-	
+	pod 'TechReadsPod', :git => 'https://github.com/AMadanlal/TechReadsPod.git', :branch => 'Feature/InstallingFirebase' 
+	pod 'Firebase'
+	pod 'Firebase/Crashlytics'
+	pod 'Firebase/Performance'
 	#pod 'Firebase/Analytics'
 
   target 'Tech ReadsTests' do

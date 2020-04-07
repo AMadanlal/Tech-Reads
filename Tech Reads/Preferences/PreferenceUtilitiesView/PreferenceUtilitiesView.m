@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PreferenceUtillitiesView.h"
-#import "TechReadsPod-Swift.h"
+#import "Tech_Reads-Swift.h"
 
 @implementation PreferenceUtilitiesView : UIViewController
 
@@ -26,8 +26,10 @@
 
 - (IBAction)btnSave:(UIButton *)sender {
   NSString *answer = self.consoles[[self.pickerView selectedRowInComponent:0]];
-    PreferenceUtilities* utilities =  [[PreferenceUtilities alloc] init];
-    [utilities saveMediumWithSavingPref:answer];
+  SaveUtility* utility = [[SaveUtility alloc] init];
+  [utility saveMediumStringWithStringToSave:answer];
+//    PreferenceUtilities* utilities =  [[PreferenceUtilities alloc] init];
+//    [utilities saveMediumWithSavingPref:answer];
     self.lblCurrentMedium.text = [self.savingClass LoadMedium];
 }
 
