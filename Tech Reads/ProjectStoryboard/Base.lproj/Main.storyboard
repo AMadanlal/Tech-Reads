@@ -45,7 +45,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="368"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-i2-vhR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="77"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="109.33333333333333"/>
                                                         <color key="backgroundColor" red="0.513721599400629" green="0.59499688354963776" blue="0.64309880602436542" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Search Game or Tech">
                                                             <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,10 +61,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSc-Um-0kL">
-                                                        <rect key="frame" x="0.0" y="97" width="382" height="77"/>
+                                                        <rect key="frame" x="0.0" y="129.33333333333334" width="382" height="109.33333333333334"/>
                                                         <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title=" General game reviews">
+                                                        <state key="normal" title="General game reviews">
                                                             <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -77,8 +77,8 @@
                                                             <segue destination="8FQ-EX-Gbr" kind="presentation" identifier="GameRevBranch" id="RXr-x6-QGj"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lg-Q6-9x3">
-                                                        <rect key="frame" x="0.0" y="194" width="382" height="77"/>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lg-Q6-9x3">
+                                                        <rect key="frame" x="0.0" y="248.66666666666669" width="382" height="0.0"/>
                                                         <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="General Tech Reviews">
                                                             <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -94,7 +94,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggo-Fn-3lP">
-                                                        <rect key="frame" x="0.0" y="291" width="382" height="77"/>
+                                                        <rect key="frame" x="0.0" y="258.66666666666669" width="382" height="109.33333333333331"/>
                                                         <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="User Preferences">
                                                             <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -152,93 +152,10 @@
             </objects>
             <point key="canvasLocation" x="2098.5507246376815" y="142.63392857142856"/>
         </scene>
-        <!--Add Genre-->
-        <scene sceneID="Dpr-NZ-xxf">
-            <objects>
-                <viewController id="ebc-Uo-jDo" customClass="AddGenre" customModule="Tech_Reads" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZwN-ZG-LGq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="4C9-yO-8yq">
-                                <rect key="frame" x="16" y="16" width="382" height="864"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="go5-gH-GED">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="407"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwA-gC-pBC">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="27.333333333333332"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Add Genre">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.091803856194019318" green="0.18693625926971436" blue="0.48673385381698608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" metaFont="system" size="17"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre to Add:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyV-AD-jGZ">
-                                                <rect key="frame" x="0.0" y="32.333333333333336" width="382" height="27.666666666666664"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7q-Vi-JRY">
-                                                <rect key="frame" x="0.0" y="65" width="382" height="291.33333333333331"/>
-                                            </pickerView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZR2-ZO-ZfT">
-                                                <rect key="frame" x="0.0" y="361.33333333333331" width="382" height="45.666666666666686"/>
-                                                <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="Add Genre">
-                                                    <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="btnAddGen:" destination="ebc-Uo-jDo" eventType="touchUpInside" id="a5K-9s-zS8"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="List of Genre's: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sCY-BL-dAd">
-                                        <rect key="frame" x="0.0" y="457" width="382" height="407"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textView>
-                                </subviews>
-                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.59807103872299194" green="0.79568344354629517" blue="0.9192776083946228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="4C9-yO-8yq" firstAttribute="top" secondItem="YiE-Rr-bAq" secondAttribute="top" constant="16" id="UQG-7N-ew7"/>
-                            <constraint firstItem="4C9-yO-8yq" firstAttribute="leading" secondItem="YiE-Rr-bAq" secondAttribute="leading" constant="16" id="Xyi-28-OOe"/>
-                            <constraint firstItem="YiE-Rr-bAq" firstAttribute="bottom" secondItem="4C9-yO-8yq" secondAttribute="bottom" constant="16" id="ghv-i9-DP0"/>
-                            <constraint firstItem="YiE-Rr-bAq" firstAttribute="trailing" secondItem="4C9-yO-8yq" secondAttribute="trailing" constant="16" id="xqk-GR-Ddu"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="YiE-Rr-bAq"/>
-                    </view>
-                    <connections>
-                        <outlet property="genrelbl" destination="fwA-gC-pBC" id="CLT-IC-3uI"/>
-                        <outlet property="genrelist" destination="Q7q-Vi-JRY" id="JCK-CN-B5i"/>
-                        <outlet property="savedgenre" destination="sCY-BL-dAd" id="So0-zL-MsU"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U2L-7P-hzV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4279.7101449275369" y="869.86607142857144"/>
-        </scene>
         <!--Game Search View-->
         <scene sceneID="6qz-Ue-jHh">
             <objects>
-                <viewController id="LE4-e1-cxl" customClass="GameSearchView" customModule="Tech_Reads" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchStory" id="LE4-e1-cxl" customClass="GameSearchView" customModule="Tech_Reads" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ot0-Fz-n8W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -286,9 +203,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="btnSearch:" destination="LE4-e1-cxl" eventType="touchUpInside" id="vvO-4A-xdk"/>
+                                                            <segue destination="wxp-Nq-JpX" kind="presentation" identifier="searchsegue" id="aJE-fF-zTn"/>
                                                         </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GNM-Cp-nHX">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="game or tech name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GNM-Cp-nHX">
                                                         <rect key="frame" x="8" y="63" width="366" height="34"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -331,6 +249,41 @@
             </objects>
             <point key="canvasLocation" x="547.82608695652175" y="869.86607142857144"/>
         </scene>
+        <!--Search Results Table-->
+        <scene sceneID="TIj-oX-XoB">
+            <objects>
+                <tableViewController storyboardIdentifier="SearchTableController" id="wxp-Nq-JpX" customClass="SearchResultsTable" customModule="Tech_Reads" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="11" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yqr-uY-CEy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.5980710387" green="0.79568344349999998" blue="0.91927760839999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.5980710387" green="0.79568344349999998" blue="0.91927760839999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.5980710387" green="0.79568344349999998" blue="0.91927760839999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" id="4o6-XT-WaK">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4o6-XT-WaK" id="ysV-hZ-zpS">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wxp-Nq-JpX" id="y26-Lp-bfY"/>
+                            <outlet property="delegate" destination="wxp-Nq-JpX" id="olf-3A-FHa"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="yqr-uY-CEy" id="Rjp-ja-6Mx"/>
+                        <segue destination="8FQ-EX-Gbr" kind="presentation" identifier="detailsegue" id="dDl-tE-BEK"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EKh-qp-4rY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="1687"/>
+        </scene>
         <!--Game Review Controller-->
         <scene sceneID="p8I-ci-eDC">
             <objects>
@@ -348,13 +301,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yq3-Sy-qIq">
                                                 <rect key="frame" x="8.6666666666666572" y="0.0" width="364.66666666666674" height="70"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s00-5c-3R8">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s00-5c-3R8">
                                                         <rect key="frame" x="0.0" y="0.0" width="178.33333333333334" height="70"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="The Name of the Game">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.091803856194019318" green="0.18693625926971436" blue="0.48673385381698608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" metaFont="system" size="19"/>
+                                                                    <font key="NSFont" metaFont="system" size="24"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -393,6 +346,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="btnNext:" destination="8FQ-EX-Gbr" eventType="touchUpInside" id="7Kh-a3-mph"/>
+                                                                    <segue destination="8FQ-EX-Gbr" kind="presentation" identifier="reloadsegue" id="yTk-3V-koh"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -400,8 +354,19 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPV-55-Idm">
-                                                <rect key="frame" x="0.0" y="167" width="382" height="211"/>
+                                                <rect key="frame" x="0.0" y="140" width="382" height="238"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bof-se-xse">
+                                                        <rect key="frame" x="16" y="16" width="350" height="206"/>
+                                                    </imageView>
+                                                </subviews>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="bof-se-xse" firstAttribute="leading" secondItem="hPV-55-Idm" secondAttribute="leading" constant="16" id="BiN-YA-Krs"/>
+                                                    <constraint firstAttribute="bottom" secondItem="bof-se-xse" secondAttribute="bottom" constant="16" id="fCk-iJ-atX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bof-se-xse" secondAttribute="trailing" constant="16" id="fcV-oO-9jx"/>
+                                                    <constraint firstItem="bof-se-xse" firstAttribute="top" secondItem="hPV-55-Idm" secondAttribute="top" constant="16" id="pUf-3C-z2a"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="15"/>
@@ -413,10 +378,10 @@
                                             <constraint firstItem="Yq3-Sy-qIq" firstAttribute="leading" secondItem="S3m-Pg-MNy" secondAttribute="leading" constant="8.6666666666666572" id="1bq-Bb-y8v"/>
                                             <constraint firstItem="hPV-55-Idm" firstAttribute="leading" secondItem="S3m-Pg-MNy" secondAttribute="leadingMargin" id="6Vj-x2-dSO"/>
                                             <constraint firstAttribute="trailing" secondItem="Yq3-Sy-qIq" secondAttribute="trailing" constant="8.6666666666666288" id="L1n-VW-1EV"/>
-                                            <constraint firstItem="hPV-55-Idm" firstAttribute="top" secondItem="Yq3-Sy-qIq" secondAttribute="bottom" constant="97" id="tyf-Gx-8jo"/>
+                                            <constraint firstItem="hPV-55-Idm" firstAttribute="top" secondItem="Yq3-Sy-qIq" secondAttribute="bottom" constant="70" id="tyf-Gx-8jo"/>
                                         </constraints>
                                     </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-Dv-fYn">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-Dv-fYn">
                                         <rect key="frame" x="0.0" y="408" width="382" height="378"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <attributedString key="attributedText">
@@ -442,6 +407,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.59807103872299194" green="0.79568344354629517" blue="0.9192776083946228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ShY-ta-e1V" firstAttribute="bottom" secondItem="gOa-Dv-fYn" secondAttribute="bottom" constant="16" id="BbB-Qg-By3"/>
+                            <constraint firstItem="ShY-ta-e1V" firstAttribute="trailing" secondItem="gOa-Dv-fYn" secondAttribute="trailing" constant="16" id="ObZ-aP-ira"/>
                             <constraint firstItem="ShY-ta-e1V" firstAttribute="trailing" secondItem="cXr-w2-bPI" secondAttribute="trailing" constant="16" id="THQ-1s-W6B"/>
                             <constraint firstItem="ShY-ta-e1V" firstAttribute="bottom" secondItem="cXr-w2-bPI" secondAttribute="bottom" constant="16" id="eNs-vX-Pbd"/>
                             <constraint firstItem="cXr-w2-bPI" firstAttribute="top" secondItem="ShY-ta-e1V" secondAttribute="top" constant="16" id="lgw-se-FpU"/>
@@ -449,6 +416,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ShY-ta-e1V"/>
                     </view>
+                    <connections>
+                        <outlet property="gameReviewText" destination="gOa-Dv-fYn" id="J52-eu-YLw"/>
+                        <outlet property="imageplace" destination="bof-se-xse" id="SgY-mD-m1K"/>
+                        <outlet property="lblMain" destination="s00-5c-3R8" id="xmV-b4-fpr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1UH-VN-GNx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="uIz-FG-8cY" userLabel="Exit" sceneMemberID="exit"/>
@@ -540,7 +512,7 @@
                                             <constraint firstItem="rs5-pc-hvF" firstAttribute="leading" secondItem="M1n-bo-8Kb" secondAttribute="leadingMargin" id="mWM-A3-u1t"/>
                                         </constraints>
                                     </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0wb-Fm-MvH">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0wb-Fm-MvH">
                                         <rect key="frame" x="0.0" y="408" width="382" height="378"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -573,97 +545,64 @@
             </objects>
             <point key="canvasLocation" x="2442.0289855072465" y="869.86607142857144"/>
         </scene>
-        <!--User Preferences Controller-->
+        <!--Preference Utilities View-->
         <scene sceneID="zcD-CE-5qj">
             <objects>
-                <viewController modalPresentationStyle="formSheet" id="28g-Z8-DkQ" customClass="UserPreferencesController" customModule="Tech_Reads" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="formSheet" id="28g-Z8-DkQ" customClass="PreferenceUtilitiesView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pDh-kr-uJ5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FQt-Mg-oXT">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-35" translatesAutoresizingMaskIntoConstraints="NO" id="FQt-Mg-oXT">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KcA-GN-Hy0">
-                                        <rect key="frame" x="16" y="16" width="382" height="422"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KcA-GN-Hy0">
+                                        <rect key="frame" x="16" y="16" width="382" height="361.33333333333331"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyC-Z7-UXk">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="21.666666666666668"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="User Preferences">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" metaFont="system" size="18"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="mainLbl" text="User Preferences" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="RyC-Z7-UXk">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="240"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                                <color key="textColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="q7A-TR-hsS">
-                                                <rect key="frame" x="0.0" y="176.33333333333334" width="382" height="60"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="IYQ-PX-OD5">
+                                                <rect key="frame" x="0.0" y="250.00000000000003" width="382" height="111.33333333333334"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E89-OQ-4Z5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Prefered Genres:">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.091803856194019318" green="0.18693625926971436" blue="0.48673385381698608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" metaFont="system" size="17"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmo-Uh-8hV">
-                                                        <rect key="frame" x="0.0" y="30" width="382" height="30"/>
-                                                        <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <state key="normal" title="Add Genres">
-                                                            <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="15"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="btnGenreAdd:" destination="28g-Z8-DkQ" eventType="touchUpInside" id="Zf2-fp-W8v"/>
-                                                            <segue destination="ebc-Uo-jDo" kind="popoverPresentation" identifier="genrepopup" popoverAnchorView="Pmo-Uh-8hV" id="rxP-88-8B3">
-                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                            </segue>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mje-Gd-QtT">
-                                                <rect key="frame" x="0.0" y="381.33333333333331" width="382" height="40.666666666666686"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gd3-dJ-TaT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Gaming Medium:">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.091803856194019318" green="0.18693625926971436" blue="0.48673385381698608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" metaFont="system" size="17"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egp-aq-bKt">
-                                                        <rect key="frame" x="0.0" y="20.333333333333371" width="382" height="20.333333333333329"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="game medium here">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.091803856194019318" green="0.18693625926971436" blue="0.48673385381698608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" metaFont="system" size="17"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ihm-CB-12C">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="40.666666666666664"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gd3-dJ-TaT">
+                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="40.666666666666664"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="Gaming Medium:">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" metaFont="system" size="22"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egp-aq-bKt">
+                                                                <rect key="frame" x="191" y="0.0" width="191" height="40.666666666666664"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="PC">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" metaFont="system" size="22"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select one of the Gaming Platforms below and Click on Save Preferences to save the result:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eS-v8-B4R">
+                                                        <rect key="frame" x="0.0" y="70.666666666666686" width="382" height="40.666666666666657"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -671,13 +610,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Fh1-15-C5b">
-                                        <rect key="frame" x="16" y="458" width="382" height="422"/>
+                                        <rect key="frame" x="16" y="342.33333333333331" width="382" height="537.66666666666674"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GjS-bF-zS3">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="342.66666666666669"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="436.66666666666669"/>
                                             </pickerView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2h3-vr-OaN">
-                                                <rect key="frame" x="0.0" y="362.66666666666663" width="382" height="59.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="456.66666666666669" width="382" height="81.000000000000057"/>
                                                 <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Save Preferences">
                                                     <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -688,7 +627,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="btnSavePref:" destination="28g-Z8-DkQ" eventType="touchUpInside" id="Y2X-sc-l1g"/>
+                                                    <action selector="btnSave:" destination="28g-Z8-DkQ" eventType="touchUpInside" id="7cM-t8-M8f"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -708,17 +647,19 @@
                         <viewLayoutGuide key="safeArea" id="XEH-jZ-ms2"/>
                     </view>
                     <connections>
-                        <outlet property="GenreLbl" destination="E89-OQ-4Z5" id="tsy-bk-7Ms"/>
                         <outlet property="MainPrefLabel" destination="RyC-Z7-UXk" id="676-nl-kou"/>
                         <outlet property="lblCurrentMedium" destination="egp-aq-bKt" id="gq3-u1-5QQ"/>
                         <outlet property="mediumLbl" destination="Gd3-dJ-TaT" id="jCe-aJ-jOZ"/>
-                        <outlet property="pickerView" destination="GjS-bF-zS3" id="aKy-hb-eQI"/>
+                        <outlet property="pickerView" destination="GjS-bF-zS3" id="ahW-nA-rFs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLF-Vi-JLI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3351" y="870"/>
+            <point key="canvasLocation" x="3350.7246376811595" y="869.86607142857144"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RXr-x6-QGj"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

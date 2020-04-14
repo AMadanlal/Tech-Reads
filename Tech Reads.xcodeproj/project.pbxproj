@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D368A43823EBF5130090A80F /* GameReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43723EBF5130090A80F /* GameReviewController.swift */; };
+		60DEA0366CFC19A0ED6F2F74 /* libPods-Tech Reads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A09859785E339A2A2DC6CCF /* libPods-Tech Reads.a */; };
+		D32D0699242C8CA6002A8647 /* PreferenceUtilitiesView.m in Sources */ = {isa = PBXBuildFile; fileRef = D32D0698242C8CA6002A8647 /* PreferenceUtilitiesView.m */; };
+		D33999B523FBC33A009E1811 /* SearchResultsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33999B423FBC33A009E1811 /* SearchResultsTableView.swift */; };
+		D368A43823EBF5130090A80F /* GameReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43723EBF5130090A80F /* GameReviewView.swift */; };
 		D368A43A23EBF6730090A80F /* GameSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43923EBF6730090A80F /* GameSearchView.swift */; };
-		D368A43E23EBF80E0090A80F /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43D23EBF80E0090A80F /* UserPreferences.swift */; };
-		D368A44023EC363D0090A80F /* GeneralTechReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43F23EC363D0090A80F /* GeneralTechReview.swift */; };
+		D368A44023EC363D0090A80F /* GeneralTechReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43F23EC363D0090A80F /* GeneralTechReviewView.swift */; };
+		D37E6937242CF68000391989 /* TextProcessingtests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37E6936242CF68000391989 /* TextProcessingtests.swift */; };
+		D37E6939242CF6FD00391989 /* InformationDisplayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37E6938242CF6FD00391989 /* InformationDisplayTest.swift */; };
+		D39986F1242E082E00A08717 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D39986F0242E082E00A08717 /* GoogleService-Info.plist */; };
+		D39986F2242E082E00A08717 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D39986F0242E082E00A08717 /* GoogleService-Info.plist */; };
+		D39986F3242E082E00A08717 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D39986F0242E082E00A08717 /* GoogleService-Info.plist */; };
+		D3A6CE172438CB2E00B96DE1 /* SaveUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6CE162438CB2E00B96DE1 /* SaveUtility.swift */; };
+		D3C1EA9C2432379C007AFFDD /* SaveLoadTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C1EA9B2432379C007AFFDD /* SaveLoadTest.swift */; };
 		D3DBEC6923E98180003EBFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC6823E98180003EBFDC /* AppDelegate.swift */; };
 		D3DBEC6B23E98180003EBFDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC6A23E98180003EBFDC /* SceneDelegate.swift */; };
 		D3DBEC6D23E98180003EBFDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC6C23E98180003EBFDC /* ViewController.swift */; };
 		D3DBEC7023E98180003EBFDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DBEC6E23E98180003EBFDC /* Main.storyboard */; };
 		D3DBEC7223E98180003EBFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3DBEC7123E98180003EBFDC /* Assets.xcassets */; };
 		D3DBEC7523E98180003EBFDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DBEC7323E98180003EBFDC /* LaunchScreen.storyboard */; };
-		D3DBEC8023E98180003EBFDC /* Tech_ReadsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC7F23E98180003EBFDC /* Tech_ReadsTests.swift */; };
 		D3DBEC8B23E98180003EBFDC /* Tech_ReadsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC8A23E98180003EBFDC /* Tech_ReadsUITests.swift */; };
+		D4A8D58AC57A1D18FB7F7D35 /* libPods-Tech Reads-Tech ReadsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C2F4133D88585DD8647788 /* libPods-Tech Reads-Tech ReadsUITests.a */; };
+		F5A5252257A568271D686DAE /* libPods-Tech ReadsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F09DD7B63BB788BF424BA54 /* libPods-Tech ReadsTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +49,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D368A43723EBF5130090A80F /* GameReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReviewController.swift; sourceTree = "<group>"; };
+		10C2F4133D88585DD8647788 /* libPods-Tech Reads-Tech ReadsUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tech Reads-Tech ReadsUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BFEB06D0B350E72EFA38D9D /* Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tech Reads-Tech ReadsUITests/Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A09859785E339A2A2DC6CCF /* libPods-Tech Reads.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tech Reads.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F09DD7B63BB788BF424BA54 /* libPods-Tech ReadsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tech ReadsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		452348086034F0985C7273F1 /* Pods-Tech ReadsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech ReadsTests.release.xcconfig"; path = "Target Support Files/Pods-Tech ReadsTests/Pods-Tech ReadsTests.release.xcconfig"; sourceTree = "<group>"; };
+		4760C2CD53B819813F0F55B0 /* Pods-Tech ReadsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech ReadsTests.debug.xcconfig"; path = "Target Support Files/Pods-Tech ReadsTests/Pods-Tech ReadsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		55AAD0F02A348F87839E55E3 /* Pods-Tech Reads-Tech ReadsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech Reads-Tech ReadsUITests.release.xcconfig"; path = "Target Support Files/Pods-Tech Reads-Tech ReadsUITests/Pods-Tech Reads-Tech ReadsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		70AC1BEE41BC2F16F8832D13 /* Pods-Tech Reads.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech Reads.release.xcconfig"; path = "Target Support Files/Pods-Tech Reads/Pods-Tech Reads.release.xcconfig"; sourceTree = "<group>"; };
+		88106D9A409647B17CEF3ACA /* Pods-Tech Reads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech Reads.debug.xcconfig"; path = "Target Support Files/Pods-Tech Reads/Pods-Tech Reads.debug.xcconfig"; sourceTree = "<group>"; };
+		D32D0697242C8CA5002A8647 /* Tech Reads-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tech Reads-Bridging-Header.h"; sourceTree = "<group>"; };
+		D32D0698242C8CA6002A8647 /* PreferenceUtilitiesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferenceUtilitiesView.m; sourceTree = "<group>"; };
+		D32D069A242C8CCC002A8647 /* PreferenceUtillitiesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceUtillitiesView.h; sourceTree = "<group>"; };
+		D33999B423FBC33A009E1811 /* SearchResultsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableView.swift; sourceTree = "<group>"; };
+		D368A43723EBF5130090A80F /* GameReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReviewView.swift; sourceTree = "<group>"; };
 		D368A43923EBF6730090A80F /* GameSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSearchView.swift; sourceTree = "<group>"; };
-		D368A43D23EBF80E0090A80F /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
-		D368A43F23EC363D0090A80F /* GeneralTechReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTechReview.swift; sourceTree = "<group>"; };
+		D368A43F23EC363D0090A80F /* GeneralTechReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTechReviewView.swift; sourceTree = "<group>"; };
+		D37E6936242CF68000391989 /* TextProcessingtests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextProcessingtests.swift; sourceTree = "<group>"; };
+		D37E6938242CF6FD00391989 /* InformationDisplayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationDisplayTest.swift; sourceTree = "<group>"; };
+		D39986F0242E082E00A08717 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D3A6CE162438CB2E00B96DE1 /* SaveUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUtility.swift; sourceTree = "<group>"; };
+		D3C1EA9B2432379C007AFFDD /* SaveLoadTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLoadTest.swift; sourceTree = "<group>"; };
 		D3DBEC6523E98180003EBFDC /* Tech Reads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tech Reads.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DBEC6823E98180003EBFDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3DBEC6A23E98180003EBFDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +79,6 @@
 		D3DBEC7423E98180003EBFDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3DBEC7623E98180003EBFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3DBEC7B23E98180003EBFDC /* Tech ReadsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tech ReadsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3DBEC7F23E98180003EBFDC /* Tech_ReadsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tech_ReadsTests.swift; sourceTree = "<group>"; };
 		D3DBEC8123E98180003EBFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3DBEC8623E98180003EBFDC /* Tech ReadsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tech ReadsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DBEC8A23E98180003EBFDC /* Tech_ReadsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tech_ReadsUITests.swift; sourceTree = "<group>"; };
@@ -64,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60DEA0366CFC19A0ED6F2F74 /* libPods-Tech Reads.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A5252257A568271D686DAE /* libPods-Tech ReadsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +106,96 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4A8D58AC57A1D18FB7F7D35 /* libPods-Tech Reads-Tech ReadsUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CD41D17481D8BFE4EE6067D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88106D9A409647B17CEF3ACA /* Pods-Tech Reads.debug.xcconfig */,
+				70AC1BEE41BC2F16F8832D13 /* Pods-Tech Reads.release.xcconfig */,
+				1BFEB06D0B350E72EFA38D9D /* Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig */,
+				55AAD0F02A348F87839E55E3 /* Pods-Tech Reads-Tech ReadsUITests.release.xcconfig */,
+				4760C2CD53B819813F0F55B0 /* Pods-Tech ReadsTests.debug.xcconfig */,
+				452348086034F0985C7273F1 /* Pods-Tech ReadsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AB06081DF31FC2B8A3E6706B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A09859785E339A2A2DC6CCF /* libPods-Tech Reads.a */,
+				10C2F4133D88585DD8647788 /* libPods-Tech Reads-Tech ReadsUITests.a */,
+				3F09DD7B63BB788BF424BA54 /* libPods-Tech ReadsTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D387DC60242DDD7D00F8A593 /* PreferenceUtilitiesView */ = {
+			isa = PBXGroup;
+			children = (
+				D32D069A242C8CCC002A8647 /* PreferenceUtillitiesView.h */,
+				D32D0698242C8CA6002A8647 /* PreferenceUtilitiesView.m */,
+				D3A6CE162438CB2E00B96DE1 /* SaveUtility.swift */,
+			);
+			path = PreferenceUtilitiesView;
+			sourceTree = "<group>";
+		};
+		D387DC62242DDDDA00F8A593 /* SearchFunctionViews */ = {
+			isa = PBXGroup;
+			children = (
+				D368A43923EBF6730090A80F /* GameSearchView.swift */,
+				D33999B423FBC33A009E1811 /* SearchResultsTableView.swift */,
+			);
+			path = SearchFunctionViews;
+			sourceTree = "<group>";
+		};
+		D387DC63242DDDFB00F8A593 /* GameReviewViews */ = {
+			isa = PBXGroup;
+			children = (
+				D368A43723EBF5130090A80F /* GameReviewView.swift */,
+			);
+			path = GameReviewViews;
+			sourceTree = "<group>";
+		};
+		D3A451732418A25F0017C53A /* GameReview */ = {
+			isa = PBXGroup;
+			children = (
+				D387DC63242DDDFB00F8A593 /* GameReviewViews */,
+			);
+			path = GameReview;
+			sourceTree = "<group>";
+		};
+		D3A451742418A2870017C53A /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				D387DC60242DDD7D00F8A593 /* PreferenceUtilitiesView */,
+				D32D0697242C8CA5002A8647 /* Tech Reads-Bridging-Header.h */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		D3A451752418A2CD0017C53A /* SearchFunction */ = {
+			isa = PBXGroup;
+			children = (
+				D387DC62242DDDDA00F8A593 /* SearchFunctionViews */,
+			);
+			path = SearchFunction;
+			sourceTree = "<group>";
+		};
+		D3A451762418A2FF0017C53A /* TechReview */ = {
+			isa = PBXGroup;
+			children = (
+				D368A43F23EC363D0090A80F /* GeneralTechReviewView.swift */,
+			);
+			path = TechReview;
+			sourceTree = "<group>";
+		};
 		D3DBEC5C23E98180003EBFDC = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +203,8 @@
 				D3DBEC7E23E98180003EBFDC /* Tech ReadsTests */,
 				D3DBEC8923E98180003EBFDC /* Tech ReadsUITests */,
 				D3DBEC6623E98180003EBFDC /* Products */,
+				3CD41D17481D8BFE4EE6067D /* Pods */,
+				AB06081DF31FC2B8A3E6706B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,17 +221,17 @@
 		D3DBEC6723E98180003EBFDC /* Tech Reads */ = {
 			isa = PBXGroup;
 			children = (
+				D39986F0242E082E00A08717 /* GoogleService-Info.plist */,
+				D3F62E96241F5012002F5398 /* ProjectStoryboard */,
+				D3A451762418A2FF0017C53A /* TechReview */,
+				D3A451752418A2CD0017C53A /* SearchFunction */,
+				D3A451742418A2870017C53A /* Preferences */,
+				D3A451732418A25F0017C53A /* GameReview */,
 				D3DBEC6823E98180003EBFDC /* AppDelegate.swift */,
 				D3DBEC6A23E98180003EBFDC /* SceneDelegate.swift */,
-				D3DBEC6C23E98180003EBFDC /* ViewController.swift */,
-				D3DBEC6E23E98180003EBFDC /* Main.storyboard */,
 				D3DBEC7123E98180003EBFDC /* Assets.xcassets */,
 				D3DBEC7323E98180003EBFDC /* LaunchScreen.storyboard */,
 				D3DBEC7623E98180003EBFDC /* Info.plist */,
-				D368A43723EBF5130090A80F /* GameReviewController.swift */,
-				D368A43923EBF6730090A80F /* GameSearchView.swift */,
-				D368A43D23EBF80E0090A80F /* UserPreferences.swift */,
-				D368A43F23EC363D0090A80F /* GeneralTechReview.swift */,
 			);
 			path = "Tech Reads";
 			sourceTree = "<group>";
@@ -125,8 +239,10 @@
 		D3DBEC7E23E98180003EBFDC /* Tech ReadsTests */ = {
 			isa = PBXGroup;
 			children = (
-				D3DBEC7F23E98180003EBFDC /* Tech_ReadsTests.swift */,
 				D3DBEC8123E98180003EBFDC /* Info.plist */,
+				D37E6936242CF68000391989 /* TextProcessingtests.swift */,
+				D37E6938242CF6FD00391989 /* InformationDisplayTest.swift */,
+				D3C1EA9B2432379C007AFFDD /* SaveLoadTest.swift */,
 			);
 			path = "Tech ReadsTests";
 			sourceTree = "<group>";
@@ -140,6 +256,15 @@
 			path = "Tech ReadsUITests";
 			sourceTree = "<group>";
 		};
+		D3F62E96241F5012002F5398 /* ProjectStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				D3DBEC6C23E98180003EBFDC /* ViewController.swift */,
+				D3DBEC6E23E98180003EBFDC /* Main.storyboard */,
+			);
+			path = ProjectStoryboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +272,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3DBEC8F23E98180003EBFDC /* Build configuration list for PBXNativeTarget "Tech Reads" */;
 			buildPhases = (
+				BEDA6CFC8D6C3A2C3115A4AB /* [CP] Check Pods Manifest.lock */,
 				D3DBEC6123E98180003EBFDC /* Sources */,
 				D3DBEC6223E98180003EBFDC /* Frameworks */,
 				D3DBEC6323E98180003EBFDC /* Resources */,
@@ -165,6 +291,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3DBEC9223E98180003EBFDC /* Build configuration list for PBXNativeTarget "Tech ReadsTests" */;
 			buildPhases = (
+				C4E26A1A529490C6C36D561C /* [CP] Check Pods Manifest.lock */,
 				D3DBEC7723E98180003EBFDC /* Sources */,
 				D3DBEC7823E98180003EBFDC /* Frameworks */,
 				D3DBEC7923E98180003EBFDC /* Resources */,
@@ -183,6 +310,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3DBEC9523E98180003EBFDC /* Build configuration list for PBXNativeTarget "Tech ReadsUITests" */;
 			buildPhases = (
+				C58DC0CAFEE9055D7A2B0025 /* [CP] Check Pods Manifest.lock */,
 				D3DBEC8223E98180003EBFDC /* Sources */,
 				D3DBEC8323E98180003EBFDC /* Frameworks */,
 				D3DBEC8423E98180003EBFDC /* Resources */,
@@ -209,6 +337,7 @@
 				TargetAttributes = {
 					D3DBEC6423E98180003EBFDC = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					D3DBEC7A23E98180003EBFDC = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -246,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3DBEC7523E98180003EBFDC /* LaunchScreen.storyboard in Resources */,
+				D39986F1242E082E00A08717 /* GoogleService-Info.plist in Resources */,
 				D3DBEC7223E98180003EBFDC /* Assets.xcassets in Resources */,
 				D3DBEC7023E98180003EBFDC /* Main.storyboard in Resources */,
 			);
@@ -255,6 +385,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39986F2242E082E00A08717 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,12 +393,79 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39986F3242E082E00A08717 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		BEDA6CFC8D6C3A2C3115A4AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tech Reads-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4E26A1A529490C6C36D561C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tech ReadsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C58DC0CAFEE9055D7A2B0025 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tech Reads-Tech ReadsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D32661F223F2C145005EB5EF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,7 +481,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -292,12 +490,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D368A43E23EBF80E0090A80F /* UserPreferences.swift in Sources */,
 				D3DBEC6D23E98180003EBFDC /* ViewController.swift in Sources */,
-				D368A44023EC363D0090A80F /* GeneralTechReview.swift in Sources */,
+				D368A44023EC363D0090A80F /* GeneralTechReviewView.swift in Sources */,
+				D33999B523FBC33A009E1811 /* SearchResultsTableView.swift in Sources */,
 				D3DBEC6923E98180003EBFDC /* AppDelegate.swift in Sources */,
-				D368A43823EBF5130090A80F /* GameReviewController.swift in Sources */,
+				D368A43823EBF5130090A80F /* GameReviewView.swift in Sources */,
+				D32D0699242C8CA6002A8647 /* PreferenceUtilitiesView.m in Sources */,
 				D368A43A23EBF6730090A80F /* GameSearchView.swift in Sources */,
+				D3A6CE172438CB2E00B96DE1 /* SaveUtility.swift in Sources */,
 				D3DBEC6B23E98180003EBFDC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +506,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3DBEC8023E98180003EBFDC /* Tech_ReadsTests.swift in Sources */,
+				D3C1EA9C2432379C007AFFDD /* SaveLoadTest.swift in Sources */,
+				D37E6939242CF6FD00391989 /* InformationDisplayTest.swift in Sources */,
+				D37E6937242CF68000391989 /* TextProcessingtests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +558,7 @@
 		D3DBEC8D23E98180003EBFDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -403,6 +606,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -416,6 +620,7 @@
 		D3DBEC8E23E98180003EBFDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -457,6 +662,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -469,9 +675,16 @@
 		};
 		D3DBEC9023E98180003EBFDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88106D9A409647B17CEF3ACA /* Pods-Tech Reads.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Tech Reads/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,6 +692,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "za.co.dvt.Tech-Reads";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tech Reads/Preferences/Tech Reads-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -486,9 +701,15 @@
 		};
 		D3DBEC9123E98180003EBFDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70AC1BEE41BC2F16F8832D13 /* Pods-Tech Reads.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Tech Reads/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -496,6 +717,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "za.co.dvt.Tech-Reads";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tech Reads/Preferences/Tech Reads-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -503,10 +725,13 @@
 		};
 		D3DBEC9323E98180003EBFDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4760C2CD53B819813F0F55B0 /* Pods-Tech ReadsTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Tech ReadsTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -516,6 +741,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "za.co.dvt.Tech-ReadsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tech Reads/Preferences/Tech Reads-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tech Reads.app/Tech Reads";
@@ -524,10 +750,13 @@
 		};
 		D3DBEC9423E98180003EBFDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 452348086034F0985C7273F1 /* Pods-Tech ReadsTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Tech ReadsTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -537,6 +766,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "za.co.dvt.Tech-ReadsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tech Reads/Preferences/Tech Reads-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tech Reads.app/Tech Reads";
@@ -545,9 +775,12 @@
 		};
 		D3DBEC9623E98180003EBFDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BFEB06D0B350E72EFA38D9D /* Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Tech ReadsUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -556,6 +789,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "za.co.dvt.Tech-ReadsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tech Reads/Preferences/Tech Reads-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Tech Reads";
@@ -564,9 +798,12 @@
 		};
 		D3DBEC9723E98180003EBFDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55AAD0F02A348F87839E55E3 /* Pods-Tech Reads-Tech ReadsUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Tech ReadsUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -575,6 +812,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "za.co.dvt.Tech-ReadsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tech Reads/Preferences/Tech Reads-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Tech Reads";
