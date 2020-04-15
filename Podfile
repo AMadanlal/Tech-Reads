@@ -6,7 +6,7 @@ target 'Tech Reads' do
   #use_frameworks!
 
   # Pods for Tech Reads
-	pod 'TechReadsPod', :git => 'https://github.com/AMadanlal/TechReadsPod.git', :branch => 'Feature/InstallingFirebase' 
+	pod 'TechReadsPod', :git => 'https://github.com/AMadanlal/TechReadsPod.git', :branch => 'Feature/APIIntegration' 
 	pod 'Firebase'
 	pod 'Firebase/Crashlytics'
 	pod 'Firebase/Performance'

@@ -27,6 +27,7 @@
 		D3DBEC7223E98180003EBFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3DBEC7123E98180003EBFDC /* Assets.xcassets */; };
 		D3DBEC7523E98180003EBFDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DBEC7323E98180003EBFDC /* LaunchScreen.storyboard */; };
 		D3DBEC8B23E98180003EBFDC /* Tech_ReadsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC8A23E98180003EBFDC /* Tech_ReadsUITests.swift */; };
+		D3FD96D324471E2600588DCE /* testfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FD96D224471E2600588DCE /* testfile.swift */; };
 		D4A8D58AC57A1D18FB7F7D35 /* libPods-Tech Reads-Tech ReadsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C2F4133D88585DD8647788 /* libPods-Tech Reads-Tech ReadsUITests.a */; };
 		F5A5252257A568271D686DAE /* libPods-Tech ReadsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F09DD7B63BB788BF424BA54 /* libPods-Tech ReadsTests.a */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 		D3DBEC8623E98180003EBFDC /* Tech ReadsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tech ReadsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DBEC8A23E98180003EBFDC /* Tech_ReadsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tech_ReadsUITests.swift; sourceTree = "<group>"; };
 		D3DBEC8C23E98180003EBFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3FD96D224471E2600588DCE /* testfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 			children = (
 				D3DBEC6C23E98180003EBFDC /* ViewController.swift */,
 				D3DBEC6E23E98180003EBFDC /* Main.storyboard */,
+				D3FD96D224471E2600588DCE /* testfile.swift */,
 			);
 			path = ProjectStoryboard;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3DBEC6D23E98180003EBFDC /* ViewController.swift in Sources */,
+				D3FD96D324471E2600588DCE /* testfile.swift in Sources */,
 				D368A44023EC363D0090A80F /* GeneralTechReviewView.swift in Sources */,
 				D33999B523FBC33A009E1811 /* SearchResultsTableView.swift in Sources */,
 				D3DBEC6923E98180003EBFDC /* AppDelegate.swift in Sources */,
