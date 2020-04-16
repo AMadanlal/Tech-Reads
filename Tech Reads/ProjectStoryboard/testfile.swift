@@ -18,7 +18,8 @@ public enum Newsinfoerror: Error {
   case canNotProcessData
 }
 
-//Codable Struct to represent JSON payload found at source: https://github.com/DanKorkelia/News-API-swift/blob/master/News-API%20Playground.playground/Contents.swift
+//Codable Struct to represent JSON payload found at source:
+//https://github.com/DanKorkelia/News-API-swift/blob/master/News-API%20Playground.playground/Contents.swift
 struct NewsSource: Codable {
     let status: String?
     let totalResults: Int?
@@ -29,16 +30,13 @@ struct NewsSource: Codable {
         let description: String?
         let url: URL?
         let urlToImage: URL?
-        let publishedAt: Date
-
+        let publishedAt: String?
         struct Source: Codable {
             let id: String?
             let name: String?
         }
     }
-
     let articles: [Article]
-
 //    private enum CodingKeys: String, CodingKey {
 //        case status
 //        case totalResults
@@ -53,37 +51,32 @@ class TestClass: UIViewController {
        super.viewDidLoad()
    }
 
-  @IBAction func resButton(_ sender: UIButton) {
-    //    attempt to do API integration here
-        let urlString: String = "http://localhost:8080/textToFormat"
-     // prepare json data
-        let json = FormattedText(with: "PC")
-    // let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+  func getArticle(theArticle: NewsSource.Article) {
+        let urlString: String = "https://techreadsapi.herokuapp.com/NewsArticleFormatter"
+        let json = theArticle
         let jsonData = try? JSONEncoder().encode(json)
-     // create post request
-     let url = URL(string: urlString)!
-     var request = URLRequest(url: url)
-     request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        // insert json data to the request
-           request.httpBody = jsonData
-     let task = URLSession.shared.dataTask(with: request) { data, _, error in
-         guard let data = data, error == nil else {
-             print(error?.localizedDescription ?? "No data")
-             return
-         }
-      let responseJSON = String(data: data, encoding: .utf8)
-      if let responseJSON = responseJSON {
-           DispatchQueue.main.async {
-             print(responseJSON)
-            self.reslbl.text = responseJSON
-          }
-         }
-     }
-    task.resume()
-
+        let url = URL(string: urlString)!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+           request.setValue("application/json", forHTTPHeaderField: "Accept")
+           request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+              request.httpBody = jsonData
+        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+         let responseJSON = String(data: data, encoding: .utf8)
+         if let responseJSON = responseJSON {
+              DispatchQueue.main.async {
+                print(responseJSON)
+               self.reslbl.text = responseJSON
+             }
+            }
+        }
+       task.resume()
   }
+
   func getNewsList(completionHandler: @escaping(Result<NewsSource, Newsinfoerror>) ->
     Void) {
     let request = NSMutableURLRequest(url: NSURL(string: "https://newsapi" +
@@ -93,7 +86,7 @@ class TestClass: UIViewController {
     request.httpMethod = "GET"
 //    NOT PUTTING HEADERS AS THEY ARE ALREADY IN THE URL STRING
     let session = URLSession.shared
-    let dataTask = session.dataTask(with: request as URLRequest) { data, response, _ in
+    let dataTask = session.dataTask(with: request as URLRequest) { data, _, _ in
       guard let jsonData = data else {
         completionHandler(.failure(.noDataAvailable))
         return
@@ -102,8 +95,6 @@ class TestClass: UIViewController {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
        let newsResponse = try decoder.decode(NewsSource.self, from: jsonData)
-//        let newsResponse = try decoder.decode(NewsSource.self, from: jsonData)
-//        completionHandler(.success(newsResponse))
         completionHandler(.success(newsResponse))
       } catch {
         completionHandler(.failure(.canNotProcessData))
@@ -119,7 +110,7 @@ class TestClass: UIViewController {
         print(error)
       case.success(let details):
         DispatchQueue.main.async {
-          self.reslbl.text = details.articles.first?.title
+          self.getArticle(theArticle: details.articles.randomElement()!)
         }
       }
     }
