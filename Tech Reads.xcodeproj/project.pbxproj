@@ -20,6 +20,7 @@
 		D39986F3242E082E00A08717 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D39986F0242E082E00A08717 /* GoogleService-Info.plist */; };
 		D3A6CE172438CB2E00B96DE1 /* SaveUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6CE162438CB2E00B96DE1 /* SaveUtility.swift */; };
 		D3C1EA9C2432379C007AFFDD /* SaveLoadTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C1EA9B2432379C007AFFDD /* SaveLoadTest.swift */; };
+		D3D5AAF12448A5040084F13F /* TechNewsAPICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D5AAF02448A5040084F13F /* TechNewsAPICalls.swift */; };
 		D3DBEC6923E98180003EBFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC6823E98180003EBFDC /* AppDelegate.swift */; };
 		D3DBEC6B23E98180003EBFDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC6A23E98180003EBFDC /* SceneDelegate.swift */; };
 		D3DBEC6D23E98180003EBFDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC6C23E98180003EBFDC /* ViewController.swift */; };
@@ -71,6 +72,7 @@
 		D39986F0242E082E00A08717 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3A6CE162438CB2E00B96DE1 /* SaveUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUtility.swift; sourceTree = "<group>"; };
 		D3C1EA9B2432379C007AFFDD /* SaveLoadTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLoadTest.swift; sourceTree = "<group>"; };
+		D3D5AAF02448A5040084F13F /* TechNewsAPICalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechNewsAPICalls.swift; sourceTree = "<group>"; };
 		D3DBEC6523E98180003EBFDC /* Tech Reads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tech Reads.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DBEC6823E98180003EBFDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3DBEC6A23E98180003EBFDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +200,14 @@
 			path = TechReview;
 			sourceTree = "<group>";
 		};
+		D3D5AAEF2448A4E50084F13F /* TechNewsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D3D5AAF02448A5040084F13F /* TechNewsAPICalls.swift */,
+			);
+			path = TechNewsAPI;
+			sourceTree = "<group>";
+		};
 		D3DBEC5C23E98180003EBFDC = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +233,7 @@
 		D3DBEC6723E98180003EBFDC /* Tech Reads */ = {
 			isa = PBXGroup;
 			children = (
+				D3D5AAEF2448A4E50084F13F /* TechNewsAPI */,
 				D39986F0242E082E00A08717 /* GoogleService-Info.plist */,
 				D3F62E96241F5012002F5398 /* ProjectStoryboard */,
 				D3A451762418A2FF0017C53A /* TechReview */,
@@ -495,6 +506,7 @@
 			files = (
 				D3DBEC6D23E98180003EBFDC /* ViewController.swift in Sources */,
 				D3FD96D324471E2600588DCE /* testfile.swift in Sources */,
+				D3D5AAF12448A5040084F13F /* TechNewsAPICalls.swift in Sources */,
 				D368A44023EC363D0090A80F /* GeneralTechReviewView.swift in Sources */,
 				D33999B523FBC33A009E1811 /* SearchResultsTableView.swift in Sources */,
 				D3DBEC6923E98180003EBFDC /* AppDelegate.swift in Sources */,
