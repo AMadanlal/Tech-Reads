@@ -430,6 +430,8 @@
         <!--General Tech Review-->
         <scene sceneID="bhm-e5-htQ">
             <objects>
+                <exit id="7Fh-mh-UJ5" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1Q-jw-V5r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="6RD-ow-mKT" customClass="GeneralTechReview" customModule="Tech_Reads" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vpd-eP-7Yx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -472,8 +474,8 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="btnCancel:" destination="6RD-ow-mKT" eventType="touchUpInside" id="beX-tb-WnT"/>
-                                                                    <segue destination="7Fh-mh-UJ5" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="Qku-qc-fEh"/>
+                                                                    <action selector="btnBack:" destination="6RD-ow-mKT" eventType="touchUpInside" id="B4E-8d-Mio"/>
+                                                                    <segue destination="7Fh-mh-UJ5" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="jAg-Yn-md1"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pj-7r-6N0">
@@ -488,7 +490,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="btnNext:" destination="6RD-ow-mKT" eventType="touchUpInside" id="fan-sy-4ep"/>
+                                                                    <action selector="btnNext:" destination="6RD-ow-mKT" eventType="touchUpInside" id="Sw3-8j-MFq"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -497,7 +499,18 @@
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rs5-pc-hvF">
                                                 <rect key="frame" x="0.0" y="165.66666666666663" width="382" height="212.33333333333337"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8LC-Ea-HQt">
+                                                        <rect key="frame" x="16" y="16" width="350" height="180.33333333333334"/>
+                                                    </imageView>
+                                                </subviews>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="8LC-Ea-HQt" secondAttribute="bottom" constant="16" id="4j0-L2-yd8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8LC-Ea-HQt" secondAttribute="trailing" constant="16" id="7RE-82-R1S"/>
+                                                    <constraint firstItem="8LC-Ea-HQt" firstAttribute="top" secondItem="rs5-pc-hvF" secondAttribute="top" constant="16" id="ERX-Kx-2bD"/>
+                                                    <constraint firstItem="8LC-Ea-HQt" firstAttribute="leading" secondItem="rs5-pc-hvF" secondAttribute="leading" constant="16" id="H8B-7X-f5h"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="15"/>
@@ -539,9 +552,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7IZ-Ei-kwE"/>
                     </view>
+                    <connections>
+                        <outlet property="imgView" destination="8LC-Ea-HQt" id="bER-1l-h7X"/>
+                        <outlet property="titleLabel" destination="nsL-FS-emX" id="3UZ-R1-l24"/>
+                        <outlet property="txtNewsDetails" destination="0wb-Fm-MvH" id="rQJ-1s-snc"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h1Q-jw-V5r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="7Fh-mh-UJ5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2442.0289855072465" y="869.86607142857144"/>
         </scene>
