@@ -10,7 +10,7 @@ import UIKit
 import TechReadsPod
 
 class GameReviewController: UIViewController {
-//  this is the main game label
+//  this is the main game label 
   @IBOutlet weak var lblMain: UILabel!
   //    this is a scroll view for the review of the game
       @IBOutlet weak var srollResultView: UIScrollView!
