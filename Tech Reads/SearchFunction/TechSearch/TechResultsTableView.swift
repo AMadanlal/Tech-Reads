@@ -10,9 +10,10 @@ import Foundation
 
 class TechResultsTableView: UITableViewController, TechResultsPresenterView {
 
-var techArticlesToDisplay = [String]()
-var searchItem = ""
-lazy var resultsPresenter = TechResultsPresenter(with: self)
+  var techArticlesToDisplay = [String]()
+  var searchItem = ""
+  lazy var resultsPresenter = TechResultsPresenter(with: self)
+  var itemIndex = 0
 
   override func viewDidAppear(_ animated: Bool) {
     resultsPresenter.displayTechResults()
@@ -29,16 +30,15 @@ lazy var resultsPresenter = TechResultsPresenter(with: self)
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    indexPath.row -> here we use this value to get a value from the array
+    itemIndex = indexPath.row
     self.performSegue(withIdentifier: "TechDetailSegue", sender: self)
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
   if segue.identifier == "TechDetailSegue" {
     let segueDest = segue.destination as? GeneralTechReview
-//    let segueDest = segue.destination as? GeneralTechReview
-//    let techDetailsPage = TechNewsPresenter(with: segueDest?)
-//    techDetailsPage.article = get article from presenter
+    segueDest?.articleStatus = true
+    segueDest?.newsPresenter.newsArticle = resultsPresenter.newsArticles?.articles[itemIndex]
       }
     }
 

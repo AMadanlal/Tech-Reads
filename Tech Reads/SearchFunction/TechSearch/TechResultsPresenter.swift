@@ -33,7 +33,7 @@ class TechResultsPresenter {
       for item in details.articles {
         let title = item.title ?? "Unknown Title"
         let description = item.description ?? "Unknown"
-        self.techNewsItems.append(title + " ," + description)
+        self.techNewsItems.append(title + " /n " + description)
       }
       DispatchQueue.main.async {
         self.view?.updateSearchItems(newsItems: self.techNewsItems)
