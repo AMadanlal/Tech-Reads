@@ -39,9 +39,17 @@ class GameSearchView: UIViewController, UITextViewDelegate {
       let segueDest = segue.destination as? SearchResultsTable
           segueDest?.searchString = txtFieldSearch.text!
       }
+    if segue.identifier == "techSearch" {
+    let segueDest = segue.destination as? TechResultsTableView
+        segueDest?.searchItem = txtFieldSearch.text!
+    }
   }
   @IBAction func btnSearch(_ sender: UIButton) {
     search = txtFieldSearch.text
       performSegue(withIdentifier: "searchsegue", sender: self)
     }
+  @IBAction func btnTechSearch(_ sender: UIButton) {
+    search = txtFieldSearch.text
+    performSegue(withIdentifier: "techSearch", sender: self)
+  }
 }

@@ -8,26 +8,29 @@
 
 import UIKit
 
-class GeneralTechReview: UIViewController {
+class GeneralTechReview: UIViewController, TechNewsPresenterView {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var txtNewsDetails: UITextView!
   @IBOutlet weak var imgView: UIImageView!
   lazy var newsPresenter = TechNewsPresenter(with: self)
+  public var articleStatus = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
-      newsPresenter.displayTechNews()
+      if articleStatus == false {
+        newsPresenter.displayRandomTechNews()
+      } else {
+        newsPresenter.displayTechNews()
+      }
     }
 
   @IBAction func btnBack(_ sender: UIButton) {
   }
 
   @IBAction func btnNext(_ sender: UIButton) {
-    newsPresenter.displayTechNews()
+    newsPresenter.displayRandomTechNews()
   }
 
-}
-
-extension GeneralTechReview: TechNewsPresenterView {
   func updateTitle(text: String) {
     titleLabel.text = text
   }
@@ -39,4 +42,5 @@ extension GeneralTechReview: TechNewsPresenterView {
   func updateTextfield(text: String) {
     txtNewsDetails.text = text
   }
+
 }
