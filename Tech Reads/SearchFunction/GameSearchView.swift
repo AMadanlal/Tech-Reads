@@ -35,21 +35,21 @@ class GameSearchView: UIViewController, UITextViewDelegate {
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "searchsegue" {
+    if segue.identifier == gameResultsPageSegue {
       let segueDest = segue.destination as? SearchResultsTable
-          segueDest?.searchString = txtFieldSearch.text!
+      segueDest?.searchString = txtFieldSearch.text ?? ""
       }
-    if segue.identifier == "techSearch" {
+    if segue.identifier == techResultsPageSegue {
     let segueDest = segue.destination as? TechResultsTableView
-        segueDest?.searchItem = txtFieldSearch.text!
+        segueDest?.searchItem = txtFieldSearch.text ?? ""
     }
   }
   @IBAction func btnSearch(_ sender: UIButton) {
     search = txtFieldSearch.text
-      performSegue(withIdentifier: "searchsegue", sender: self)
+      performSegue(withIdentifier: gameResultsPageSegue, sender: self)
     }
   @IBAction func btnTechSearch(_ sender: UIButton) {
     search = txtFieldSearch.text
-    performSegue(withIdentifier: "techSearch", sender: self)
+    performSegue(withIdentifier: techResultsPageSegue, sender: self)
   }
 }

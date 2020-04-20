@@ -13,11 +13,11 @@ class GeneralTechReview: UIViewController, TechNewsPresenterView {
   @IBOutlet weak var txtNewsDetails: UITextView!
   @IBOutlet weak var imgView: UIImageView!
   lazy var newsPresenter = TechNewsPresenter(with: self)
-  public var articleStatus = false
+  public var isSearched = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      if articleStatus == false {
+      if isSearched == false {
         newsPresenter.displayRandomTechNews()
       } else {
         newsPresenter.displayTechNews()

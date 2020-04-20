@@ -9,12 +9,6 @@
 import Foundation
 import TechReadsPod
 
-protocol TechNewsPresenterView: class {
-  func updateTextfield(text: String)
-  func updateTitle(text: String)
-  func updateImage(image: UIImage)
-}
-
 class TechNewsPresenter {
 
   weak var view: TechNewsPresenterView?
@@ -26,9 +20,10 @@ class TechNewsPresenter {
   func loadimage(imageUrl: String, completionHandler: @escaping(UIImage) -> Void) {
      guard let imageURL = URL(string: imageUrl) else { return }
      DispatchQueue.global().async {
-        guard let imageData = try? Data(contentsOf: imageURL) else { return }
-        let image = UIImage(data: imageData)
-        completionHandler(image!)
+      guard let imageData = try? Data(contentsOf: imageURL) else { return }
+      if let image = UIImage(data: imageData) {
+        completionHandler(image)
+      }
      }
    }
 
@@ -37,7 +32,8 @@ class TechNewsPresenter {
   func displayTechNews() {
     let newsApi = NewsAPICalls()
     view?.updateTitle(text: self.newsArticle?.title ?? "Unknown Title")
-    newsApi.getArticleTextFormat(theArticle: (self.newsArticle!)) { result in
+    guard let newsArticle = self.newsArticle else { return }
+    newsApi.getArticleTextFormat(theArticle: newsArticle) { result in
     DispatchQueue.main.async {
     self.view?.updateTextfield(text: result)
       self.loadimage(imageUrl: self.newsArticle?.urlToImage?.absoluteString ?? "") { result in
@@ -60,7 +56,8 @@ class TechNewsPresenter {
       self.newsArticle = newsApi.getRandomArticle(allArticles: details)
       DispatchQueue.main.async {
         self.view?.updateTitle(text: self.newsArticle?.title ?? "Unknown Title")
-        newsApi.getArticleTextFormat(theArticle: (self.newsArticle!)) { result in
+        guard let newsArticle = self.newsArticle else { return }
+        newsApi.getArticleTextFormat(theArticle: newsArticle) { result in
           DispatchQueue.main.async {
           self.view?.updateTextfield(text: result)
             self.loadimage(imageUrl: self.newsArticle?.urlToImage?.absoluteString ?? "") { result in

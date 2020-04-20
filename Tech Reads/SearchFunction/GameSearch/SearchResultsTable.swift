@@ -11,17 +11,18 @@ import TechReadsPod
 
 class SearchResultsTable: UITableViewController {
   var searchString = ""
-  var gPlatform = ""
+  var gamePlatform = ""
   var gamesToDisplay = [String]()
   var itemsToSend = [String]()
   var itemPlatform = [String]()
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    gamesToDisplay = [String]()
   }
+
   override func viewDidAppear(_ animated: Bool) {
-    if gamesToDisplay.count == 0 {
-      let gamelist = ChickenCoopAPI(searched: searchString, platform: gPlatform)
+    if gamesToDisplay.isEmpty {
+      let gamelist = ChickenCoopAPI(searched: searchString, platform: gamePlatform)
         var gameListvariable = gamelist.gamelist
           gamelist.getGameList { result in
           switch result {
@@ -55,14 +56,14 @@ class SearchResultsTable: UITableViewController {
   }
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     searchString = itemsToSend[indexPath.row]
-    gPlatform = itemPlatform[indexPath.row]
+    gamePlatform = itemPlatform[indexPath.row]
     self.performSegue(withIdentifier: "detailsegue", sender: self)
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
   if segue.identifier == "detailsegue" {
     let segueDest = segue.destination as? GameReviewController
     segueDest?.searcheditem = searchString
-    segueDest?.gameplatform = gPlatform
+    segueDest?.gameplatform = gamePlatform
       }
     }
 }

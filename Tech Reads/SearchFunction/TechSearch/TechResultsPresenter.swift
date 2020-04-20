@@ -9,12 +9,6 @@
 import Foundation
 import TechReadsPod
 
-protocol TechResultsPresenterView: class {
-  func getSearchString() -> String
-  func updateSearchItems(newsItems: [String])
-  func reloadTable()
-}
-
 class TechResultsPresenter {
   weak var view: TechResultsPresenterView?
   var newsArticles: NewsSource?
@@ -24,20 +18,19 @@ class TechResultsPresenter {
 
   func displayTechResults() {
     let newsApi = NewsAPICalls()
-    newsApi.getCustomNewsList(searchitem: view?.getSearchString() ?? "") { result in
+    newsApi.getCustomNewsList(searchitem: view?.searchString ?? "") { result in
     switch result {
     case .failure(let error):
       print(error)
     case.success(let details):
       self.newsArticles = details
-      for item in details.articles {
+      self.techNewsItems = details.articles.map { item in
         let title = item.title ?? "Unknown Title"
         let description = item.description ?? "Unknown"
-        self.techNewsItems.append(title + " /n " + description)
+        return title + " /n " + description
       }
       DispatchQueue.main.async {
         self.view?.updateSearchItems(newsItems: self.techNewsItems)
-        self.view?.reloadTable()
         }
       }
     }

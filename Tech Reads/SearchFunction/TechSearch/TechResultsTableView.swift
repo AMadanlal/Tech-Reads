@@ -9,9 +9,12 @@
 import Foundation
 
 class TechResultsTableView: UITableViewController, TechResultsPresenterView {
-
+  var searchString: String {
+    return searchItem
+  }
   var techArticlesToDisplay = [String]()
   var searchItem = ""
+
   lazy var resultsPresenter = TechResultsPresenter(with: self)
   var itemIndex = 0
 
@@ -37,21 +40,13 @@ class TechResultsTableView: UITableViewController, TechResultsPresenterView {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
   if segue.identifier == "TechDetailSegue" {
     let segueDest = segue.destination as? GeneralTechReview
-    segueDest?.articleStatus = true
+    segueDest?.isSearched = true
     segueDest?.newsPresenter.newsArticle = resultsPresenter.newsArticles?.articles[itemIndex]
       }
     }
 
-  func getSearchString() -> String {
-    return searchItem
-  }
-
   func updateSearchItems(newsItems: [String]) {
     techArticlesToDisplay = newsItems
-  }
-
-  func reloadTable() {
     tableView.reloadData()
   }
-
 }
