@@ -32,6 +32,8 @@ class TechNewsPresenter {
      }
    }
 
+  func getSourceURLString() -> String { return newsArticle?.url?.absoluteString ?? "www.google.com"}
+
   func displayTechNews() {
     let newsApi = NewsAPICalls()
     view?.updateTitle(text: self.newsArticle?.title ?? "Unknown Title")

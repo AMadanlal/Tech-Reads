@@ -27,6 +27,10 @@ class GeneralTechReview: UIViewController, TechNewsPresenterView {
   @IBAction func btnBack(_ sender: UIButton) {
   }
 
+  @IBAction func btnSource(_ sender: UIButton) {
+    performSegue(withIdentifier: "sourceLink", sender: self)
+  }
+
   @IBAction func btnNext(_ sender: UIButton) {
     newsPresenter.displayRandomTechNews()
   }
@@ -42,5 +46,12 @@ class GeneralTechReview: UIViewController, TechNewsPresenterView {
   func updateTextfield(text: String) {
     txtNewsDetails.text = text
   }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     if segue.identifier == "sourceLink" {
+       let segueDest = segue.destination as? WebView
+      segueDest?.urlString = newsPresenter.getSourceURLString()
+       }
+   }
 
 }
