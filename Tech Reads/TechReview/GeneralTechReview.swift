@@ -35,23 +35,34 @@ class GeneralTechReview: UIViewController, TechNewsPresenterView {
     newsPresenter.displayRandomTechNews()
   }
 
-  func updateTitle(text: String) {
-    titleLabel.text = text
-  }
-
-  func updateImage(image: UIImage) {
-    imgView.image = image
-  }
-
-  func updateTextfield(text: String) {
-    txtNewsDetails.text = text
+  func updatePageContent(title: String, content: String, imageUrl: String) {
+    titleLabel.text = title
+    txtNewsDetails.text = content
+    imgView.image(fromUrl: imageUrl)
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      if segue.identifier == "sourceLink" {
-       let segueDest = segue.destination as? WebView
+      let segueDest = segue.destination as? WebView
       segueDest?.urlString = newsPresenter.getSourceURLString()
        }
    }
 
+}
+
+extension UIImageView {
+  public func image(fromUrl urlString: String) {
+    guard let url = URL(string: urlString) else {
+      print("Could not get Image")
+      return
+    }
+    let theTask = URLSession.shared.dataTask(with: url) { data, response, _ in
+      if let response = data {
+        DispatchQueue.main.async {
+          self.image = UIImage(data: response)
+        }
+      }
+    }
+    theTask.resume()
+  }
 }

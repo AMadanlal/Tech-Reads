@@ -25,8 +25,8 @@ class TechResultsPresenter {
     case.success(let details):
       self.newsArticles = details
       self.techNewsItems = details.articles.map { item in
-        let title = item.title ?? "Unknown Title"
-        let description = item.description ?? "Unknown"
+        let title = item.title
+        let description = item.description ?? "Unknown Description"
         return title + " /n " + description
       }
       DispatchQueue.main.async {

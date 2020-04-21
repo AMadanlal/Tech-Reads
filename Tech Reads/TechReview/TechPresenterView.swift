@@ -9,7 +9,5 @@
 import Foundation
 
 public protocol TechNewsPresenterView: class {
-  func updateTextfield(text: String)
-  func updateTitle(text: String)
-  func updateImage(image: UIImage)
+  func updatePageContent(title: String, content: String, imageUrl: String)
 }
