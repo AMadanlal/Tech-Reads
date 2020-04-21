@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		60DEA0366CFC19A0ED6F2F74 /* libPods-Tech Reads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A09859785E339A2A2DC6CCF /* libPods-Tech Reads.a */; };
+		188428E57875AE5432233BD2 /* libPods-Tech Reads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A25C5754E8E8BD7F564E507B /* libPods-Tech Reads.a */; };
+		6794637ED12DBD419C9180A8 /* libPods-Tech Reads-Tech ReadsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E23546AAF2C9A6B428B70F /* libPods-Tech Reads-Tech ReadsUITests.a */; };
+		8365C9DE564898A0706B5879 /* libPods-Tech ReadsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0901F52C02252689E92166 /* libPods-Tech ReadsTests.a */; };
+		D32801CA24499F9F00E1DEF1 /* TechNewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32801C924499F9F00E1DEF1 /* TechNewsPresenter.swift */; };
 		D32D0699242C8CA6002A8647 /* PreferenceUtilitiesView.m in Sources */ = {isa = PBXBuildFile; fileRef = D32D0698242C8CA6002A8647 /* PreferenceUtilitiesView.m */; };
-		D33999B523FBC33A009E1811 /* SearchResultsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33999B423FBC33A009E1811 /* SearchResultsTableView.swift */; };
-		D368A43823EBF5130090A80F /* GameReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43723EBF5130090A80F /* GameReviewView.swift */; };
+		D33999B523FBC33A009E1811 /* SearchResultsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33999B423FBC33A009E1811 /* SearchResultsTable.swift */; };
+		D368A43823EBF5130090A80F /* GameReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43723EBF5130090A80F /* GameReviewController.swift */; };
 		D368A43A23EBF6730090A80F /* GameSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43923EBF6730090A80F /* GameSearchView.swift */; };
-		D368A44023EC363D0090A80F /* GeneralTechReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43F23EC363D0090A80F /* GeneralTechReviewView.swift */; };
+		D368A44023EC363D0090A80F /* GeneralTechReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368A43F23EC363D0090A80F /* GeneralTechReview.swift */; };
 		D37E6937242CF68000391989 /* TextProcessingtests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37E6936242CF68000391989 /* TextProcessingtests.swift */; };
 		D37E6939242CF6FD00391989 /* InformationDisplayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37E6938242CF6FD00391989 /* InformationDisplayTest.swift */; };
+		D3866AA7244D8037004FC01D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866AA6244D8037004FC01D /* WebView.swift */; };
+		D3866AAD244DCB23004FC01D /* Seques.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866AAC244DCB23004FC01D /* Seques.swift */; };
+		D3866AAF244DCDEA004FC01D /* TechPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866AAE244DCDEA004FC01D /* TechPresenterView.swift */; };
+		D3866AB1244DCE27004FC01D /* TechResultsPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3866AB0244DCE27004FC01D /* TechResultsPresenterView.swift */; };
+		D396EBA3244B265D007DB5B5 /* TechResultsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D396EBA2244B265D007DB5B5 /* TechResultsTableView.swift */; };
+		D396EBA9244B2B5E007DB5B5 /* TechResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D396EBA8244B2B5E007DB5B5 /* TechResultsPresenter.swift */; };
 		D39986F1242E082E00A08717 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D39986F0242E082E00A08717 /* GoogleService-Info.plist */; };
 		D39986F2242E082E00A08717 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D39986F0242E082E00A08717 /* GoogleService-Info.plist */; };
 		D39986F3242E082E00A08717 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D39986F0242E082E00A08717 /* GoogleService-Info.plist */; };
@@ -27,8 +36,6 @@
 		D3DBEC7223E98180003EBFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3DBEC7123E98180003EBFDC /* Assets.xcassets */; };
 		D3DBEC7523E98180003EBFDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DBEC7323E98180003EBFDC /* LaunchScreen.storyboard */; };
 		D3DBEC8B23E98180003EBFDC /* Tech_ReadsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC8A23E98180003EBFDC /* Tech_ReadsUITests.swift */; };
-		D4A8D58AC57A1D18FB7F7D35 /* libPods-Tech Reads-Tech ReadsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C2F4133D88585DD8647788 /* libPods-Tech Reads-Tech ReadsUITests.a */; };
-		F5A5252257A568271D686DAE /* libPods-Tech ReadsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F09DD7B63BB788BF424BA54 /* libPods-Tech ReadsTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,24 +56,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		10C2F4133D88585DD8647788 /* libPods-Tech Reads-Tech ReadsUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tech Reads-Tech ReadsUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BFEB06D0B350E72EFA38D9D /* Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tech Reads-Tech ReadsUITests/Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		3A09859785E339A2A2DC6CCF /* libPods-Tech Reads.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tech Reads.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F09DD7B63BB788BF424BA54 /* libPods-Tech ReadsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tech ReadsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		452348086034F0985C7273F1 /* Pods-Tech ReadsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech ReadsTests.release.xcconfig"; path = "Target Support Files/Pods-Tech ReadsTests/Pods-Tech ReadsTests.release.xcconfig"; sourceTree = "<group>"; };
-		4760C2CD53B819813F0F55B0 /* Pods-Tech ReadsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech ReadsTests.debug.xcconfig"; path = "Target Support Files/Pods-Tech ReadsTests/Pods-Tech ReadsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		55AAD0F02A348F87839E55E3 /* Pods-Tech Reads-Tech ReadsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech Reads-Tech ReadsUITests.release.xcconfig"; path = "Target Support Files/Pods-Tech Reads-Tech ReadsUITests/Pods-Tech Reads-Tech ReadsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		70AC1BEE41BC2F16F8832D13 /* Pods-Tech Reads.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech Reads.release.xcconfig"; path = "Target Support Files/Pods-Tech Reads/Pods-Tech Reads.release.xcconfig"; sourceTree = "<group>"; };
-		88106D9A409647B17CEF3ACA /* Pods-Tech Reads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech Reads.debug.xcconfig"; path = "Target Support Files/Pods-Tech Reads/Pods-Tech Reads.debug.xcconfig"; sourceTree = "<group>"; };
+		29BE15E97EFCB6A9500A52A6 /* Pods-Tech Reads-Tech ReadsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech Reads-Tech ReadsUITests.release.xcconfig"; path = "Target Support Files/Pods-Tech Reads-Tech ReadsUITests/Pods-Tech Reads-Tech ReadsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		29DB52FA38EA3AE99CE9EC55 /* Pods-Tech Reads.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech Reads.release.xcconfig"; path = "Target Support Files/Pods-Tech Reads/Pods-Tech Reads.release.xcconfig"; sourceTree = "<group>"; };
+		5F0901F52C02252689E92166 /* libPods-Tech ReadsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tech ReadsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8075BC6A0A81F0DA5C071272 /* Pods-Tech ReadsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech ReadsTests.release.xcconfig"; path = "Target Support Files/Pods-Tech ReadsTests/Pods-Tech ReadsTests.release.xcconfig"; sourceTree = "<group>"; };
+		A25C5754E8E8BD7F564E507B /* libPods-Tech Reads.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tech Reads.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC85CA5247B376CCC93CD2D5 /* Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tech Reads-Tech ReadsUITests/Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2E23546AAF2C9A6B428B70F /* libPods-Tech Reads-Tech ReadsUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tech Reads-Tech ReadsUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D32801C924499F9F00E1DEF1 /* TechNewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechNewsPresenter.swift; sourceTree = "<group>"; };
 		D32D0697242C8CA5002A8647 /* Tech Reads-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tech Reads-Bridging-Header.h"; sourceTree = "<group>"; };
 		D32D0698242C8CA6002A8647 /* PreferenceUtilitiesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferenceUtilitiesView.m; sourceTree = "<group>"; };
 		D32D069A242C8CCC002A8647 /* PreferenceUtillitiesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceUtillitiesView.h; sourceTree = "<group>"; };
-		D33999B423FBC33A009E1811 /* SearchResultsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableView.swift; sourceTree = "<group>"; };
-		D368A43723EBF5130090A80F /* GameReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReviewView.swift; sourceTree = "<group>"; };
+		D33999B423FBC33A009E1811 /* SearchResultsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTable.swift; sourceTree = "<group>"; };
+		D368A43723EBF5130090A80F /* GameReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReviewController.swift; sourceTree = "<group>"; };
 		D368A43923EBF6730090A80F /* GameSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSearchView.swift; sourceTree = "<group>"; };
-		D368A43F23EC363D0090A80F /* GeneralTechReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTechReviewView.swift; sourceTree = "<group>"; };
+		D368A43F23EC363D0090A80F /* GeneralTechReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTechReview.swift; sourceTree = "<group>"; };
 		D37E6936242CF68000391989 /* TextProcessingtests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextProcessingtests.swift; sourceTree = "<group>"; };
 		D37E6938242CF6FD00391989 /* InformationDisplayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationDisplayTest.swift; sourceTree = "<group>"; };
+		D3866AA6244D8037004FC01D /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		D3866AAC244DCB23004FC01D /* Seques.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seques.swift; sourceTree = "<group>"; };
+		D3866AAE244DCDEA004FC01D /* TechPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechPresenterView.swift; sourceTree = "<group>"; };
+		D3866AB0244DCE27004FC01D /* TechResultsPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechResultsPresenterView.swift; sourceTree = "<group>"; };
+		D396EBA2244B265D007DB5B5 /* TechResultsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechResultsTableView.swift; sourceTree = "<group>"; };
+		D396EBA8244B2B5E007DB5B5 /* TechResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechResultsPresenter.swift; sourceTree = "<group>"; };
 		D39986F0242E082E00A08717 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3A6CE162438CB2E00B96DE1 /* SaveUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUtility.swift; sourceTree = "<group>"; };
 		D3C1EA9B2432379C007AFFDD /* SaveLoadTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLoadTest.swift; sourceTree = "<group>"; };
@@ -83,6 +95,8 @@
 		D3DBEC8623E98180003EBFDC /* Tech ReadsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tech ReadsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DBEC8A23E98180003EBFDC /* Tech_ReadsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tech_ReadsUITests.swift; sourceTree = "<group>"; };
 		D3DBEC8C23E98180003EBFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4F26167041AE84853BA58CA /* Pods-Tech ReadsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech ReadsTests.debug.xcconfig"; path = "Target Support Files/Pods-Tech ReadsTests/Pods-Tech ReadsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E65594B4E2A802E27831D6D4 /* Pods-Tech Reads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech Reads.debug.xcconfig"; path = "Target Support Files/Pods-Tech Reads/Pods-Tech Reads.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60DEA0366CFC19A0ED6F2F74 /* libPods-Tech Reads.a in Frameworks */,
+				188428E57875AE5432233BD2 /* libPods-Tech Reads.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5A5252257A568271D686DAE /* libPods-Tech ReadsTests.a in Frameworks */,
+				8365C9DE564898A0706B5879 /* libPods-Tech ReadsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,34 +120,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4A8D58AC57A1D18FB7F7D35 /* libPods-Tech Reads-Tech ReadsUITests.a in Frameworks */,
+				6794637ED12DBD419C9180A8 /* libPods-Tech Reads-Tech ReadsUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33B0A67E423879FBDB875FE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A25C5754E8E8BD7F564E507B /* libPods-Tech Reads.a */,
+				D2E23546AAF2C9A6B428B70F /* libPods-Tech Reads-Tech ReadsUITests.a */,
+				5F0901F52C02252689E92166 /* libPods-Tech ReadsTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3CD41D17481D8BFE4EE6067D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				88106D9A409647B17CEF3ACA /* Pods-Tech Reads.debug.xcconfig */,
-				70AC1BEE41BC2F16F8832D13 /* Pods-Tech Reads.release.xcconfig */,
-				1BFEB06D0B350E72EFA38D9D /* Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig */,
-				55AAD0F02A348F87839E55E3 /* Pods-Tech Reads-Tech ReadsUITests.release.xcconfig */,
-				4760C2CD53B819813F0F55B0 /* Pods-Tech ReadsTests.debug.xcconfig */,
-				452348086034F0985C7273F1 /* Pods-Tech ReadsTests.release.xcconfig */,
+				E65594B4E2A802E27831D6D4 /* Pods-Tech Reads.debug.xcconfig */,
+				29DB52FA38EA3AE99CE9EC55 /* Pods-Tech Reads.release.xcconfig */,
+				BC85CA5247B376CCC93CD2D5 /* Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig */,
+				29BE15E97EFCB6A9500A52A6 /* Pods-Tech Reads-Tech ReadsUITests.release.xcconfig */,
+				D4F26167041AE84853BA58CA /* Pods-Tech ReadsTests.debug.xcconfig */,
+				8075BC6A0A81F0DA5C071272 /* Pods-Tech ReadsTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		AB06081DF31FC2B8A3E6706B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3A09859785E339A2A2DC6CCF /* libPods-Tech Reads.a */,
-				10C2F4133D88585DD8647788 /* libPods-Tech Reads-Tech ReadsUITests.a */,
-				3F09DD7B63BB788BF424BA54 /* libPods-Tech ReadsTests.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D387DC60242DDD7D00F8A593 /* PreferenceUtilitiesView */ = {
@@ -146,21 +160,30 @@
 			path = PreferenceUtilitiesView;
 			sourceTree = "<group>";
 		};
-		D387DC62242DDDDA00F8A593 /* SearchFunctionViews */ = {
-			isa = PBXGroup;
-			children = (
-				D368A43923EBF6730090A80F /* GameSearchView.swift */,
-				D33999B423FBC33A009E1811 /* SearchResultsTableView.swift */,
-			);
-			path = SearchFunctionViews;
-			sourceTree = "<group>";
-		};
 		D387DC63242DDDFB00F8A593 /* GameReviewViews */ = {
 			isa = PBXGroup;
 			children = (
-				D368A43723EBF5130090A80F /* GameReviewView.swift */,
+				D368A43723EBF5130090A80F /* GameReviewController.swift */,
 			);
 			path = GameReviewViews;
+			sourceTree = "<group>";
+		};
+		D396EBA5244B2AC8007DB5B5 /* GameSearch */ = {
+			isa = PBXGroup;
+			children = (
+				D33999B423FBC33A009E1811 /* SearchResultsTable.swift */,
+			);
+			path = GameSearch;
+			sourceTree = "<group>";
+		};
+		D396EBA6244B2AD6007DB5B5 /* TechSearch */ = {
+			isa = PBXGroup;
+			children = (
+				D396EBA8244B2B5E007DB5B5 /* TechResultsPresenter.swift */,
+				D396EBA2244B265D007DB5B5 /* TechResultsTableView.swift */,
+				D3866AB0244DCE27004FC01D /* TechResultsPresenterView.swift */,
+			);
+			path = TechSearch;
 			sourceTree = "<group>";
 		};
 		D3A451732418A25F0017C53A /* GameReview */ = {
@@ -183,7 +206,9 @@
 		D3A451752418A2CD0017C53A /* SearchFunction */ = {
 			isa = PBXGroup;
 			children = (
-				D387DC62242DDDDA00F8A593 /* SearchFunctionViews */,
+				D368A43923EBF6730090A80F /* GameSearchView.swift */,
+				D396EBA6244B2AD6007DB5B5 /* TechSearch */,
+				D396EBA5244B2AC8007DB5B5 /* GameSearch */,
 			);
 			path = SearchFunction;
 			sourceTree = "<group>";
@@ -191,7 +216,10 @@
 		D3A451762418A2FF0017C53A /* TechReview */ = {
 			isa = PBXGroup;
 			children = (
-				D368A43F23EC363D0090A80F /* GeneralTechReviewView.swift */,
+				D368A43F23EC363D0090A80F /* GeneralTechReview.swift */,
+				D32801C924499F9F00E1DEF1 /* TechNewsPresenter.swift */,
+				D3866AA6244D8037004FC01D /* WebView.swift */,
+				D3866AAE244DCDEA004FC01D /* TechPresenterView.swift */,
 			);
 			path = TechReview;
 			sourceTree = "<group>";
@@ -204,7 +232,7 @@
 				D3DBEC8923E98180003EBFDC /* Tech ReadsUITests */,
 				D3DBEC6623E98180003EBFDC /* Products */,
 				3CD41D17481D8BFE4EE6067D /* Pods */,
-				AB06081DF31FC2B8A3E6706B /* Frameworks */,
+				33B0A67E423879FBDB875FE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -232,6 +260,7 @@
 				D3DBEC7123E98180003EBFDC /* Assets.xcassets */,
 				D3DBEC7323E98180003EBFDC /* LaunchScreen.storyboard */,
 				D3DBEC7623E98180003EBFDC /* Info.plist */,
+				D3866AAC244DCB23004FC01D /* Seques.swift */,
 			);
 			path = "Tech Reads";
 			sourceTree = "<group>";
@@ -272,7 +301,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3DBEC8F23E98180003EBFDC /* Build configuration list for PBXNativeTarget "Tech Reads" */;
 			buildPhases = (
-				BEDA6CFC8D6C3A2C3115A4AB /* [CP] Check Pods Manifest.lock */,
+				7A628026D9CCB3186F05AC10 /* [CP] Check Pods Manifest.lock */,
 				D3DBEC6123E98180003EBFDC /* Sources */,
 				D3DBEC6223E98180003EBFDC /* Frameworks */,
 				D3DBEC6323E98180003EBFDC /* Resources */,
@@ -291,7 +320,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3DBEC9223E98180003EBFDC /* Build configuration list for PBXNativeTarget "Tech ReadsTests" */;
 			buildPhases = (
-				C4E26A1A529490C6C36D561C /* [CP] Check Pods Manifest.lock */,
+				0568925FA4FA385405AE62AD /* [CP] Check Pods Manifest.lock */,
 				D3DBEC7723E98180003EBFDC /* Sources */,
 				D3DBEC7823E98180003EBFDC /* Frameworks */,
 				D3DBEC7923E98180003EBFDC /* Resources */,
@@ -310,7 +339,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3DBEC9523E98180003EBFDC /* Build configuration list for PBXNativeTarget "Tech ReadsUITests" */;
 			buildPhases = (
-				C58DC0CAFEE9055D7A2B0025 /* [CP] Check Pods Manifest.lock */,
+				92C7159F77D267894F776D10 /* [CP] Check Pods Manifest.lock */,
 				D3DBEC8223E98180003EBFDC /* Sources */,
 				D3DBEC8323E98180003EBFDC /* Frameworks */,
 				D3DBEC8423E98180003EBFDC /* Resources */,
@@ -400,29 +429,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BEDA6CFC8D6C3A2C3115A4AB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Tech Reads-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4E26A1A529490C6C36D561C /* [CP] Check Pods Manifest.lock */ = {
+		0568925FA4FA385405AE62AD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -444,7 +451,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C58DC0CAFEE9055D7A2B0025 /* [CP] Check Pods Manifest.lock */ = {
+		7A628026D9CCB3186F05AC10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tech Reads-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92C7159F77D267894F776D10 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -491,14 +520,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3DBEC6D23E98180003EBFDC /* ViewController.swift in Sources */,
-				D368A44023EC363D0090A80F /* GeneralTechReviewView.swift in Sources */,
-				D33999B523FBC33A009E1811 /* SearchResultsTableView.swift in Sources */,
+				D32801CA24499F9F00E1DEF1 /* TechNewsPresenter.swift in Sources */,
+				D3866AB1244DCE27004FC01D /* TechResultsPresenterView.swift in Sources */,
+				D3866AA7244D8037004FC01D /* WebView.swift in Sources */,
+				D368A44023EC363D0090A80F /* GeneralTechReview.swift in Sources */,
+				D33999B523FBC33A009E1811 /* SearchResultsTable.swift in Sources */,
+				D3866AAD244DCB23004FC01D /* Seques.swift in Sources */,
+				D396EBA3244B265D007DB5B5 /* TechResultsTableView.swift in Sources */,
 				D3DBEC6923E98180003EBFDC /* AppDelegate.swift in Sources */,
-				D368A43823EBF5130090A80F /* GameReviewView.swift in Sources */,
+				D368A43823EBF5130090A80F /* GameReviewController.swift in Sources */,
+				D3866AAF244DCDEA004FC01D /* TechPresenterView.swift in Sources */,
 				D32D0699242C8CA6002A8647 /* PreferenceUtilitiesView.m in Sources */,
 				D368A43A23EBF6730090A80F /* GameSearchView.swift in Sources */,
 				D3A6CE172438CB2E00B96DE1 /* SaveUtility.swift in Sources */,
 				D3DBEC6B23E98180003EBFDC /* SceneDelegate.swift in Sources */,
+				D396EBA9244B2B5E007DB5B5 /* TechResultsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,7 +711,7 @@
 		};
 		D3DBEC9023E98180003EBFDC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88106D9A409647B17CEF3ACA /* Pods-Tech Reads.debug.xcconfig */;
+			baseConfigurationReference = E65594B4E2A802E27831D6D4 /* Pods-Tech Reads.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -701,7 +737,7 @@
 		};
 		D3DBEC9123E98180003EBFDC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70AC1BEE41BC2F16F8832D13 /* Pods-Tech Reads.release.xcconfig */;
+			baseConfigurationReference = 29DB52FA38EA3AE99CE9EC55 /* Pods-Tech Reads.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -725,7 +761,7 @@
 		};
 		D3DBEC9323E98180003EBFDC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4760C2CD53B819813F0F55B0 /* Pods-Tech ReadsTests.debug.xcconfig */;
+			baseConfigurationReference = D4F26167041AE84853BA58CA /* Pods-Tech ReadsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -750,7 +786,7 @@
 		};
 		D3DBEC9423E98180003EBFDC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 452348086034F0985C7273F1 /* Pods-Tech ReadsTests.release.xcconfig */;
+			baseConfigurationReference = 8075BC6A0A81F0DA5C071272 /* Pods-Tech ReadsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -775,7 +811,7 @@
 		};
 		D3DBEC9623E98180003EBFDC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BFEB06D0B350E72EFA38D9D /* Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig */;
+			baseConfigurationReference = BC85CA5247B376CCC93CD2D5 /* Pods-Tech Reads-Tech ReadsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
@@ -798,7 +834,7 @@
 		};
 		D3DBEC9723E98180003EBFDC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55AAD0F02A348F87839E55E3 /* Pods-Tech Reads-Tech ReadsUITests.release.xcconfig */;
+			baseConfigurationReference = 29BE15E97EFCB6A9500A52A6 /* Pods-Tech Reads-Tech ReadsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;

@@ -29,7 +29,7 @@ class TechReadsUITests: XCTestCase {
     application.buttons["Search Game or Tech"].tap()
     application.textFields["game or tech name"].tap()
     application.textFields["game or tech name"].typeText("borderlands")
-    application.buttons["Search"].tap()
+    application.buttons["Search Game"].tap()
     sleep(7)
     application.staticTexts["Borderlands 3 , on console: PS4"].tap()
     sleep(7)

@@ -11,17 +11,18 @@ import TechReadsPod
 
 class SearchResultsTable: UITableViewController {
   var searchString = ""
-  var gplatform = ""
-  var thingstodisplay = [String]()
-  var itemstosend = [String]()
-  var itemplatform = [String]()
+  var gamePlatform = ""
+  var gamesToDisplay = [String]()
+  var itemsToSend = [String]()
+  var itemPlatform = [String]()
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    thingstodisplay = [String]()
   }
+
   override func viewDidAppear(_ animated: Bool) {
-    if thingstodisplay.count == 0 {
-      let gamelist = ChickenCoopAPI(searched: searchString, platform: gplatform)
+    if gamesToDisplay.isEmpty {
+      let gamelist = ChickenCoopAPI(searched: searchString, platform: gamePlatform)
         var gameListvariable = gamelist.gamelist
           gamelist.getGameList { result in
           switch result {
@@ -31,9 +32,9 @@ class SearchResultsTable: UITableViewController {
               gameListvariable = details
                 DispatchQueue.main.async {
                   for item in gameListvariable.result {
-                    self.thingstodisplay.append(item.title + " , on console: \(item.platform)" )
-                    self.itemstosend.append(item.title)
-                    self.itemplatform.append(item.platform)
+                    self.gamesToDisplay.append(item.title + " , on console: \(item.platform)" )
+                    self.itemsToSend.append(item.title)
+                    self.itemPlatform.append(item.platform)
                     self.tableView.reloadData()
                 }
               }
@@ -42,7 +43,7 @@ class SearchResultsTable: UITableViewController {
       }
   }
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return thingstodisplay.count
+    return gamesToDisplay.count
   }
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath)
@@ -50,19 +51,19 @@ class SearchResultsTable: UITableViewController {
     cell.backgroundColor = UIColor.init(red: 153/255, green: 203/255, blue: 234/255, alpha: 1)
     cell.textLabel?.textColor = UIColor.blue// check this value
     cell.textLabel?.numberOfLines = 0
-    cell.textLabel?.text = thingstodisplay[indexPath.row]
+    cell.textLabel?.text = gamesToDisplay[indexPath.row]
     return cell
   }
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    searchString = itemstosend[indexPath.row]
-    gplatform = itemplatform[indexPath.row]
+    searchString = itemsToSend[indexPath.row]
+    gamePlatform = itemPlatform[indexPath.row]
     self.performSegue(withIdentifier: "detailsegue", sender: self)
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
   if segue.identifier == "detailsegue" {
     let segueDest = segue.destination as? GameReviewController
     segueDest?.searcheditem = searchString
-    segueDest?.gameplatform = gplatform
+    segueDest?.gameplatform = gamePlatform
       }
     }
 }
