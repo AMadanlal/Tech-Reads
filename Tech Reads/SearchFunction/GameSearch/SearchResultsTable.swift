@@ -21,26 +21,26 @@ class SearchResultsTable: UITableViewController {
   }
 
   override func viewDidAppear(_ animated: Bool) {
-    if gamesToDisplay.isEmpty {
-      let gamelist = ChickenCoopAPI(searched: searchString, platform: gamePlatform)
-        var gameListvariable = gamelist.gamelist
-          gamelist.getGameList { result in
-          switch result {
-          case .failure(let error):
-              print(error)
-          case.success(let details):
-              gameListvariable = details
-                DispatchQueue.main.async {
-                  for item in gameListvariable.result {
-                    self.gamesToDisplay.append(item.title + " , on console: \(item.platform)" )
-                    self.itemsToSend.append(item.title)
-                    self.itemPlatform.append(item.platform)
-                    self.tableView.reloadData()
-                }
-              }
-            }
-          }
-      }
+//    if gamesToDisplay.isEmpty {
+//      let gamelist = ChickenCoopAPI(searched: searchString, platform: gamePlatform)
+//        var gameListvariable = gamelist.gamelist
+//          gamelist.getGameList { result in
+//          switch result {
+//          case .failure(let error):
+//              print(error)
+//          case.success(let details):
+//              gameListvariable = details
+//                DispatchQueue.main.async {
+//                  for item in gameListvariable.result {
+//                    self.gamesToDisplay.append(item.title + " , on console: \(item.platform)" )
+//                    self.itemsToSend.append(item.title)
+//                    self.itemPlatform.append(item.platform)
+//                    self.tableView.reloadData()
+//                }
+//              }
+//            }
+//          }
+//      }
   }
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return gamesToDisplay.count
@@ -61,9 +61,9 @@ class SearchResultsTable: UITableViewController {
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
   if segue.identifier == "detailsegue" {
-    let segueDest = segue.destination as? GameReviewController
-    segueDest?.searcheditem = searchString
-    segueDest?.gameplatform = gamePlatform
+//    let segueDest = segue.destination as? GameReviewController
+//    segueDest?.searcheditem = searchString
+//    segueDest?.gameplatform = gamePlatform
       }
     }
 }
