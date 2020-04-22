@@ -32,7 +32,7 @@ class GameReviewPresenter {
           guard let aGame = self.game else { return }
           let content = infoProcessing.textDisplay(game: aGame)
           self.view?.updatePageContent(aGame.title, withContent: content, andImageURL: aGame.image)
-      }
+        }
       }
     }
   }
@@ -42,24 +42,24 @@ class GameReviewPresenter {
     gameAPI.getGameList(searchItem: "") { result in
       switch result {
       case .failure(let error):
-      print(error)
+        print(error)
       case.success(let details):
-      self.gameList = details
-      DispatchQueue.main.async {
-      guard let gameList = self.gameList else { return }
-      self.gameListItem = gameAPI.getRandomGameListItem(gameList: gameList)
-      guard let listItem = self.gameListItem else { return }
-      gameAPI.getGameInfo(gameTitle: listItem.title, gamePlatform: listItem.platform) { result in
-      switch result {
-      case .failure(let error):
-      print(error)
-      case.success(let details):
-      self.game = details
-      DispatchQueue.main.async {
-        let infoProcessing = GameInfoProcess()
-        guard let aGame = self.game else { return }
-        let content = infoProcessing.textDisplay(game: aGame)
-        self.view?.updatePageContent(aGame.title, withContent: content, andImageURL: aGame.image)
+        self.gameList = details
+        DispatchQueue.main.async {
+          guard let gameList = self.gameList else { return }
+          self.gameListItem = gameAPI.getRandomGameListItem(gameList: gameList)
+          guard let listItem = self.gameListItem else { return }
+          gameAPI.getGameInfo(gameTitle: listItem.title, gamePlatform: listItem.platform) { result in
+            switch result {
+            case .failure(let error):
+              print(error)
+            case.success(let details):
+              self.game = details
+              DispatchQueue.main.async {
+                let infoProcessing = GameInfoProcess()
+                guard let aGame = self.game else { return }
+                let content = infoProcessing.textDisplay(game: aGame)
+                self.view?.updatePageContent(aGame.title, withContent: content, andImageURL: aGame.image)
               }
             }
           }
@@ -67,4 +67,5 @@ class GameReviewPresenter {
       }
     }
   }
+
 }
