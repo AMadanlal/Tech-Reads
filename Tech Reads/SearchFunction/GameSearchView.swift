@@ -37,7 +37,7 @@ class GameSearchView: UIViewController, UITextViewDelegate {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == gameResultsPageSegue {
       let segueDest = segue.destination as? SearchResultsTable
-      segueDest?.searchString = txtFieldSearch.text ?? ""
+      segueDest?.searchItem = txtFieldSearch.text ?? ""
       }
     if segue.identifier == techResultsPageSegue {
     let segueDest = segue.destination as? TechResultsTableView

@@ -14,7 +14,6 @@ class TechResultsTableView: UITableViewController, TechResultsPresenterView {
   }
   var techArticlesToDisplay = [String]()
   var searchItem = ""
-
   lazy var resultsPresenter = TechResultsPresenter(with: self)
   var itemIndex = 0
 

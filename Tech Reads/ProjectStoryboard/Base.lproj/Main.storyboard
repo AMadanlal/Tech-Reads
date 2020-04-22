@@ -389,7 +389,6 @@
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="btnNext:" destination="8FQ-EX-Gbr" eventType="touchUpInside" id="7Kh-a3-mph"/>
-                                                                    <segue destination="8FQ-EX-Gbr" kind="presentation" identifier="reloadsegue" id="yTk-3V-koh"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
