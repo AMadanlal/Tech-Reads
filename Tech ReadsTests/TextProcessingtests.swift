@@ -12,11 +12,11 @@ import XCTest
 
 class TextProcessingtests: XCTestCase {
 
-  var APIClass: ChickenCoopAPI!
+  var APIClass: GameInfoProcess!
 
      override func setUp() {
          // Put setup code here. This method is called before the invocation of each test method in the class.
-            APIClass = ChickenCoopAPI(searched: "Mock Game", platform: "Any")
+            APIClass = GameInfoProcess()
      }
 
    func testFormatPlatformStringPC() {

@@ -30,9 +30,9 @@ class TechReadsUITests: XCTestCase {
     application.textFields["game or tech name"].tap()
     application.textFields["game or tech name"].typeText("borderlands")
     application.buttons["Search Game"].tap()
-    sleep(7)
-    application.staticTexts["Borderlands 3 , on console: PS4"].tap()
-    sleep(7)
+    sleep(9)
+    application.staticTexts["Borderlands 3 /n PS4"].tap()
+    sleep(9)
     application.buttons["Back"].tap()
     XCTAssert(application.buttons["Search Game or Tech"].exists)
   }
@@ -44,14 +44,5 @@ class TechReadsUITests: XCTestCase {
     application.buttons["Save Preferences"].tap()
     sleep(1)
     XCTAssertEqual(application.staticTexts.element(matching: .any, identifier: "lblpreference").label, "PC")
-  }
-
-  func testNextgameButtonDoesNotStayonLoading() {
-    application.launch()
-    application.buttons["General game reviews"].tap()
-    sleep(7)
-    application.buttons["Next Story"].tap()
-    sleep(7)
-    XCTAssertFalse(application.staticTexts["Loading..."].exists)
   }
 }

@@ -27,13 +27,6 @@ class GameReviewController: UIViewController, GamePresenterView {
       }
     }
 
-//    override func viewDidAppear(_ animated: Bool) {
-//          displayAllInformation()
-//    }
-//  func displayAllInformation() {
-//  normally had the info
-//  }
-
     @IBAction func btnCancel(_ sender: UIButton) {
 
   }

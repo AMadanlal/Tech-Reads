@@ -10,3 +10,4 @@ import Foundation
 
 public let gameResultsPageSegue = "searchsegue"
 public let techResultsPageSegue = "techSearch"
+public let gameDetailSegue = "detailsegue"
