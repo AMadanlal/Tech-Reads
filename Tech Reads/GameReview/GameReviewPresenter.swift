@@ -27,7 +27,6 @@ class GameReviewPresenter {
         print(error)
       case.success(let details):
         self.game = details
-        print(details)
         DispatchQueue.main.async {
           let infoProcessing = GameInfoProcess()
           guard let aGame = self.game else { return }
