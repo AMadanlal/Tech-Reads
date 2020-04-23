@@ -13,7 +13,7 @@
 @implementation PreferenceUtilitiesView : UIViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+  [super viewDidLoad];
   self.consoles = @[@"Any", @"PC", @"XONE", @"PS4", @"Switch", @"iOS"];
   self.pickerView.delegate = self;
   self.pickerView.dataSource = self;
@@ -21,16 +21,18 @@
   [self.mediumLbl setFont:[UIFont fontWithName:@"italicSystemFont" size:15]];
   [self.pickerView setValue:UIColor.blueColor forKey: @"textColor"];
   self.savingClass = [[SavingUtilities alloc] init];
-  self.lblCurrentMedium.text = [self.savingClass LoadMedium];
+  SaveUtilityPresenter* utilityPresenter = [[SaveUtilityPresenter alloc] init];
+  [utilityPresenter setViewWithView:self];
+  [utilityPresenter loadMediumStringFromDB];
 }
 
 - (IBAction)btnSave:(UIButton *)sender {
   NSString *answer = self.consoles[[self.pickerView selectedRowInComponent:0]];
-  SaveUtility* utility = [[SaveUtility alloc] init];
-  [utility saveMediumStringWithStringToSave:answer];
-//    PreferenceUtilities* utilities =  [[PreferenceUtilities alloc] init];
-//    [utilities saveMediumWithSavingPref:answer];
-    self.lblCurrentMedium.text = [self.savingClass LoadMedium];
+  SaveUtilityPresenter* utilityPresenter = [[SaveUtilityPresenter alloc] init];
+  [utilityPresenter setViewWithView:self];
+  [utilityPresenter saveMediumStringWithStringToSave:answer];
+  [utilityPresenter saveMediumStringToDBWithStringToSave:answer];
+  [utilityPresenter loadMediumStringFromDB];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(nonnull UIPickerView *)pickerView {
@@ -46,5 +48,9 @@
   return self.consoles[row];
 }
 
+
+- (void)updateLabel:(NSString *)gamingMedium {
+  self.lblCurrentMedium.text = gamingMedium;
+}
 
 @end
