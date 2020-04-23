@@ -11,7 +11,7 @@ import TechReadsPod
 
 @objc public class SaveUtilityPresenter: NSObject {
   weak var view: PreferenceUtilitiesPresenterView?
-  var prefModel = PreferenceModel()
+  var prefModel = PreferenceRepository()
 
   @objc public func setView(view: PreferenceUtilitiesPresenterView) {
     self.view = view
@@ -23,11 +23,11 @@ import TechReadsPod
   }
 
   @objc public func saveMediumStringToDB(stringToSave: String) {
-    PreferenceModel().savePreferenceToDb(pref: stringToSave)
+    PreferenceRepository().savePreferenceToDb(pref: stringToSave)
   }
 
   @objc public func loadMediumStringFromDB() {
-    view?.updateLabel(PreferenceModel().loadPreferenceFromDb())
+    view?.updateLabel(PreferenceRepository().loadPreferenceFromDb())
   }
 
 }

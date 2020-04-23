@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class PreferenceModel {
+class PreferenceRepository {
   var preferenceInstance = NSManagedObject()
 
   func savePreferenceToDb(pref: String) {
