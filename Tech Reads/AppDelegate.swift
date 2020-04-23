@@ -47,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      error conditions that could cause the creation of the store to fail.
      */
     let container = NSPersistentContainer(name: "TechReads")
+//    swiftlint:disable all
+//    I am disabling it due to this code being from Xcode
     container.loadPersistentStores(completionHandler: { (storeDescription, error) in
       if let error = error as NSError? {
         // Replace this implementation with code to handle the error appropriately.
@@ -66,6 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     })
     return container
   }()
+//    swiftlint:enable all
 
   // MARK: - Core Data Saving support
 
