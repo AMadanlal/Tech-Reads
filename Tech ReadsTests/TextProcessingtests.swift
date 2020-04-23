@@ -23,7 +23,7 @@ class TextProcessingtests: XCTestCase {
     //    GIVEN
         let platform = "PC"
     //    WHEN
-        let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+        let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
     //    THEN
         XCTAssertEqual(formattedplatform, "pc")
       }
@@ -31,7 +31,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
             let platform = "PS4"
         //    WHEN
-            let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+            let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
         //    THEN
             XCTAssertEqual(formattedplatform, "playstation-4")
       }
@@ -39,7 +39,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
             let platform = "XONE"
         //    WHEN
-            let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+            let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
         //    THEN
             XCTAssertEqual(formattedplatform, "xbox-one")
       }
@@ -47,7 +47,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
                let platform = "Stadia"
            //    WHEN
-               let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+               let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
            //    THEN
                XCTAssertEqual(formattedplatform, "stadia")
       }
@@ -55,7 +55,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
                let platform = "Switch"
            //    WHEN
-               let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+               let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
            //    THEN
                XCTAssertEqual(formattedplatform, "switch")
       }
@@ -63,7 +63,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
                let platform = "3DS"
            //    WHEN
-               let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+               let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
            //    THEN
                XCTAssertEqual(formattedplatform, "3ds")
       }
@@ -71,7 +71,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
                let platform = "X360"
            //    WHEN
-               let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+               let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
            //    THEN
                XCTAssertEqual(formattedplatform, "xbox360")
       }
@@ -79,7 +79,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
                let platform = "WIIU"
            //    WHEN
-               let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+               let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
            //    THEN
                XCTAssertEqual(formattedplatform, "wii-u")
       }
@@ -87,7 +87,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
                let platform = "VITA"
            //    WHEN
-               let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+               let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
            //    THEN
                XCTAssertEqual(formattedplatform, "playstation-vita")
       }
@@ -95,7 +95,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
                let platform = "PSP"
            //    WHEN
-               let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+               let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
            //    THEN
                XCTAssertEqual(formattedplatform, "psp")
       }
@@ -103,7 +103,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
                let platform = "GBA"
            //    WHEN
-               let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+               let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
            //    THEN
                XCTAssertEqual(formattedplatform, "game-boy-advance")
       }
@@ -111,7 +111,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
                let platform = "PS2"
            //    WHEN
-               let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+               let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
            //    THEN
                XCTAssertEqual(formattedplatform, "playstation-2")
       }
@@ -119,7 +119,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
                let platform = "PS3"
            //    WHEN
-               let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+               let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
            //    THEN
                XCTAssertEqual(formattedplatform, "playstation-3")
       }
@@ -127,7 +127,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
                let platform = "DS"
            //    WHEN
-               let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+               let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
            //    THEN
                XCTAssertEqual(formattedplatform, "ds")
       }
@@ -135,7 +135,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
                let platform = "iOS"
            //    WHEN
-               let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+               let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
            //    THEN
                XCTAssertEqual(formattedplatform, "ios")
       }
@@ -143,7 +143,7 @@ class TextProcessingtests: XCTestCase {
         //    GIVEN
                let platform = "Any"
            //    WHEN
-               let formattedplatform = APIClass.formatplatformstring(stringtoformat: platform)
+               let formattedplatform = APIClass.formatPlatformString(stringtoformat: platform)
            //    THEN
                XCTAssertEqual(formattedplatform, "Any")
       }

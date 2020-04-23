@@ -10,9 +10,9 @@
 #define PreferenceUtillitiesView_h
 #import <UIKit/UIKit.h>
 #import "SavingUtilities.h"
+#import "PreferenceUtilitiesPresenterView.h"
 
-@interface PreferenceUtilitiesView : UIViewController  <UIPickerViewDelegate, UIPickerViewDataSource>
-
+@interface PreferenceUtilitiesView : UIViewController  <UIPickerViewDelegate, UIPickerViewDataSource, PreferenceUtilitiesPresenterView>
 @property (nonatomic, weak) IBOutlet UILabel *mediumLbl;
 @property (nonatomic, weak) IBOutlet UILabel *mainPrefLabel;
 @property (nonatomic, weak) IBOutlet UILabel *lblCurrentMedium;

@@ -127,7 +127,7 @@ DEPENDENCIES:
   - Firebase
   - Firebase/Crashlytics
   - Firebase/Performance
-  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/MVPRestructure`)
+  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/CoreDataSaving`)
 
 SPEC REPOS:
   trunk:
@@ -155,12 +155,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   TechReadsPod:
-    :branch: Feature/MVPRestructure
+    :branch: Feature/CoreDataSaving
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 CHECKOUT OPTIONS:
   TechReadsPod:
-    :commit: de583ec87479b513e44ab6de398415a2fb5ce595
+    :commit: 3ee2283270d112abad54afccba25c86a51078ab6
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 SPEC CHECKSUMS:
@@ -187,6 +187,6 @@ SPEC CHECKSUMS:
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
   TechReadsPod: 14e6b0039660aec923a1036eb6ff7b8c0453e409
 
-PODFILE CHECKSUM: f0708f51f280ed8d126276fefc96240929b12937
+PODFILE CHECKSUM: b49396990c9f87bd7d1742630e9125a15a36c150
 
 COCOAPODS: 1.9.1
