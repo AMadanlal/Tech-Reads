@@ -12,7 +12,7 @@ import WatchConnectivity
 extension WKInterfaceImage {
   public func image(fromUrl urlString: String) {
     guard let url = URL(string: urlString) else {
-      print("Could not get Image")
+      print("Could not get Image with \(urlString)")
       return
     }
     let theTask = URLSession.shared.dataTask(with: url) { data, response, _ in

@@ -44,9 +44,15 @@ extension InterfaceController: WCSessionDelegate {
   }
 
   func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
-    print("received data: \(message)")
-    if let value = message["iPhone"] as? String {//**7.1
+    if let value = message["title"] as? String {
       self.articleTitle.setText(value)
+    }
+    if let value = message["description"] as? String {
+      self.articleDescription.setText(value)
+    }
+    if let value = message["imageUrl"] as? String {
+      print(value)
+      self.articleImage.image(fromUrl: value)
     }
   }
 }

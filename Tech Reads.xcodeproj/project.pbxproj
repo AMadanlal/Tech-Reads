@@ -52,7 +52,6 @@
 		D3DBEC7223E98180003EBFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3DBEC7123E98180003EBFDC /* Assets.xcassets */; };
 		D3DBEC7523E98180003EBFDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DBEC7323E98180003EBFDC /* LaunchScreen.storyboard */; };
 		D3DBEC8B23E98180003EBFDC /* Tech_ReadsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBEC8A23E98180003EBFDC /* Tech_ReadsUITests.swift */; };
-		D3DF985B2452CF64008C6217 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF985A2452CF64008C6217 /* SessionHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,7 +174,6 @@
 		D3DBEC8623E98180003EBFDC /* Tech ReadsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tech ReadsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DBEC8A23E98180003EBFDC /* Tech_ReadsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tech_ReadsUITests.swift; sourceTree = "<group>"; };
 		D3DBEC8C23E98180003EBFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3DF985A2452CF64008C6217 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
 		DAA3FE0C7F7D28036D115990 /* Pods-TopHeadlinesWatchApp Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopHeadlinesWatchApp Extension.release.xcconfig"; path = "Target Support Files/Pods-TopHeadlinesWatchApp Extension/Pods-TopHeadlinesWatchApp Extension.release.xcconfig"; sourceTree = "<group>"; };
 		E7440DE68D673AE27C279664 /* Pods-Tech Reads-Tech ReadsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech Reads-Tech ReadsUITests.release.xcconfig"; path = "Target Support Files/Pods-Tech Reads-Tech ReadsUITests/Pods-Tech Reads-Tech ReadsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F21EA55F97CF8B38C3117D0F /* Pods-TopHeadlinesWatchApp Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopHeadlinesWatchApp Extension.debug.xcconfig"; path = "Target Support Files/Pods-TopHeadlinesWatchApp Extension/Pods-TopHeadlinesWatchApp Extension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -360,7 +358,6 @@
 		D3D89CC72453134200263A32 /* AppleWatch */ = {
 			isa = PBXGroup;
 			children = (
-				D3DF985A2452CF64008C6217 /* SessionHandler.swift */,
 			);
 			path = AppleWatch;
 			sourceTree = "<group>";
@@ -793,7 +790,6 @@
 				D380778224501B0600716FB6 /* GameResultPresenter.swift in Sources */,
 				D368A44023EC363D0090A80F /* GeneralTechReview.swift in Sources */,
 				D33999B523FBC33A009E1811 /* SearchResultsTable.swift in Sources */,
-				D3DF985B2452CF64008C6217 /* SessionHandler.swift in Sources */,
 				D3866AAD244DCB23004FC01D /* Segues.swift in Sources */,
 				D396EBA3244B265D007DB5B5 /* TechResultsTableView.swift in Sources */,
 				D3DBEC6923E98180003EBFDC /* AppDelegate.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 import QuartzCore
+import TechReadsPod
 import WatchConnectivity
 
 class ViewController: UIViewController {
@@ -17,11 +18,30 @@ class ViewController: UIViewController {
       self.configureWatchKitSesstion()
     }
 
-  @IBAction func btnConnect(_ sender: UIButton) {
-        if let validSession = self.session, validSession.isReachable {//5.1
-          let data: [String: Any] = ["iPhone": "Info from the phone!" as Any] // Create your Dictionay as per uses
-          validSession.sendMessage(data, replyHandler: nil, errorHandler: nil)
+  func sendArticleItem() {
+    NewsAPICalls().getNewsList { result in
+        switch result {
+        case .failure(let error):
+        print(error)
+        case.success(let details):
+        let article: NewsSource.Article? = details.articles.first
+        guard let val = article else { return }
+        DispatchQueue.main.async {
+          let articleTitleToSend: [String: Any] = ["title": val.title ]
+          let articleDescriptionToSend: [String: Any] = ["description": val.description ?? ""]
+          let articleImageToSend: [String: Any] = ["imageUrl": val.urlToImage?.absoluteString ?? "No imageURL"]
+          if let validSession = self.session, validSession.isReachable {
+            validSession.sendMessage(articleTitleToSend, replyHandler: nil, errorHandler: nil)
+            validSession.sendMessage(articleDescriptionToSend, replyHandler: nil, errorHandler: nil)
+            validSession.sendMessage(articleImageToSend, replyHandler: nil, errorHandler: nil)
+          }
         }
+      }
+    }
+  }
+
+  @IBAction func btnConnect(_ sender: UIButton) {
+    sendArticleItem()
   }
 
   @IBOutlet weak var mainlabel: UILabel!
