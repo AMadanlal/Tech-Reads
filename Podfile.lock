@@ -125,6 +125,7 @@ PODS:
 
 DEPENDENCIES:
   - Firebase
+  - Firebase/Analytics
   - Firebase/Crashlytics
   - Firebase/Performance
   - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/CoreDataSaving`)
@@ -187,6 +188,6 @@ SPEC CHECKSUMS:
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
   TechReadsPod: 14e6b0039660aec923a1036eb6ff7b8c0453e409
 
-PODFILE CHECKSUM: b49396990c9f87bd7d1742630e9125a15a36c150
+PODFILE CHECKSUM: 59dbe0fb7c51425275cf05fb4951136d6eaf4e71
 
 COCOAPODS: 1.9.1

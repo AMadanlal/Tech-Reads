@@ -11,21 +11,42 @@ import Foundation
 import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
+  let session = WCSession.default
+  @IBOutlet weak var articleImage: WKInterfaceImage!
+  @IBOutlet weak var articleTitle: WKInterfaceLabel!
+  @IBOutlet weak var articleDescription: WKInterfaceLabel!
 
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
+  override func awake(withContext context: Any?) {
+    super.awake(withContext: context)
+    session.delegate = self
+    session.activate()
+  }
 
-        // Configure interface objects here.
+  override func willActivate() {
+    // This method is called when watch view controller is about to be visible to user
+    super.willActivate()
+  }
+  override func didDeactivate() {
+    // This method is called when watch view controller is no longer visible
+    super.didDeactivate()
+  }
+
+  @IBAction func btnGetHeadlines() {
+    let data: [String: Any] = ["Connect": "data from watch" as Any] //Create your dictionary as per uses
+    session.sendMessage(data, replyHandler: nil, errorHandler: nil)
+  }
+
+}
+
+extension InterfaceController: WCSessionDelegate {
+  func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState,
+               error: Error?) {
+  }
+
+  func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
+    print("received data: \(message)")
+    if let value = message["iPhone"] as? String {//**7.1
+      self.articleTitle.setText(value)
     }
-
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
+  }
 }

@@ -45,7 +45,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="368"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-i2-vhR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="77"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="57.666666666666664"/>
                                                         <color key="backgroundColor" red="0.513721599400629" green="0.59499688354963776" blue="0.64309880602436542" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Search Game or Tech">
                                                             <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,7 +61,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSc-Um-0kL">
-                                                        <rect key="frame" x="0.0" y="97" width="382" height="77"/>
+                                                        <rect key="frame" x="0.0" y="77.666666666666657" width="382" height="57.666666666666657"/>
                                                         <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="General game reviews">
@@ -78,7 +78,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lg-Q6-9x3">
-                                                        <rect key="frame" x="0.0" y="194" width="382" height="77"/>
+                                                        <rect key="frame" x="0.0" y="155.33333333333331" width="382" height="57.333333333333343"/>
                                                         <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="General Tech Reviews">
                                                             <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -94,7 +94,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggo-Fn-3lP">
-                                                        <rect key="frame" x="0.0" y="291" width="382" height="77"/>
+                                                        <rect key="frame" x="0.0" y="232.66666666666666" width="382" height="57.666666666666657"/>
                                                         <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="User Preferences">
                                                             <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -107,6 +107,13 @@
                                                         <connections>
                                                             <action selector="btnPref:" destination="BYZ-38-t0r" eventType="touchUpInside" id="418-bT-TpY"/>
                                                             <segue destination="28g-Z8-DkQ" kind="presentation" identifier="PrefBranch" id="N8Y-zi-ZjP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEw-ff-LXc">
+                                                        <rect key="frame" x="0.0" y="310.33333333333331" width="382" height="57.666666666666686"/>
+                                                        <state key="normal" title="connect"/>
+                                                        <connections>
+                                                            <action selector="btnConnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M2i-NP-2tK"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -769,8 +776,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sZQ-p7-oTp"/>
-        <segue reference="dDl-tE-BEK"/>
+        <segue reference="WRv-N6-WqP"/>
+        <segue reference="RXr-x6-QGj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
