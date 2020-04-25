@@ -12,37 +12,14 @@ import TechReadsPod
 import WatchConnectivity
 
 class ViewController: UIViewController {
-   var session: WCSession?
+  var session: WCSession?
+  var newsList: NewsSource?
+  var articleToUse: NewsSource.Article?
+
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
       self.configureWatchKitSesstion()
     }
-
-  func sendArticleItem() {
-    NewsAPICalls().getNewsList { result in
-        switch result {
-        case .failure(let error):
-        print(error)
-        case.success(let details):
-        let article: NewsSource.Article? = details.articles.first
-        guard let val = article else { return }
-        DispatchQueue.main.async {
-          let articleTitleToSend: [String: Any] = ["title": val.title ]
-          let articleDescriptionToSend: [String: Any] = ["description": val.description ?? ""]
-          let articleImageToSend: [String: Any] = ["imageUrl": val.urlToImage?.absoluteString ?? "No imageURL"]
-          if let validSession = self.session, validSession.isReachable {
-            validSession.sendMessage(articleTitleToSend, replyHandler: nil, errorHandler: nil)
-            validSession.sendMessage(articleDescriptionToSend, replyHandler: nil, errorHandler: nil)
-            validSession.sendMessage(articleImageToSend, replyHandler: nil, errorHandler: nil)
-          }
-        }
-      }
-    }
-  }
-
-  @IBAction func btnConnect(_ sender: UIButton) {
-    sendArticleItem()
-  }
 
   @IBOutlet weak var mainlabel: UILabel!
 //    this button takes the user to the search page
@@ -73,27 +50,4 @@ class ViewController: UIViewController {
     }
   }
 
-}
-
-// WCSession delegate functions
-extension ViewController: WCSessionDelegate {
-
-  func sessionDidBecomeInactive(_ session: WCSession) {
-  }
-
-  func sessionDidDeactivate(_ session: WCSession) {
-  }
-
-  func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState,
-               error: Error?) {
-  }
-
-  func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
-    print("received message: \(message)")
-    DispatchQueue.main.async {
-      if let value = message["Connect"] as? String {
-        self.mainlabel.text = value
-      }
-    }
-  }
 }

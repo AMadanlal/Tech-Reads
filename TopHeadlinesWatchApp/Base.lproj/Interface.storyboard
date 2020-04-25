@@ -11,35 +11,48 @@
             <objects>
                 <controller hidesWhenLoading="NO" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TopHeadlinesWatchApp" customModuleProvider="target">
                     <items>
-                        <button width="136" alignment="left" title="Top Headlines" id="E7U-CU-r51">
+                        <button width="140" height="30" alignment="center" title="Top Headline" id="E7U-CU-r51">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.60392156862745094" green="0.60271537303924561" blue="0.60271537303924561" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="btnGetHeadlines" destination="AgC-eL-Hgc" id="s5N-RV-iaI"/>
                             </connections>
                         </button>
-                        <group width="1" alignment="left" id="m6J-qa-vEh">
+                        <group width="1" alignment="left" layout="vertical" id="m6J-qa-vEh">
                             <items>
-                                <imageView width="50" height="50" alignment="left" id="4dl-UG-ldg"/>
-                                <group alignment="left" layout="vertical" spacing="0.0" id="hSc-SI-iPU">
-                                    <items>
-                                        <label alignment="left" text="Article Title" id="vnL-Bi-uoD"/>
-                                        <label alignment="left" text="Article Description" id="aWp-tg-RKa"/>
-                                    </items>
-                                </group>
+                                <label alignment="center" hidden="YES" text="Loading..." numberOfLines="5" id="vnL-Bi-uoD">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                                </label>
+                                <imageView width="70" height="76" alignment="center" verticalAlignment="bottom" id="4dl-UG-ldg"/>
                             </items>
                             <edgeInsets key="margins" left="0.0" right="0.0" top="6" bottom="0.0"/>
                         </group>
+                        <button width="140" height="30" alignment="center" verticalAlignment="bottom" hidden="YES" title="Open in App" id="uLd-9z-auM">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="btnGoToApp" destination="AgC-eL-Hgc" id="ynr-7C-DTG"/>
+                            </connections>
+                        </button>
+                        <button width="140" height="30" alignment="center" verticalAlignment="bottom" hidden="YES" title="Next Article" id="OS4-UU-Di8">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="btnNewArticle" destination="AgC-eL-Hgc" id="kKz-X4-DBn"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="articleDescription" destination="aWp-tg-RKa" id="QIX-zF-iDQ"/>
                         <outlet property="articleImage" destination="4dl-UG-ldg" id="Nxr-oe-saV"/>
                         <outlet property="articleTitle" destination="vnL-Bi-uoD" id="oWa-wm-z6o"/>
                         <outlet property="btnGetHeadlines" destination="E7U-CU-r51" id="N18-sr-gOd"/>
+                        <outlet property="btnGoToAppOutlet" destination="uLd-9z-auM" id="s0S-Qp-3I9"/>
+                        <outlet property="btnNewArticleOutlet" destination="OS4-UU-Di8" id="Zv3-xL-KA3"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="219.69230769230771" y="344.79487179487182"/>
+            <point key="canvasLocation" x="219.69230769230771" y="380.10256410256414"/>
         </scene>
     </scenes>
 </document>
