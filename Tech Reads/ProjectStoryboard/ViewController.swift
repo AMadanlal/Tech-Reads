@@ -8,13 +8,20 @@
 
 import UIKit
 import QuartzCore
+import TechReadsPod
+import WatchConnectivity
 
 class ViewController: UIViewController {
+  var session: WCSession?
+  var newsList: NewsSource?
+  var articleToUse: NewsSource.Article?
+
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
+      self.configureWatchKitSesstion()
     }
-    //    this is the app name label
-    @IBOutlet weak var mainlabel: UILabel!
+
+  @IBOutlet weak var mainlabel: UILabel!
 //    this button takes the user to the search page
   @IBAction func btnSearch(_ sender: UIButton) {
      performSegue(withIdentifier: "SearchBranch", sender: self)
@@ -34,4 +41,13 @@ class ViewController: UIViewController {
 //    this function is to perform the unwind segue
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
     }
+
+  func configureWatchKitSesstion() {
+    if WCSession.isSupported() {
+      session = WCSession.default
+      session?.delegate = self
+      session?.activate()
+    }
+  }
+
 }

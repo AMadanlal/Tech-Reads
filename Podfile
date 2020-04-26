@@ -10,7 +10,7 @@ target 'Tech Reads' do
 	pod 'Firebase'
 	pod 'Firebase/Crashlytics'
 	pod 'Firebase/Performance'
-	#pod 'Firebase/Analytics'
+	pod 'Firebase/Analytics'
 
   target 'Tech ReadsTests' do
     inherit! :search_paths
@@ -20,5 +20,18 @@ target 'Tech Reads' do
   target 'Tech ReadsUITests' do
     # Pods for testing
   end
+	
+  target 'TopHeadlinesWatchApp Extension' do
+     platform :watchos, '6.2'
+     #inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'TopHeadlinesWatchApp' do
+     platform :watchos, '6.2'
+     #inherit! :search_paths
+    # Pods for testing
+  end
+
 
 end

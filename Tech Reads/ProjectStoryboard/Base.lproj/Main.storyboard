@@ -146,6 +146,7 @@
                         <outlet property="GameReviewText" destination="gOa-Dv-fYn" id="F95-6v-79r"/>
                         <outlet property="GametrailerView" destination="hPV-55-Idm" id="cUg-gU-4Jl"/>
                         <outlet property="mainlabel" destination="9ua-Oy-7hd" id="uTk-4r-S6L"/>
+                        <segue destination="6RD-ow-mKT" kind="presentation" identifier="WatchSegue" id="uKz-MC-vK4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -769,8 +770,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sZQ-p7-oTp"/>
-        <segue reference="dDl-tE-BEK"/>
+        <segue reference="uKz-MC-vK4"/>
+        <segue reference="RXr-x6-QGj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
