@@ -11,38 +11,44 @@ import XCTest
 class TechReadsUITests: XCTestCase {
   var application: XCUIApplication!
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         continueAfterFailure = false
         application = XCUIApplication()
     }
 
   func testGameReview() {
+    setupSnapshot(application)
     application.launch()
     application.buttons["General game reviews"].tap()
-    sleep(7)
+    sleep(10)
+    snapshot("gameReview")
     application.buttons["Back"].tap()
     XCTAssert(application.buttons["General game reviews"].exists)
   }
 
   func testsearchingfunction() {
+    setupSnapshot(application)
     application.launch()
     application.buttons["Search Game or Tech"].tap()
     application.textFields["game or tech name"].tap()
     application.textFields["game or tech name"].typeText("borderlands")
     application.buttons["Search Game"].tap()
     sleep(9)
+    snapshot("BorderlandsResult")
     application.staticTexts["Borderlands 3 /n PS4"].tap()
-    sleep(9)
+    sleep(10)
+    snapshot("Borderlands3Result")
     application.buttons["Back"].tap()
     XCTAssert(application.buttons["Search Game or Tech"].exists)
   }
 
   func testUserPreferences() {
+    setupSnapshot(application)
     application.launch()
     application.buttons["User Preferences"].tap()
     application.pickerWheels.element.adjust(toPickerWheelValue: "PC")
     application.buttons["Save Preferences"].tap()
     sleep(1)
+    snapshot("preferences")
     XCTAssertEqual(application.staticTexts.element(matching: .any, identifier: "lblpreference").label, "PC")
   }
 }
