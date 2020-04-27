@@ -18,6 +18,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *lblCurrentMedium;
 @property (nonatomic, weak) IBOutlet UIPickerView *pickerView;
 @property (nonatomic, strong)NSArray *consoles;
+@property (weak, nonatomic) IBOutlet UILabel *instructionsLabel;
+@property (weak, nonatomic) IBOutlet UIButton *btnSaveOutlet;
 @property SavingUtilities* savingClass;
 - (void)viewDidLoad;
 - (IBAction)btnSave:(UIButton *)sender;

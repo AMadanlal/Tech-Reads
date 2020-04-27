@@ -19,11 +19,14 @@
   self.pickerView.dataSource = self;
   self.lblCurrentMedium.accessibilityIdentifier = @"lblpreference";
   [self.mediumLbl setFont:[UIFont fontWithName:@"italicSystemFont" size:15]];
-  [self.pickerView setValue:UIColor.blueColor forKey: @"textColor"];
+  [self.pickerView setValue:UIColor.whiteColor forKey: @"textColor"];
   self.savingClass = [[SavingUtilities alloc] init];
   SaveUtilityPresenter* utilityPresenter = [[SaveUtilityPresenter alloc] init];
   [utilityPresenter setViewWithView:self];
   [utilityPresenter loadMediumStringFromDB];
+  PreferenceButtonModification* buttonModificationClass = [[PreferenceButtonModification alloc] init];
+  [buttonModificationClass setUpButtonWithButton:(self.btnSaveOutlet)];
+  [buttonModificationClass setUpLabelWithLabel:(self.instructionsLabel)];
 }
 
 - (IBAction)btnSave:(UIButton *)sender {
