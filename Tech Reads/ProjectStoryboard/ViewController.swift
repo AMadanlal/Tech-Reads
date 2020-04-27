@@ -12,13 +12,26 @@ import TechReadsPod
 import WatchConnectivity
 
 class ViewController: UIViewController {
+  @IBOutlet weak var btnSearchOutlet: UIButton!
+  @IBOutlet weak var btnGameOutlet: UIButton!
+  @IBOutlet weak var btnTechOutlet: UIButton!
   var session: WCSession?
+  @IBOutlet weak var btnPreferenceOutlet: UIButton!
   var newsList: NewsSource?
   var articleToUse: NewsSource.Article?
 
     override func viewDidLoad() {
       super.viewDidLoad()
       self.configureWatchKitSesstion()
+      setGradientonBorder(button: btnSearchOutlet)
+      setProperSpacing(in: btnSearchOutlet)
+      setGradientonBorder(button: btnGameOutlet)
+      setProperSpacing(in: btnGameOutlet)
+      setGradientonBorder(button: btnTechOutlet)
+      setProperSpacing(in: btnTechOutlet)
+      setGradientonBorder(button: btnPreferenceOutlet)
+      btnPreferenceOutlet.imageEdgeInsets = UIEdgeInsets(top: 10, left: -80, bottom: 10, right: 30)
+      btnPreferenceOutlet.titleEdgeInsets = UIEdgeInsets(top: 0, left: -60, bottom: 0, right: 0)
     }
 
   @IBOutlet weak var mainlabel: UILabel!

@@ -21,19 +21,25 @@
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Foq-S7-Iut">
                                         <rect key="frame" x="16" y="16" width="382" height="368"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" preservesSuperviewLayoutMargins="YES" text="Tech Reads" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ua-Oy-7hd">
-                                                <rect key="frame" x="20" y="20" width="342" height="328"/>
-                                                <color key="backgroundColor" red="0.59807103872299194" green="0.79568344354629517" blue="0.9192776083946228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" preservesSuperviewLayoutMargins="YES" text="Tech Reads" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ua-Oy-7hd">
+                                                <rect key="frame" x="20" y="290.66666666666669" width="342" height="57.333333333333314"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="80"/>
-                                                <color key="textColor" red="0.091803856194019318" green="0.18693625926971436" blue="0.48673385381698608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TechReadsMainIcon" translatesAutoresizingMaskIntoConstraints="NO" id="v4d-tj-QQb">
+                                                <rect key="frame" x="30" y="-19.333333333333343" width="322" height="300"/>
+                                            </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.59807103872299194" green="0.79568344354629517" blue="0.9192776083946228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="9ua-Oy-7hd" firstAttribute="leading" secondItem="Foq-S7-Iut" secondAttribute="leading" constant="20" symbolic="YES" id="4cz-YY-U4H"/>
-                                            <constraint firstItem="9ua-Oy-7hd" firstAttribute="top" secondItem="Foq-S7-Iut" secondAttribute="top" constant="20" symbolic="YES" id="Tmd-hJ-bCY"/>
+                                            <constraint firstItem="v4d-tj-QQb" firstAttribute="top" secondItem="Foq-S7-Iut" secondAttribute="top" priority="749" constant="30" id="8Ly-sx-3yd"/>
+                                            <constraint firstItem="v4d-tj-QQb" firstAttribute="leading" secondItem="Foq-S7-Iut" secondAttribute="leading" constant="30" id="etB-8h-pXK"/>
+                                            <constraint firstItem="9ua-Oy-7hd" firstAttribute="top" secondItem="v4d-tj-QQb" secondAttribute="bottom" constant="10" id="ryj-EL-fox"/>
+                                            <constraint firstAttribute="trailing" secondItem="v4d-tj-QQb" secondAttribute="trailing" constant="30" id="twO-7D-voQ"/>
                                             <constraint firstAttribute="trailing" secondItem="9ua-Oy-7hd" secondAttribute="trailing" constant="20" symbolic="YES" id="wf3-1d-j9k"/>
                                             <constraint firstAttribute="bottom" secondItem="9ua-Oy-7hd" secondAttribute="bottom" constant="20" symbolic="YES" id="xxs-qC-GIM"/>
                                         </constraints>
@@ -44,15 +50,20 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qbh-VH-VlZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="368"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-i2-vhR">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-i2-vhR">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="77"/>
-                                                        <color key="backgroundColor" red="0.513721599400629" green="0.59499688354963776" blue="0.64309880602436542" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <state key="normal" title="Search Game or Tech">
-                                                            <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="0.20036922089041095" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                        </accessibility>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Search Game or Tech" image="Search Icon">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="15"/>
+                                                                <integer key="value" value="30"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -60,16 +71,19 @@
                                                             <segue destination="LE4-e1-cxl" kind="presentation" identifier="SearchBranch" id="Git-F2-gj1"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSc-Um-0kL">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSc-Um-0kL">
                                                         <rect key="frame" x="0.0" y="97" width="382" height="77"/>
-                                                        <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="General game reviews">
-                                                            <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="0.203125" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                        </accessibility>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <state key="normal" title="General game reviews" image="Game Icon">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="15"/>
+                                                                <integer key="value" value="30"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -77,15 +91,19 @@
                                                             <segue destination="8FQ-EX-Gbr" kind="presentation" identifier="GameRevBranch" id="RXr-x6-QGj"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lg-Q6-9x3">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lg-Q6-9x3">
                                                         <rect key="frame" x="0.0" y="194" width="382" height="77"/>
-                                                        <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <state key="normal" title="General Tech Reviews">
-                                                            <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="0.1952857448630137" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                        </accessibility>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <state key="normal" title="General Tech Reviews" image="Tech Icon">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="15"/>
+                                                                <integer key="value" value="30"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -93,15 +111,19 @@
                                                             <segue destination="6RD-ow-mKT" kind="presentation" identifier="TechRevBranch" id="WRv-N6-WqP"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggo-Fn-3lP">
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggo-Fn-3lP">
                                                         <rect key="frame" x="0.0" y="291" width="382" height="77"/>
-                                                        <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <state key="normal" title="User Preferences">
-                                                            <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="0.2032052654109589" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                        </accessibility>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <state key="normal" title="User Preferences" image="Settings Icon">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="15"/>
+                                                                <integer key="value" value="30"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -132,8 +154,8 @@
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.59807103872299194" green="0.79568344354629517" blue="0.9192776083946228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KtA-BJ-dKd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EwI-b9-KpN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KtA-BJ-dKd" secondAttribute="trailing" id="H8m-CS-2VE"/>
@@ -145,6 +167,10 @@
                     <connections>
                         <outlet property="GameReviewText" destination="gOa-Dv-fYn" id="F95-6v-79r"/>
                         <outlet property="GametrailerView" destination="hPV-55-Idm" id="cUg-gU-4Jl"/>
+                        <outlet property="btnGameOutlet" destination="oSc-Um-0kL" id="WC3-5s-fQV"/>
+                        <outlet property="btnPreferenceOutlet" destination="Ggo-Fn-3lP" id="BF0-8E-x3c"/>
+                        <outlet property="btnSearchOutlet" destination="sfr-i2-vhR" id="KHq-zi-wJe"/>
+                        <outlet property="btnTechOutlet" destination="4lg-Q6-9x3" id="MIt-wh-S8P"/>
                         <outlet property="mainlabel" destination="9ua-Oy-7hd" id="uTk-4r-S6L"/>
                         <segue destination="6RD-ow-mKT" kind="presentation" identifier="WatchSegue" id="uKz-MC-vK4"/>
                     </connections>
@@ -266,21 +292,29 @@
         <scene sceneID="TIj-oX-XoB">
             <objects>
                 <tableViewController storyboardIdentifier="SearchTableController" id="wxp-Nq-JpX" customClass="SearchResultsTable" customModule="Tech_Reads" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="11" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yqr-uY-CEy">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" sectionIndexMinimumDisplayRowCount="11" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="yqr-uY-CEy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.5980710387" green="0.79568344349999998" blue="0.91927760839999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="separatorColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.5980710387" green="0.79568344349999998" blue="0.91927760839999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.5980710387" green="0.79568344349999998" blue="0.91927760839999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" id="4o6-XT-WaK">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="55.333332061767578" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4o6-XT-WaK" id="ysV-hZ-zpS">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -774,4 +808,11 @@
         <segue reference="RXr-x6-QGj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="Game Icon" width="118" height="118"/>
+        <image name="Search Icon" width="116.66666412353516" height="116.66666412353516"/>
+        <image name="Settings Icon" width="116.66666412353516" height="116.66666412353516"/>
+        <image name="Tech Icon" width="116.66666412353516" height="116.66666412353516"/>
+        <image name="TechReadsMainIcon" width="407" height="300"/>
+    </resources>
 </document>

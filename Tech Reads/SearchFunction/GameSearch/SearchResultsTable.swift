@@ -31,8 +31,6 @@ class SearchResultsTable: UITableViewController, GameResultsPresenterView {
   }
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath)
-    tableView.backgroundColor = UIColor.init(red: 153/255, green: 203/255, blue: 234/255, alpha: 1)
-    cell.backgroundColor = UIColor.init(red: 153/255, green: 203/255, blue: 234/255, alpha: 1)
     cell.textLabel?.textColor = UIColor.blue
     cell.textLabel?.numberOfLines = 0
     cell.textLabel?.text = gamesToDisplay[indexPath.row]
