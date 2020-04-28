@@ -27,7 +27,7 @@ class GameResultsPresenter {
         self.gameItems = details.result.map { item in
           let title = item.title
           let description = item.platform
-          return title + " /n " + description
+          return title + " on " + description
         }
         DispatchQueue.main.async {
           self.view?.updateSearchItems(gameItems: self.gameItems)
