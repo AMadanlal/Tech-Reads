@@ -24,9 +24,6 @@ class GeneralTechReview: UIViewController, TechNewsPresenterView {
       }
     }
 
-  @IBAction func btnBack(_ sender: UIButton) {
-  }
-
   @IBAction func btnSource(_ sender: UIButton) {
     performSegue(withIdentifier: "sourceLink", sender: self)
   }

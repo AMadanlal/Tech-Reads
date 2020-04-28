@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
 #import "PreferenceUtillitiesView.h"
 #import "Tech_Reads-Swift.h"
 
@@ -24,9 +25,23 @@
   SaveUtilityPresenter* utilityPresenter = [[SaveUtilityPresenter alloc] init];
   [utilityPresenter setViewWithView:self];
   [utilityPresenter loadMediumStringFromDB];
+  [self setUI];
+  self.view.layer.borderColor = [UIColor blueColor].CGColor;
+  self.view.layer.cornerRadius = 30.0f;
+  self.view.layer.borderWidth = 5.0f;
+}
+
+- (void)setUI {
   PreferenceButtonModification* buttonModificationClass = [[PreferenceButtonModification alloc] init];
   [buttonModificationClass setUpButtonWithButton:(self.btnSaveOutlet)];
   [buttonModificationClass setUpLabelWithLabel:(self.instructionsLabel)];
+}
+
+- (void)viewDidLayoutSubviews {
+  [self setUI];
+}
+- (IBAction)btnBack:(UIButton *)sender {
+//  this unwinds the segue
 }
 
 - (IBAction)btnSave:(UIButton *)sender {

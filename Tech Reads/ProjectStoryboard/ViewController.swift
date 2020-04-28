@@ -20,19 +20,27 @@ class ViewController: UIViewController {
   var newsList: NewsSource?
   var articleToUse: NewsSource.Article?
 
+  func setUpButtons() {
+    setButtonBorder(button: btnSearchOutlet)
+    setProperSpacing(in: btnSearchOutlet, imageInsertLeft: -40, titleInsertLeft: -60)
+    setButtonBorder(button: btnGameOutlet)
+    setProperSpacing(in: btnGameOutlet, imageInsertLeft: -40, titleInsertLeft: -60)
+    setButtonBorder(button: btnTechOutlet)
+    setProperSpacing(in: btnTechOutlet, imageInsertLeft: -40, titleInsertLeft: -60)
+    setButtonBorder(button: btnPreferenceOutlet)
+    setProperSpacing(in: btnPreferenceOutlet, imageInsertLeft: -80, titleInsertLeft: -60)
+  }
+
     override func viewDidLoad() {
       super.viewDidLoad()
       self.configureWatchKitSesstion()
-      setGradientonBorder(button: btnSearchOutlet)
-      setProperSpacing(in: btnSearchOutlet)
-      setGradientonBorder(button: btnGameOutlet)
-      setProperSpacing(in: btnGameOutlet)
-      setGradientonBorder(button: btnTechOutlet)
-      setProperSpacing(in: btnTechOutlet)
-      setGradientonBorder(button: btnPreferenceOutlet)
-      btnPreferenceOutlet.imageEdgeInsets = UIEdgeInsets(top: 10, left: -80, bottom: 10, right: 30)
-      btnPreferenceOutlet.titleEdgeInsets = UIEdgeInsets(top: 0, left: -60, bottom: 0, right: 0)
-    }
+      setUpButtons()
+  }
+
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    setUpButtons()
+  }
 
   @IBOutlet weak var mainlabel: UILabel!
 //    this button takes the user to the search page

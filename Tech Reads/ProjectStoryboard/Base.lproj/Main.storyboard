@@ -15,14 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="KtA-BJ-dKd">
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="KtA-BJ-dKd">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Foq-S7-Iut">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bz6-rR-hbM">
                                         <rect key="frame" x="16" y="16" width="382" height="368"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TechReadsMainIcon" translatesAutoresizingMaskIntoConstraints="NO" id="v4d-tj-QQb">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="300"/>
+                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" preservesSuperviewLayoutMargins="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ua-Oy-7hd">
-                                                <rect key="frame" x="20" y="292" width="342" height="56"/>
+                                                <rect key="frame" x="65.666666666666686" y="310" width="251" height="58"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
@@ -36,151 +39,123 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TechReadsMainIcon" translatesAutoresizingMaskIntoConstraints="NO" id="v4d-tj-QQb">
-                                                <rect key="frame" x="30" y="-18" width="322" height="300"/>
-                                            </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="9ua-Oy-7hd" firstAttribute="leading" secondItem="Foq-S7-Iut" secondAttribute="leading" constant="20" symbolic="YES" id="4cz-YY-U4H"/>
-                                            <constraint firstItem="v4d-tj-QQb" firstAttribute="top" secondItem="Foq-S7-Iut" secondAttribute="top" priority="749" constant="30" id="8Ly-sx-3yd"/>
-                                            <constraint firstItem="v4d-tj-QQb" firstAttribute="leading" secondItem="Foq-S7-Iut" secondAttribute="leading" constant="30" id="etB-8h-pXK"/>
-                                            <constraint firstItem="9ua-Oy-7hd" firstAttribute="top" secondItem="v4d-tj-QQb" secondAttribute="bottom" constant="10" id="ryj-EL-fox"/>
-                                            <constraint firstAttribute="trailing" secondItem="v4d-tj-QQb" secondAttribute="trailing" constant="30" id="twO-7D-voQ"/>
-                                            <constraint firstAttribute="trailing" secondItem="9ua-Oy-7hd" secondAttribute="trailing" constant="20" symbolic="YES" id="wf3-1d-j9k"/>
-                                            <constraint firstAttribute="bottom" secondItem="9ua-Oy-7hd" secondAttribute="bottom" constant="20" symbolic="YES" id="xxs-qC-GIM"/>
-                                        </constraints>
-                                    </view>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qLF-ay-3xG">
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Qbh-VH-VlZ">
                                         <rect key="frame" x="16" y="434" width="382" height="368"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qbh-VH-VlZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="368"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-i2-vhR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="77"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="0.20036922089041095" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <accessibility key="accessibilityConfiguration">
-                                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                        </accessibility>
-                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" image="Search Icon">
-                                                            <attributedString key="attributedTitle">
-                                                                <fragment content="Search Game or Tech">
-                                                                    <attributes>
-                                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <font key="NSFont" size="21" name="SFProDisplay-Regular"/>
-                                                                    </attributes>
-                                                                </fragment>
-                                                            </attributedString>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="30"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="btnSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rlf-IW-sSI"/>
-                                                            <segue destination="LE4-e1-cxl" kind="presentation" identifier="SearchBranch" id="Git-F2-gj1"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oSc-Um-0kL">
-                                                        <rect key="frame" x="0.0" y="97" width="382" height="77"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="0.203125" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <accessibility key="accessibilityConfiguration">
-                                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                        </accessibility>
-                                                        <state key="normal" image="Game Icon">
-                                                            <attributedString key="attributedTitle">
-                                                                <fragment content="General game reviews">
-                                                                    <attributes>
-                                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <font key="NSFont" size="21" name="SFProDisplay-Regular"/>
-                                                                    </attributes>
-                                                                </fragment>
-                                                            </attributedString>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="30"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="btnGameReview:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32g-y1-aoq"/>
-                                                            <segue destination="8FQ-EX-Gbr" kind="presentation" identifier="GameRevBranch" id="RXr-x6-QGj"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4lg-Q6-9x3">
-                                                        <rect key="frame" x="0.0" y="194" width="382" height="77"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="0.1952857448630137" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <accessibility key="accessibilityConfiguration">
-                                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                        </accessibility>
-                                                        <state key="normal" image="Tech Icon">
-                                                            <attributedString key="attributedTitle">
-                                                                <fragment content="General Tech Reviews">
-                                                                    <attributes>
-                                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <font key="NSFont" size="21" name="SFProDisplay-Regular"/>
-                                                                    </attributes>
-                                                                </fragment>
-                                                            </attributedString>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="30"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="btnTechReview:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aa1-ms-fUa"/>
-                                                            <segue destination="6RD-ow-mKT" kind="presentation" identifier="TechRevBranch" id="WRv-N6-WqP"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ggo-Fn-3lP">
-                                                        <rect key="frame" x="0.0" y="291" width="382" height="77"/>
-                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="0.2032052654109589" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <accessibility key="accessibilityConfiguration">
-                                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                        </accessibility>
-                                                        <state key="normal" image="Settings Icon">
-                                                            <attributedString key="attributedTitle">
-                                                                <fragment content="User Preferences">
-                                                                    <attributes>
-                                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <font key="NSFont" size="21" name="SFProDisplay-Regular"/>
-                                                                    </attributes>
-                                                                </fragment>
-                                                            </attributedString>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="30"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="btnPref:" destination="BYZ-38-t0r" eventType="touchUpInside" id="418-bT-TpY"/>
-                                                            <segue destination="28g-Z8-DkQ" kind="presentation" identifier="PrefBranch" id="N8Y-zi-ZjP"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-i2-vhR">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="73.333333333333329"/>
+                                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="0.20036922089041095" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="Search Icon">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Search Game or Tech">
+                                                            <attributes>
+                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <font key="NSFont" size="21" name="SFProDisplay-Regular"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rlf-IW-sSI"/>
+                                                    <segue destination="LE4-e1-cxl" kind="presentation" identifier="SearchBranch" id="Git-F2-gj1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oSc-Um-0kL">
+                                                <rect key="frame" x="0.0" y="98.333333333333371" width="382" height="73.333333333333314"/>
+                                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="0.203125" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" image="Game Icon">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="General game reviews">
+                                                            <attributes>
+                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <font key="NSFont" size="21" name="SFProDisplay-Regular"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnGameReview:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32g-y1-aoq"/>
+                                                    <segue destination="8FQ-EX-Gbr" kind="presentation" identifier="GameRevBranch" id="RXr-x6-QGj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4lg-Q6-9x3">
+                                                <rect key="frame" x="0.0" y="196.66666666666663" width="382" height="73"/>
+                                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="0.1952857448630137" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" image="Tech Icon">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="General Tech Reviews">
+                                                            <attributes>
+                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <font key="NSFont" size="21" name="SFProDisplay-Regular"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnTechReview:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aa1-ms-fUa"/>
+                                                    <segue destination="6RD-ow-mKT" kind="presentation" identifier="TechRevBranch" id="WRv-N6-WqP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ggo-Fn-3lP">
+                                                <rect key="frame" x="0.0" y="294.66666666666663" width="382" height="73.333333333333314"/>
+                                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="0.2032052654109589" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <state key="normal" image="Settings Icon">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="User Preferences">
+                                                            <attributes>
+                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <font key="NSFont" size="21" name="SFProDisplay-Regular"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnPref:" destination="BYZ-38-t0r" eventType="touchUpInside" id="418-bT-TpY"/>
+                                                    <segue destination="28g-Z8-DkQ" kind="presentation" identifier="PrefBranch" id="N8Y-zi-ZjP"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="vdE-cP-xBI" firstAttribute="trailing" secondItem="Qbh-VH-VlZ" secondAttribute="trailing" id="A9T-xX-QhY"/>
-                                            <constraint firstAttribute="trailing" secondItem="Qbh-VH-VlZ" secondAttribute="trailing" id="Cpo-fx-jO3"/>
-                                            <constraint firstItem="Qbh-VH-VlZ" firstAttribute="top" secondItem="vdE-cP-xBI" secondAttribute="top" id="EiR-ET-qyy"/>
-                                            <constraint firstAttribute="bottom" secondItem="Qbh-VH-VlZ" secondAttribute="bottom" id="ci3-fm-XYm"/>
-                                            <constraint firstItem="vdE-cP-xBI" firstAttribute="bottom" secondItem="Qbh-VH-VlZ" secondAttribute="bottom" id="pb1-1P-wcG"/>
-                                            <constraint firstItem="Qbh-VH-VlZ" firstAttribute="leading" secondItem="vdE-cP-xBI" secondAttribute="leading" id="qcv-SV-bkx"/>
+                                            <constraint firstAttribute="height" constant="368" id="MN3-m6-qdD"/>
+                                            <constraint firstAttribute="width" constant="382" id="kwL-zq-R05"/>
                                         </constraints>
-                                        <viewLayoutGuide key="contentLayoutGuide" id="TsF-X8-KcL"/>
-                                        <viewLayoutGuide key="frameLayoutGuide" id="vdE-cP-xBI"/>
-                                    </scrollView>
+                                    </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="Foq-S7-Iut" firstAttribute="leading" secondItem="KtA-BJ-dKd" secondAttribute="leading" constant="16" id="3L1-ei-eiu"/>
-                                    <constraint firstItem="Foq-S7-Iut" firstAttribute="top" secondItem="KtA-BJ-dKd" secondAttribute="top" constant="16" id="ODc-7u-0dp"/>
-                                </constraints>
                                 <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                             </stackView>
@@ -635,7 +610,7 @@
                                         <rect key="frame" x="0.0" y="408" width="382" height="378"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0wb-Fm-MvH">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="322"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="306"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -648,7 +623,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gg3-3s-3zP">
-                                                <rect key="frame" x="0.0" y="347" width="382" height="31"/>
+                                                <rect key="frame" x="0.0" y="331" width="382" height="47"/>
                                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Go To sorce ">
                                                     <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -691,7 +666,7 @@
         <scene sceneID="zcD-CE-5qj">
             <objects>
                 <viewController modalPresentationStyle="formSheet" id="28g-Z8-DkQ" customClass="PreferenceUtilitiesView" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pDh-kr-uJ5">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pDh-kr-uJ5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>

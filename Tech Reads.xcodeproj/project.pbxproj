@@ -13,6 +13,7 @@
 		B4429A66DF30A7BE4DD696F0 /* libPods-TopHeadlinesWatchApp Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 328A3275B64D52D4B0048382 /* libPods-TopHeadlinesWatchApp Extension.a */; };
 		B7EFBC061B375C74662EF100 /* libPods-Tech Reads-Tech ReadsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E0AF83470AC3E407DD29C /* libPods-Tech Reads-Tech ReadsUITests.a */; };
 		D32801CA24499F9F00E1DEF1 /* TechNewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32801C924499F9F00E1DEF1 /* TechNewsPresenter.swift */; };
+		D32A8534245808C5007BAB55 /* UIModifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A8533245808C5007BAB55 /* UIModifications.swift */; };
 		D32D0699242C8CA6002A8647 /* PreferenceUtilitiesView.m in Sources */ = {isa = PBXBuildFile; fileRef = D32D0698242C8CA6002A8647 /* PreferenceUtilitiesView.m */; };
 		D33999B523FBC33A009E1811 /* SearchResultsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33999B423FBC33A009E1811 /* SearchResultsTable.swift */; };
 		D3522B482451DCEC009405AE /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3522B462451DCEC009405AE /* Interface.storyboard */; };
@@ -127,6 +128,7 @@
 		CBBB633214498383E6AAF9E6 /* Pods-Tech ReadsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tech ReadsTests.release.xcconfig"; path = "Target Support Files/Pods-Tech ReadsTests/Pods-Tech ReadsTests.release.xcconfig"; sourceTree = "<group>"; };
 		D174AA0B58E47A229D672AA9 /* Pods-TopHeadlinesWatchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopHeadlinesWatchApp.debug.xcconfig"; path = "Target Support Files/Pods-TopHeadlinesWatchApp/Pods-TopHeadlinesWatchApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D32801C924499F9F00E1DEF1 /* TechNewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechNewsPresenter.swift; sourceTree = "<group>"; };
+		D32A8533245808C5007BAB55 /* UIModifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModifications.swift; sourceTree = "<group>"; };
 		D32D0697242C8CA5002A8647 /* Tech Reads-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tech Reads-Bridging-Header.h"; sourceTree = "<group>"; };
 		D32D0698242C8CA6002A8647 /* PreferenceUtilitiesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferenceUtilitiesView.m; sourceTree = "<group>"; };
 		D32D069A242C8CCC002A8647 /* PreferenceUtillitiesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceUtillitiesView.h; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				D37725D7244F30DB00510A35 /* UIImageExtention.swift */,
 				D3866AAC244DCB23004FC01D /* Segues.swift */,
 				D3DDB5D9245703C7001C31D6 /* ColorExtention.swift */,
+				D32A8533245808C5007BAB55 /* UIModifications.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -812,6 +815,7 @@
 				D368A43A23EBF6730090A80F /* GameSearchView.swift in Sources */,
 				D3A6CE172438CB2E00B96DE1 /* SaveUtilityPresenter.swift in Sources */,
 				D3DBEC6B23E98180003EBFDC /* SceneDelegate.swift in Sources */,
+				D32A8534245808C5007BAB55 /* UIModifications.swift in Sources */,
 				D37725D8244F30DB00510A35 /* UIImageExtention.swift in Sources */,
 				D396EBA9244B2B5E007DB5B5 /* TechResultsPresenter.swift in Sources */,
 				D357DB522454622A00E9466A /* ViewControllerExtention.swift in Sources */,
