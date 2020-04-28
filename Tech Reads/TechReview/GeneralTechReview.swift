@@ -15,7 +15,10 @@ class GeneralTechReview: UIViewController, TechNewsPresenterView {
   lazy var newsPresenter = TechNewsPresenter(with: self)
   public var isSearched = false
 
-    override func viewDidLoad() {
+  @IBAction func btnBack(_ sender: Any) {
+  }
+
+  override func viewDidLoad() {
         super.viewDidLoad()
       if isSearched == false {
         newsPresenter.displayRandomTechNews()
