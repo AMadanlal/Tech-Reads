@@ -203,20 +203,43 @@
                                     <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Qgd-ZB-hCJ">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="379"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search For the Game or Tech you want to see." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQF-EO-rOH">
-                                                <rect key="frame" x="20" y="20" width="342" height="359"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NIu-aH-2Kt">
+                                                <rect key="frame" x="4" y="231" width="374" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <segments>
+                                                    <segment title="Games"/>
+                                                    <segment title="Tech"/>
+                                                </segments>
+                                                <color key="selectedSegmentTintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="segmentedControl:" destination="LE4-e1-cxl" eventType="valueChanged" id="Uar-cw-nih"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="game or tech name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GNM-Cp-nHX">
+                                                <rect key="frame" x="8" y="304" width="366" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="LE4-e1-cxl" id="6Lt-po-VHm"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search For the Game or Tech you want to see." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQF-EO-rOH">
+                                                <rect key="frame" x="28" y="33" width="327" height="159"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
-                                                <color key="textColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.59807103872299194" green="0.79568344354629517" blue="0.9192776083946228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="xQF-EO-rOH" firstAttribute="leading" secondItem="Qgd-ZB-hCJ" secondAttribute="leading" constant="20" symbolic="YES" id="4Ay-0y-lOy"/>
-                                            <constraint firstAttribute="trailing" secondItem="xQF-EO-rOH" secondAttribute="trailing" constant="20" symbolic="YES" id="Liw-So-pOL"/>
-                                            <constraint firstAttribute="bottom" secondItem="xQF-EO-rOH" secondAttribute="bottom" id="cSk-rg-8zY"/>
-                                            <constraint firstItem="xQF-EO-rOH" firstAttribute="top" secondItem="Qgd-ZB-hCJ" secondAttribute="top" constant="20" symbolic="YES" id="spq-bQ-r64"/>
-                                        </constraints>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cso-jq-5Uf">
                                         <rect key="frame" x="0.0" y="429" width="382" height="379"/>
@@ -224,35 +247,12 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsd-ab-lMd">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="379"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="game or tech name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GNM-Cp-nHX">
-                                                        <rect key="frame" x="8" y="63" width="366" height="34"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                        <connections>
-                                                            <outlet property="delegate" destination="LE4-e1-cxl" id="6Lt-po-VHm"/>
-                                                        </connections>
-                                                    </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8C-rM-rZP">
-                                                        <rect key="frame" x="97" y="188" width="188" height="51"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asC-sj-ARB">
+                                                        <rect key="frame" x="80" y="50" width="230" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Search Tech"/>
-                                                        <connections>
-                                                            <action selector="btnTechSearch:" destination="LE4-e1-cxl" eventType="touchUpInside" id="fFN-pt-S4b"/>
-                                                            <segue destination="3fe-PS-cQ8" kind="popoverPresentation" identifier="techSearch" popoverAnchorView="m8C-rM-rZP" id="ShB-rs-RYF">
-                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                            </segue>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asC-sj-ARB">
-                                                        <rect key="frame" x="97" y="137" width="188" height="43"/>
-                                                        <color key="backgroundColor" red="0.51372159939999995" green="0.59499688350000002" blue="0.64309880600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="43" id="fBg-ya-R44"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Search Game">
-                                                            <color key="titleColor" red="0.091803856190000005" green="0.18693625929999999" blue="0.4867338538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="0.40012307366164379" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="Search Game" image="Search Icon">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -264,16 +264,27 @@
                                                             <segue destination="wxp-Nq-JpX" kind="presentation" identifier="searchsegue" id="aJE-fF-zTn"/>
                                                         </connections>
                                                     </button>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8C-rM-rZP">
+                                                        <rect key="frame" x="80" y="50" width="230" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="0.3966449058219178" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="Search Tech" image="Search Icon">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="btnTechSearch:" destination="LE4-e1-cxl" eventType="touchUpInside" id="fFN-pt-S4b"/>
+                                                            <segue destination="3fe-PS-cQ8" kind="popoverPresentation" identifier="techSearch" popoverAnchorView="m8C-rM-rZP" id="ShB-rs-RYF">
+                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                            </segue>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.59807103872299194" green="0.79568344354629517" blue="0.9192776083946228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstItem="asC-sj-ARB" firstAttribute="top" secondItem="GNM-Cp-nHX" secondAttribute="bottom" constant="40" id="CtA-J1-XiL"/>
-                                                    <constraint firstItem="asC-sj-ARB" firstAttribute="top" secondItem="bsd-ab-lMd" secondAttribute="top" constant="137" id="DvQ-Uf-3Rw"/>
-                                                    <constraint firstItem="GNM-Cp-nHX" firstAttribute="centerX" secondItem="asC-sj-ARB" secondAttribute="centerX" id="EtM-9i-56n"/>
-                                                    <constraint firstItem="asC-sj-ARB" firstAttribute="leading" secondItem="bsd-ab-lMd" secondAttribute="leading" constant="97" id="JcQ-iq-uvY"/>
-                                                    <constraint firstItem="GNM-Cp-nHX" firstAttribute="leading" secondItem="bsd-ab-lMd" secondAttribute="leadingMargin" id="lnq-MV-J15"/>
-                                                    <constraint firstItem="asC-sj-ARB" firstAttribute="centerX" secondItem="bsd-ab-lMd" secondAttribute="centerX" id="y1H-8J-9Ou"/>
-                                                </constraints>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -281,7 +292,7 @@
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.59807103872299194" green="0.79568344354629517" blue="0.9192776083946228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AbP-rl-jMf" firstAttribute="top" secondItem="vM9-dF-Gch" secondAttribute="top" constant="16" id="OVd-3Y-RKL"/>
                             <constraint firstItem="AbP-rl-jMf" firstAttribute="leading" secondItem="vM9-dF-Gch" secondAttribute="leading" constant="16" id="e8R-Ml-ZFF"/>
@@ -291,6 +302,10 @@
                         <viewLayoutGuide key="safeArea" id="vM9-dF-Gch"/>
                     </view>
                     <connections>
+                        <outlet property="btnGameOutlet" destination="asC-sj-ARB" id="iwi-80-mzE"/>
+                        <outlet property="btnTechOutlet" destination="m8C-rM-rZP" id="6bz-A6-Idk"/>
+                        <outlet property="segmentedControlOutlet" destination="NIu-aH-2Kt" id="g0g-ho-BS7"/>
+                        <outlet property="titleLabel" destination="xQF-EO-rOH" id="33O-fO-omk"/>
                         <outlet property="txtFieldSearch" destination="GNM-Cp-nHX" id="XZS-Tz-cTj"/>
                     </connections>
                 </viewController>
