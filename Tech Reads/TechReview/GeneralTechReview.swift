@@ -12,9 +12,12 @@ class GeneralTechReview: UIViewController, TechNewsPresenterView {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var txtNewsDetails: UITextView!
   @IBOutlet weak var imgView: UIImageView!
+  @IBOutlet weak var btnNextOutlet: UIButton!
   lazy var newsPresenter = TechNewsPresenter(with: self)
   public var isSearched = false
+  @IBOutlet weak var btnSourceOutlet: UIButton!
 
+  @IBOutlet weak var techView: UIView!
   @IBAction func btnBack(_ sender: Any) {
   }
 
@@ -25,7 +28,20 @@ class GeneralTechReview: UIViewController, TechNewsPresenterView {
       } else {
         newsPresenter.displayTechNews()
       }
+    setUpUI()
     }
+
+  func setUpUI() {
+    setTextViewBorder(field: techView)
+    setButtonBorder(button: btnSourceOutlet)
+    setProperSpacing(in: btnSourceOutlet, imageInsertLeft: 0, titleInsertLeft: -20)
+    setButtonBorder(button: btnNextOutlet)
+  }
+
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    setUpUI()
+  }
 
   @IBAction func btnSource(_ sender: UIButton) {
     performSegue(withIdentifier: "sourceLink", sender: self)
