@@ -30,7 +30,7 @@ import Foundation
 func getShape(bounds: CGRect, radius: CGFloat) -> CAShapeLayer {
   let shape = CAShapeLayer()
   shape.lineWidth = 4
-  shape.path = UIBezierPath(roundedRect: bounds, cornerRadius: radius).cgPath
+  shape.path = UIBezierPath(roundedRect: bounds, cornerRadius: radius + 10).cgPath
   shape.strokeColor = UIColor.black.cgColor
   shape.fillColor = UIColor.clear.cgColor
   shape.name = "ShapeLayer"
@@ -64,7 +64,7 @@ public func setButtonBorder(button: UIButton) {
   button.imageView?.contentMode = .scaleAspectFit
 }
 
-public func setTextFieldBorder(field: UITextField) {
+public func setTextViewBorder(field: UIView) {
   if let oldGradientLayer = field.layer.sublayers?.filter({$0.name == "GradientLayer"}).first {
     oldGradientLayer.removeFromSuperlayer()
   }
