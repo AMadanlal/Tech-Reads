@@ -561,9 +561,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07u-7M-T0p">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="103.66666666666667"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-Dv-fYn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="325"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-Dv-fYn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="103.66666666666667"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="loading...">
@@ -583,6 +582,12 @@
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="gOa-Dv-fYn" secondAttribute="bottom" id="Oon-CB-7uK"/>
+                                                    <constraint firstItem="gOa-Dv-fYn" firstAttribute="top" secondItem="07u-7M-T0p" secondAttribute="top" id="Wzh-N6-FbY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gOa-Dv-fYn" secondAttribute="trailing" id="bmq-Ta-ugL"/>
+                                                    <constraint firstItem="gOa-Dv-fYn" firstAttribute="leading" secondItem="07u-7M-T0p" secondAttribute="leading" id="jPN-lZ-3nu"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="15"/>
