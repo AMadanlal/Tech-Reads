@@ -19,4 +19,12 @@ class SaveLoadTest: XCTestCase {
     let loadedMedium = loadUtility.loadMedium()
     XCTAssertEqual(loadedMedium, "PC")
   }
+
+  func testSavingAndLoadingFromDataBase() {
+    let preferenceToSave = "PS4"
+    PreferenceRepository().savePreferenceToDb(pref: preferenceToSave)
+    let preferenceLoaded =  PreferenceRepository().loadPreferenceFromDb()
+    XCTAssertEqual(preferenceToSave, preferenceLoaded)
+  }
+
 }

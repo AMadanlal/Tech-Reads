@@ -11,11 +11,10 @@ import TechReadsPod
 
 class GameReviewController: UIViewController, GamePresenterView {
 
-//  this is the main game label 
   @IBOutlet weak var lblMain: UILabel!
   @IBOutlet weak var gameReviewText: UITextView!
-  @IBOutlet weak var imageplace: UIImageView!
-   @IBOutlet weak var textview: UIView!
+  @IBOutlet weak var imagePlace: UIImageView!
+   @IBOutlet weak var textView: UIView!
   @IBOutlet weak var btnNextOutlet: UIButton!
   lazy var gamePresenter = GameReviewPresenter(with: self)
   public var isSearched = false
@@ -31,7 +30,7 @@ class GameReviewController: UIViewController, GamePresenterView {
     }
 
   func setupViewBorders() {
-    setTextViewBorder(field: textview)
+    setTextViewBorder(field: textView)
     setButtonBorder(button: btnNextOutlet)
   }
 
@@ -51,7 +50,7 @@ class GameReviewController: UIViewController, GamePresenterView {
   func updatePageContent(_ title: String, withContent content: String, andImageURL imageUrl: String) {
     lblMain.text = title
     gameReviewText.text = content
-    imageplace.image(fromUrl: imageUrl)
+    imagePlace.image(fromUrl: imageUrl)
   }
 
 }
