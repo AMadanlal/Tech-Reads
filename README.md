@@ -7,11 +7,10 @@ It is a game and tech review application that allows a user to read game reviews
 [![codecov](https://codecov.io/gh/AMadanlal/Tech-Reads/branch/Develop/graph/badge.svg)](https://codecov.io/gh/AMadanlal/Tech-Reads)
 
 Prototype Screenshots:
-
-![Game Review Screen](PrototypeScreenshots/Game%20review%20Screen.png)
-![Search Game Results Page](PrototypeScreenshots/Search%20Game%20Results%20Page.png)
-![Search Screen](PrototypeScreenshots/Search%20Screen.png)
-![Search Tech Results Page](PrototypeScreenshots/Search%20Tech%20Results%20Page.png)
 ![Home Screen](PrototypeScreenshots/Home%20Screen.png)
 ![User Preferences Screen](PrototypeScreenshots/User%20Preferences%20Screen.png)
+![Search Screen](PrototypeScreenshots/Search%20Screen.png)
+![Search Game Results Page](PrototypeScreenshots/Search%20Game%20Results%20Page.png)
+![Game Review Screen](PrototypeScreenshots/Game%20review%20Screen.png)
+![Search Tech Results Page](PrototypeScreenshots/Search%20Tech%20Results%20Page.png)
 ![Tech News Screen](PrototypeScreenshots/Tech%20News%20Screen.png)
