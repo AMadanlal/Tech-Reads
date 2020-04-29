@@ -118,6 +118,19 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - OHHTTPStubs/Core (9.0.0)
+  - OHHTTPStubs/Default (9.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.0.0)
+  - OHHTTPStubs/Swift (9.0.0):
+    - OHHTTPStubs/Default
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.4)
   - TechReadsPod (0.0.1):
@@ -128,7 +141,8 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Crashlytics
   - Firebase/Performance
-  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Feature/CoreDataSaving`)
+  - OHHTTPStubs/Swift
+  - TechReadsPod (from `https://github.com/AMadanlal/TechReadsPod.git`, branch `Develop`)
 
 SPEC REPOS:
   trunk:
@@ -151,12 +165,13 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - nanopb
+    - OHHTTPStubs
     - PromisesObjC
     - Protobuf
 
 EXTERNAL SOURCES:
   TechReadsPod:
-    :branch: Feature/CoreDataSaving
+    :branch: Develop
     :git: https://github.com/AMadanlal/TechReadsPod.git
 
 CHECKOUT OPTIONS:
@@ -184,10 +199,11 @@ SPEC CHECKSUMS:
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
   TechReadsPod: 14e6b0039660aec923a1036eb6ff7b8c0453e409
 
-PODFILE CHECKSUM: 59dbe0fb7c51425275cf05fb4951136d6eaf4e71
+PODFILE CHECKSUM: ba080eaf1745e67224ad81d82fdfd996bd50439d
 
 COCOAPODS: 1.9.1

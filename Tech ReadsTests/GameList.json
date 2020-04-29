@@ -1,0 +1,47 @@
+{
+  "query": "/rest/games?title=",
+  "executionTime": 0.836309,
+  "result": [
+    {
+      "title": "Detroit: Become Human",
+      "platform": "PS4"
+    },
+    {
+      "title": "God of War",
+      "platform": "PS4"
+    },
+    {
+      "title": "Resident Evil 7: biohazard",
+      "platform": "PS4"
+    },
+    {
+      "title": "Gears of War 4",
+      "platform": "XONE"
+    },
+    {
+      "title": "Marvel's Spider-Man",
+      "platform": "PS4"
+    },
+    {
+      "title": "Call of Duty: Black Ops 4",
+      "platform": "PS4"
+    },
+    {
+      "title": "Battlefield V",
+      "platform": "PS4"
+    },
+    {
+      "title": "Spyro Reignited Trilogy",
+      "platform": "PS4"
+    },
+    {
+      "title": "Super Smash Bros. Ultimate",
+      "platform": "Switch"
+    },
+    {
+      "title": "Here They Lie",
+      "platform": "PS4"
+    }
+  ],
+  "countResult": 10
+}

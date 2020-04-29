@@ -10,4 +10,5 @@ import Foundation
 
 public protocol TechNewsPresenterView: class {
   func updatePageContent(title: String, content: String, imageUrl: String)
+  func popUpWarning(title: String, message: String)
 }

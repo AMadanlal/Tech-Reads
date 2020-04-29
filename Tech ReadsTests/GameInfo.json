@@ -1,0 +1,29 @@
+{
+  "query": "/rest/games/borderlands?platform=pc",
+  "executionTime": 1.403186,
+  "result": {
+    "title": "Borderlands",
+    "releaseDate": "Oct 26, 2009",
+    "description": "As the first title in an all-new sci-fi action franchise, Borderlands combines the best elements of Gearbox Software's first-person action titles with player customization and vehicular combat. Borderlands features a unique content generation system allowing for near-endless variety in As the first title in an all-new sci-fi action franchise, Borderlands combines the best elements of Gearbox Software's first-person action titles with player customization and vehicular combat. Borderlands features a unique content generation system allowing for near-endless variety in missions, environments, enemies, weapons, item drops and character customization. Borderlands is a cooperative experience, allowing for multiple players to share the same game experience simultaneously online. Players can freely join or leave each other’s games at anytime, or choose to play in the full single-player mode. Borderlands features life-like character animations, impressive real-time physics, and customizable vehicles. More details to follow. [2K Games/Gearbox Software] &hellip;  Expand",
+    "genre": [
+      "Action",
+      "Shooter",
+      "Shooter",
+      "First-Person",
+      "Sci-Fi",
+      "Sci-Fi",
+      "Arcade"
+    ],
+    "image": "https://static.metacritic.com/images/products/games/7/a6d2e246d5588a36e2cc3234798c84a8-98.jpg",
+    "score": 81,
+    "developer": "Gearbox Software",
+    "publisher": [
+      "2K Games"
+    ],
+    "rating": "M",
+    "alsoAvailableOn": [
+      "PlayStation 3",
+      "Xbox 360"
+    ]
+  }
+}

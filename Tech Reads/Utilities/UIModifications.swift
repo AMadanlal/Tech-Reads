@@ -10,11 +10,11 @@ import Foundation
 
 @objc public class PreferenceButtonModification: NSObject {
   @objc public func setUpButton(button: UIButton) {
-    setButtonBorder(button: button)
+    setStandardButtonBorder(button: button)
     setProperSpacing(in: button, imageInsertLeft: -10, titleInsertLeft: -60)
   }
   @objc public func setUpLabel(label: UILabel) {
-    setLabelBorder(label: label)
+    setStandardLabelBorder(label: label)
   }
 }
 
@@ -48,6 +48,25 @@ public func setLabelBorder(label: UILabel) {
   let gradient = getGradient(size: label.frame.size)
   gradient.mask = shape
   label.layer.addSublayer(gradient)
+}
+
+public func setStandardTextViewBorder(field: UITextView) {
+  field.layer.borderWidth = 2
+  let aColor = UIColor.systemBlue
+  field.layer.borderColor = aColor.cgColor
+}
+
+public func setStandardLabelBorder(label: UILabel) {
+  label.layer.borderWidth = 2
+  let aColor = UIColor.systemBlue
+  label.layer.borderColor = aColor.cgColor
+}
+
+public func setStandardButtonBorder(button: UIButton) {
+  button.layer.borderWidth = 2
+  let aColor = UIColor.systemBlue
+  button.layer.borderColor = aColor.cgColor
+  button.imageView?.contentMode = .scaleAspectFit
 }
 
 public func setButtonBorder(button: UIButton) {

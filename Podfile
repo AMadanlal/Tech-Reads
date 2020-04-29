@@ -6,7 +6,7 @@ target 'Tech Reads' do
   #use_frameworks!
 
   # Pods for Tech Reads
-	pod 'TechReadsPod', :git => 'https://github.com/AMadanlal/TechReadsPod.git', :branch => 'Feature/CoreDataSaving' 
+	pod 'TechReadsPod', :git => 'https://github.com/AMadanlal/TechReadsPod.git', :branch => 'Develop' 
 	pod 'Firebase'
 	pod 'Firebase/Crashlytics'
 	pod 'Firebase/Performance'
@@ -14,6 +14,7 @@ target 'Tech Reads' do
 
   target 'Tech ReadsTests' do
     inherit! :search_paths
+	pod 'OHHTTPStubs/Swift'
     # Pods for testing
   end
 

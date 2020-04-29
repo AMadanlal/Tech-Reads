@@ -9,6 +9,7 @@
 import Foundation
 
 class TechResultsTableView: UITableViewController, TechResultsPresenterView {
+
   @IBOutlet var tableViewOutlet: UITableView!
   var searchString: String {
     return searchItem
@@ -67,6 +68,11 @@ class TechResultsTableView: UITableViewController, TechResultsPresenterView {
     segueDest?.newsPresenter.newsArticle = resultsPresenter.newsArticles?.articles[itemIndex]
       }
     }
+
+  func popUpWarning(title: String, message: String) {
+    let alert = alertPopupBox(title: title, message: message)
+    self.present(alert, animated: true, completion: nil)
+  }
 
   func updateSearchItems(newsItems: [String]) {
     techArticlesToDisplay = newsItems

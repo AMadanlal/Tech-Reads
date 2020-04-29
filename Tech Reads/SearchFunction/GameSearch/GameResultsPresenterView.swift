@@ -11,4 +11,5 @@ import Foundation
 public protocol GameResultsPresenterView: class {
   func updateSearchItems(gameItems: [String])
   var searchString: String { get }
+  func popUpWarning(title: String, message: String)
 }

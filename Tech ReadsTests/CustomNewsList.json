@@ -1,0 +1,32 @@
+{
+  "status": "ok",
+  "totalResults": 2,
+  "articles": [
+    {
+      "source": {
+        "id": "techradar",
+        "name": "TechRadar"
+      },
+      "author": "Stephen Lambrechts",
+      "title": "Samsung Galaxy S20 Ultra's camera bump is randomly shattering for some users - TechRadar",
+      "description": "But will warranty cover it?",
+      "url": "https://www.techradar.com/news/samsung-galaxy-s20-ultras-camera-bump-is-randomly-shattering-for-some-users",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/qrnZgUNcvrwmDgMzNsovsL-1200-80.jpg",
+      "publishedAt": "2020-04-29T05:12:00Z",
+      "content": "Samsung's Galaxy S20 Ultra may be one of the South Korean manufacturer's most expensive phones to date, but it appears there could be a serious design flaw in the high-end handset, as reported by SamMobile.\r\nSeveral S20 Ultra users have taken to the company's… [+2439 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Tomsguide.com"
+      },
+      "author": "Kate Kozuch",
+      "title": "Galaxy Buds X could be Samsung's AirPods Pro killer - Tom's Guide",
+      "description": "Samsung's new wireless earbuds could put AirPods Pro on notice",
+      "url": "https://www.tomsguide.com/news/galaxy-buds-x-could-be-samsungs-airpods-pro-killer",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/c3kkFkS9sizPzEYpg7hcw8-1200-80.jpg",
+      "publishedAt": "2020-04-28T21:22:01Z",
+      "content": "Samsung Galaxy Buds X could be the company's next truly wireless earbuds project, following up the excellent Galaxy Buds Plus that debuted earlier this year.\r\nAccording to LetsGoDigital (via Digital Trends), Samsung filed a trademark registration this week fo… [+1755 chars]"
+    }
+  ]
+}

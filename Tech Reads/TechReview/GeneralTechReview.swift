@@ -32,14 +32,17 @@ class GeneralTechReview: UIViewController, TechNewsPresenterView {
     }
 
   func setUpUI() {
-    setTextViewBorder(field: techView)
-    setButtonBorder(button: btnSourceOutlet)
+    setStandardTextViewBorder(field: txtNewsDetails)
+    setStandardButtonBorder(button: btnSourceOutlet)
     setProperSpacing(in: btnSourceOutlet, imageInsertLeft: 0, titleInsertLeft: -20)
-    setButtonBorder(button: btnNextOutlet)
+    setStandardButtonBorder(button: btnNextOutlet)
   }
 
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
+    setUpUI()
+  }
+  override func viewDidAppear(_ animated: Bool) {
     setUpUI()
   }
 
@@ -55,6 +58,11 @@ class GeneralTechReview: UIViewController, TechNewsPresenterView {
     titleLabel.text = title
     txtNewsDetails.text = content
     imgView.image(fromUrl: imageUrl)
+  }
+
+  func popUpWarning(title: String, message: String) {
+    let alert = alertPopupBox(title: title, message: message)
+    self.present(alert, animated: true, completion: nil)
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

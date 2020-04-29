@@ -9,14 +9,18 @@
 import Foundation
 import TechReadsPod
 
+protocol GamePresenterViewExtention: GamePresenterView {
+  func popUpWarning(title: String, message: String)
+}
+
 class GameReviewPresenter {
 
-  weak var view: GamePresenterView?
+  weak var view: GamePresenterViewExtention?
   var gameList: GameList?
   var gameListItem: GameListItem?
   var game: Game?
 
-  init(with view: GamePresenterView) { self.view = view }
+  init(with view: GamePresenterViewExtention) { self.view = view }
 
   func displayGame() {
     let gameDetail = ChickenCoopAPI()
@@ -25,6 +29,9 @@ class GameReviewPresenter {
       switch result {
       case .failure(let error):
         print(error)
+        DispatchQueue.main.async {
+          self.view?.popUpWarning(title: "Error", message: "Data couldnt be obtained")
+        }
       case.success(let details):
         self.game = details
         DispatchQueue.main.async {
@@ -43,6 +50,9 @@ class GameReviewPresenter {
       switch result {
       case .failure(let error):
         print(error)
+        DispatchQueue.main.async {
+          self.view?.popUpWarning(title: "Error", message: "Data couldnt be obtained")
+        }
       case.success(let details):
         self.gameList = details
         DispatchQueue.main.async {
@@ -53,6 +63,9 @@ class GameReviewPresenter {
             switch result {
             case .failure(let error):
               print(error)
+              DispatchQueue.main.async {
+                self.view?.popUpWarning(title: "Error", message: "Data couldnt be obtained")
+              }
             case.success(let details):
               self.game = details
               DispatchQueue.main.async {

@@ -26,7 +26,7 @@
   [utilityPresenter setViewWithView:self];
   [utilityPresenter loadMediumStringFromDB];
   [self setUI];
-  self.view.layer.borderColor = [UIColor blueColor].CGColor;
+  self.view.layer.borderColor = [UIColor systemBlueColor].CGColor;
   self.view.layer.cornerRadius = 30.0f;
   self.view.layer.borderWidth = 5.0f;
 }
