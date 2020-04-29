@@ -42,6 +42,9 @@ class GeneralTechReview: UIViewController, TechNewsPresenterView {
     super.viewDidLayoutSubviews()
     setUpUI()
   }
+  override func viewDidAppear(_ animated: Bool) {
+    setUpUI()
+  }
 
   @IBAction func btnSource(_ sender: UIButton) {
     performSegue(withIdentifier: "sourceLink", sender: self)

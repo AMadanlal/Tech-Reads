@@ -37,6 +37,10 @@ class ViewController: UIViewController {
       setUpButtons()
   }
 
+  override func viewDidAppear(_ animated: Bool) {
+    setUpButtons()
+  }
+
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     setUpButtons()

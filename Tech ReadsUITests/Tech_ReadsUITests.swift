@@ -26,10 +26,20 @@ class TechReadsUITests: XCTestCase {
     XCTAssert(application.buttons["General game reviews"].exists)
   }
 
+  func testTechNewsScreen() {
+    setupSnapshot(application)
+    application.launch()
+    application.buttons["General Tech News"].tap()
+    let label = application.staticTexts["Loading..."]
+    let exists = NSPredicate(format: "exists == 0")
+    exceptionUse(exists: exists, staticText: label)
+    application.buttons["<"].tap()
+    XCTAssert(application.buttons["General game reviews"].exists)
+  }
+
   func testTechNewsNavigation() {
     setupSnapshot(application)
     application.launch()
-
     application.buttons["General Tech News"].tap()
     let button = application.buttons["<"]
     let exists = NSPredicate(format: "exists == 1")
@@ -60,6 +70,13 @@ class TechReadsUITests: XCTestCase {
     snapshot("Borderlands3Result")
     application.buttons["<"].tap()
     XCTAssert(application.buttons["Search Game or Tech"].exists)
+  }
+
+  func testSearchModes() {
+    application.launch()
+    application.buttons["Search Game or Tech"].tap()
+    application.segmentedControls.buttons.element(boundBy: 1).tap()
+    XCTAssertTrue(application.buttons["Search Tech"].exists)
   }
 
   func testUserPreferences() {
