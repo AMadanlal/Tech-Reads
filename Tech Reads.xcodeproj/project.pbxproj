@@ -21,6 +21,13 @@
 		D3486D1024598C5C00087796 /* CustomNewsList.json in Resources */ = {isa = PBXBuildFile; fileRef = D3486D0F24598C5C00087796 /* CustomNewsList.json */; };
 		D3486D1124598C5C00087796 /* CustomNewsList.json in Resources */ = {isa = PBXBuildFile; fileRef = D3486D0F24598C5C00087796 /* CustomNewsList.json */; };
 		D3486D1224598C5C00087796 /* CustomNewsList.json in Resources */ = {isa = PBXBuildFile; fileRef = D3486D0F24598C5C00087796 /* CustomNewsList.json */; };
+		D3486D142459963700087796 /* GameAPICodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3486D132459963700087796 /* GameAPICodeTest.swift */; };
+		D3486D172459991400087796 /* GameList.json in Resources */ = {isa = PBXBuildFile; fileRef = D3486D152459991400087796 /* GameList.json */; };
+		D3486D182459991400087796 /* GameList.json in Resources */ = {isa = PBXBuildFile; fileRef = D3486D152459991400087796 /* GameList.json */; };
+		D3486D192459991400087796 /* GameList.json in Resources */ = {isa = PBXBuildFile; fileRef = D3486D152459991400087796 /* GameList.json */; };
+		D3486D1A2459991400087796 /* GameInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = D3486D162459991400087796 /* GameInfo.json */; };
+		D3486D1B2459991400087796 /* GameInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = D3486D162459991400087796 /* GameInfo.json */; };
+		D3486D1C2459991400087796 /* GameInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = D3486D162459991400087796 /* GameInfo.json */; };
 		D3522B482451DCEC009405AE /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3522B462451DCEC009405AE /* Interface.storyboard */; };
 		D3522B4A2451DCED009405AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3522B492451DCED009405AE /* Assets.xcassets */; };
 		D3522B512451DCED009405AE /* TopHeadlinesWatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D3522B502451DCED009405AE /* TopHeadlinesWatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -142,6 +149,9 @@
 		D33999B423FBC33A009E1811 /* SearchResultsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTable.swift; sourceTree = "<group>"; };
 		D3486D0B2459655300087796 /* NewsList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NewsList.json; sourceTree = "<group>"; };
 		D3486D0F24598C5C00087796 /* CustomNewsList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CustomNewsList.json; sourceTree = "<group>"; };
+		D3486D132459963700087796 /* GameAPICodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAPICodeTest.swift; sourceTree = "<group>"; };
+		D3486D152459991400087796 /* GameList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GameList.json; sourceTree = "<group>"; };
+		D3486D162459991400087796 /* GameInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GameInfo.json; sourceTree = "<group>"; };
 		D3522B4124517A64009405AE /* PreferenceUtilitiesPresenterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceUtilitiesPresenterView.h; sourceTree = "<group>"; };
 		D3522B442451DCEC009405AE /* TopHeadlinesWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopHeadlinesWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3522B472451DCEC009405AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -438,6 +448,9 @@
 				D37E6938242CF6FD00391989 /* InformationDisplayTest.swift */,
 				D3C1EA9B2432379C007AFFDD /* SaveLoadTest.swift */,
 				D328BECE245957D300AACC4C /* NewsAPICodeTest.swift */,
+				D3486D132459963700087796 /* GameAPICodeTest.swift */,
+				D3486D162459991400087796 /* GameInfo.json */,
+				D3486D152459991400087796 /* GameList.json */,
 				D3486D0F24598C5C00087796 /* CustomNewsList.json */,
 				D3486D0B2459655300087796 /* NewsList.json */,
 			);
@@ -638,7 +651,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3DBEC7523E98180003EBFDC /* LaunchScreen.storyboard in Resources */,
+				D3486D172459991400087796 /* GameList.json in Resources */,
 				D3486D1024598C5C00087796 /* CustomNewsList.json in Resources */,
+				D3486D1A2459991400087796 /* GameInfo.json in Resources */,
 				D39986F1242E082E00A08717 /* GoogleService-Info.plist in Resources */,
 				D3486D0C2459655300087796 /* NewsList.json in Resources */,
 				D3DBEC7223E98180003EBFDC /* Assets.xcassets in Resources */,
@@ -652,7 +667,9 @@
 			files = (
 				D3486D0D2459655300087796 /* NewsList.json in Resources */,
 				D3486D1124598C5C00087796 /* CustomNewsList.json in Resources */,
+				D3486D1B2459991400087796 /* GameInfo.json in Resources */,
 				D39986F2242E082E00A08717 /* GoogleService-Info.plist in Resources */,
+				D3486D182459991400087796 /* GameList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,7 +679,9 @@
 			files = (
 				D3486D0E2459655300087796 /* NewsList.json in Resources */,
 				D3486D1224598C5C00087796 /* CustomNewsList.json in Resources */,
+				D3486D1C2459991400087796 /* GameInfo.json in Resources */,
 				D39986F3242E082E00A08717 /* GoogleService-Info.plist in Resources */,
+				D3486D192459991400087796 /* GameList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,6 +868,7 @@
 				D37E6939242CF6FD00391989 /* InformationDisplayTest.swift in Sources */,
 				D328BECF245957D300AACC4C /* NewsAPICodeTest.swift in Sources */,
 				D37E6937242CF68000391989 /* TextProcessingtests.swift in Sources */,
+				D3486D142459963700087796 /* GameAPICodeTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
