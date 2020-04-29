@@ -11,10 +11,10 @@ target 'Tech Reads' do
 	pod 'Firebase/Crashlytics'
 	pod 'Firebase/Performance'
 	pod 'Firebase/Analytics'
-	pod 'OHHTTPStubs/Swift'
 
   target 'Tech ReadsTests' do
     inherit! :search_paths
+	pod 'OHHTTPStubs/Swift'
     # Pods for testing
   end
 

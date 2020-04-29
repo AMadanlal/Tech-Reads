@@ -17,12 +17,6 @@ class InformationDisplayTest: XCTestCase {
      // Put setup code here. This method is called before the invocation of each test method in the class.
    }
 
-   func testDisplay() {
-  }
-
-  func testRandomDisplay() {
-  }
-
   func testArrayFormatter() {
     let displayClass = GameInfoProcess()
     let exampleArray = ["MonkeysRule", "RemoveMe", "SwiftRules"]
