@@ -13,8 +13,8 @@ class GameReviewController: UIViewController, GamePresenterView {
 
   @IBOutlet weak var lblMain: UILabel!
   @IBOutlet weak var gameReviewText: UITextView!
-  @IBOutlet weak var imagePlace: UIImageView!
-   @IBOutlet weak var textView: UIView!
+  @IBOutlet weak var imageplace: UIImageView!
+   @IBOutlet weak var textview: UIView!
   @IBOutlet weak var btnNextOutlet: UIButton!
   lazy var gamePresenter = GameReviewPresenter(with: self)
   public var isSearched = false
@@ -30,7 +30,7 @@ class GameReviewController: UIViewController, GamePresenterView {
     }
 
   func setupViewBorders() {
-    setTextViewBorder(field: textView)
+    setTextViewBorder(field: textview)
     setButtonBorder(button: btnNextOutlet)
   }
 
@@ -50,7 +50,7 @@ class GameReviewController: UIViewController, GamePresenterView {
   func updatePageContent(_ title: String, withContent content: String, andImageURL imageUrl: String) {
     lblMain.text = title
     gameReviewText.text = content
-    imagePlace.image(fromUrl: imageUrl)
+    imageplace.image(fromUrl: imageUrl)
   }
 
 }
