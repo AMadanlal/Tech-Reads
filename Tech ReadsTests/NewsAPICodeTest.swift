@@ -36,6 +36,7 @@ var condition = 0
 
   func testGivenURLWhenRequestIsSentThenRecieveRightAmountOfItems() {
     condition = 0
+    let exception = XCTestExpectation(description: "Waiting for file to get data")
     NewsAPICalls().getNewsList { result in
       switch result {
       case .failure(let error):
@@ -43,12 +44,15 @@ var condition = 0
         XCTFail("StubFailed")
       case.success(let details):
         XCTAssertTrue(details.articles.count == 10)
+        exception.fulfill()
       }
     }
+     wait(for: [exception], timeout: 3)
   }
 
   func testGivenURLWhenItemIsSearchedThenRecieveCorrectItems() {
     condition = 1
+    let exception = XCTestExpectation(description: "Waiting for file to get data")
     NewsAPICalls().getCustomNewsList(searchitem: "Samsung") { result in
       switch result {
       case .failure(let error):
@@ -56,8 +60,10 @@ var condition = 0
         XCTFail("StubFailed")
       case.success(let details):
         XCTAssertTrue(details.articles.count == 2)
+        exception.fulfill()
       }
     }
+     wait(for: [exception], timeout: 3)
   }
 
 }

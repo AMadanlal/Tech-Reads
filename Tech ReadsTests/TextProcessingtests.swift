@@ -14,10 +14,17 @@ class TextProcessingtests: XCTestCase {
 
   var APIClass: GameInfoProcess!
 
-     override func setUp() {
-         // Put setup code here. This method is called before the invocation of each test method in the class.
-            APIClass = GameInfoProcess()
-     }
+    override func setUp() {
+      APIClass = GameInfoProcess()
+    }
+
+  func testArrayFormatter() {
+    let displayClass = GameInfoProcess()
+    let exampleArray = ["MonkeysRule", "RemoveMe", "SwiftRules"]
+    let actualResult = displayClass.stringArrayFormatter(textArray: exampleArray)
+    let expectedResult = "MonkeysRule, RemoveMe, SwiftRules"
+    XCTAssertEqual(actualResult, expectedResult)
+  }
 
    func testFormatPlatformStringPC() {
     //    GIVEN
@@ -149,7 +156,6 @@ class TextProcessingtests: XCTestCase {
       }
 
      override func tearDown() {
-         // Put teardown code here. This method is called after the invocation of each test method in the class.
        APIClass = nil
      }
  }

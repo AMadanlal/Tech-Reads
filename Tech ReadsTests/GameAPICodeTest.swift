@@ -37,6 +37,7 @@ class GameAPICodeTest: XCTestCase {
 
   func testGivenURLWhenRequestIsSentThenRecieveCorrectGameInformation() {
     condition = 0
+    let exception = XCTestExpectation(description: "Waiting for file to get data")
     ChickenCoopAPI().getGameInfo(gameTitle: "borderlands", gamePlatform: "pc") { result in
       switch result {
       case .failure(let error):
@@ -44,12 +45,15 @@ class GameAPICodeTest: XCTestCase {
         XCTFail("StubFailed")
       case.success(let details):
         XCTAssertTrue(details.title == "Borderlands")
+        exception.fulfill()
       }
     }
+    wait(for: [exception], timeout: 3)
   }
 
   func testGivenURLWhenItemIsSearchedThenRecieveCorrectItems() {
     condition = 1
+     let exception = XCTestExpectation(description: "Waiting for file to get data")
     ChickenCoopAPI().getGameList(searchItem: "") { result in
       switch result {
       case .failure(let error):
@@ -57,8 +61,10 @@ class GameAPICodeTest: XCTestCase {
         XCTFail("StubFailed")
       case.success(let details):
         XCTAssertTrue(details.result.count == 10)
+         exception.fulfill()
       }
     }
+    wait(for: [exception], timeout: 3)
   }
 
 }
