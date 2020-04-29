@@ -19,9 +19,9 @@ class TechReadsUITests: XCTestCase {
     setupSnapshot(application)
     application.launch()
     application.buttons["General game reviews"].tap()
-    sleep(10)
+    sleep(10)//replace using XCWait
     snapshot("gameReview")
-    application.buttons["Back"].tap()
+    application.buttons["<"].tap()
     XCTAssert(application.buttons["General game reviews"].exists)
   }
 
@@ -32,12 +32,12 @@ class TechReadsUITests: XCTestCase {
     application.textFields["game or tech name"].tap()
     application.textFields["game or tech name"].typeText("borderlands")
     application.buttons["Search Game"].tap()
-    sleep(9)
+    sleep(9)//replace using XCWait
     snapshot("BorderlandsResult")
-    application.staticTexts["Borderlands 3 /n PS4"].tap()
-    sleep(10)
+    application.staticTexts["Borderlands 3 on PS4"].tap()
+    sleep(10)//replace using XCWait
     snapshot("Borderlands3Result")
-    application.buttons["Back"].tap()
+    application.buttons["<"].tap()
     XCTAssert(application.buttons["Search Game or Tech"].exists)
   }
 

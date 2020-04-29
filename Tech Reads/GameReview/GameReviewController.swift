@@ -15,6 +15,8 @@ class GameReviewController: UIViewController, GamePresenterView {
   @IBOutlet weak var lblMain: UILabel!
   @IBOutlet weak var gameReviewText: UITextView!
   @IBOutlet weak var imageplace: UIImageView!
+   @IBOutlet weak var textview: UIView!
+  @IBOutlet weak var btnNextOutlet: UIButton!
   lazy var gamePresenter = GameReviewPresenter(with: self)
   public var isSearched = false
 
@@ -25,7 +27,18 @@ class GameReviewController: UIViewController, GamePresenterView {
       } else {
         gamePresenter.displayGame()
       }
+      setupViewBorders()
     }
+
+  func setupViewBorders() {
+    setTextViewBorder(field: textview)
+    setButtonBorder(button: btnNextOutlet)
+  }
+
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    setupViewBorders()
+  }
 
     @IBAction func btnCancel(_ sender: UIButton) {
 

@@ -12,19 +12,35 @@ class GeneralTechReview: UIViewController, TechNewsPresenterView {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var txtNewsDetails: UITextView!
   @IBOutlet weak var imgView: UIImageView!
+  @IBOutlet weak var btnNextOutlet: UIButton!
   lazy var newsPresenter = TechNewsPresenter(with: self)
   public var isSearched = false
+  @IBOutlet weak var btnSourceOutlet: UIButton!
 
-    override func viewDidLoad() {
+  @IBOutlet weak var techView: UIView!
+  @IBAction func btnBack(_ sender: Any) {
+  }
+
+  override func viewDidLoad() {
         super.viewDidLoad()
       if isSearched == false {
         newsPresenter.displayRandomTechNews()
       } else {
         newsPresenter.displayTechNews()
       }
+    setUpUI()
     }
 
-  @IBAction func btnBack(_ sender: UIButton) {
+  func setUpUI() {
+    setTextViewBorder(field: techView)
+    setButtonBorder(button: btnSourceOutlet)
+    setProperSpacing(in: btnSourceOutlet, imageInsertLeft: 0, titleInsertLeft: -20)
+    setButtonBorder(button: btnNextOutlet)
+  }
+
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    setUpUI()
   }
 
   @IBAction func btnSource(_ sender: UIButton) {

@@ -26,8 +26,7 @@ class TechResultsPresenter {
       self.newsArticles = details
       self.techNewsItems = details.articles.map { item in
         let title = item.title
-        let description = item.description ?? "Unknown Description"
-        return title + " /n " + description
+        return title
       }
       DispatchQueue.main.async {
         self.view?.updateSearchItems(newsItems: self.techNewsItems)

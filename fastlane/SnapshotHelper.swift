@@ -17,7 +17,7 @@ import XCTest
 
 var deviceLanguage = ""
 var locale = ""
-
+//    swiftlint:disable all
 func setupSnapshot(_ app: XCUIApplication, waitForAnimations: Bool = true) {
     Snapshot.setupSnapshot(app, waitForAnimations: waitForAnimations)
 }
@@ -301,3 +301,4 @@ private extension CGFloat {
 // Please don't remove the lines below
 // They are used to detect outdated configuration files
 // SnapshotHelperVersion [1.21]
+//    swiftlint:enable all

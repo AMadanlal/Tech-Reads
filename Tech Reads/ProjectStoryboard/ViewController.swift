@@ -12,14 +12,35 @@ import TechReadsPod
 import WatchConnectivity
 
 class ViewController: UIViewController {
+  @IBOutlet weak var btnSearchOutlet: UIButton!
+  @IBOutlet weak var btnGameOutlet: UIButton!
+  @IBOutlet weak var btnTechOutlet: UIButton!
   var session: WCSession?
+  @IBOutlet weak var btnPreferenceOutlet: UIButton!
   var newsList: NewsSource?
   var articleToUse: NewsSource.Article?
+
+  func setUpButtons() {
+    setButtonBorder(button: btnSearchOutlet)
+    setProperSpacing(in: btnSearchOutlet, imageInsertLeft: -40, titleInsertLeft: -60)
+    setButtonBorder(button: btnGameOutlet)
+    setProperSpacing(in: btnGameOutlet, imageInsertLeft: -40, titleInsertLeft: -60)
+    setButtonBorder(button: btnTechOutlet)
+    setProperSpacing(in: btnTechOutlet, imageInsertLeft: -40, titleInsertLeft: -60)
+    setButtonBorder(button: btnPreferenceOutlet)
+    setProperSpacing(in: btnPreferenceOutlet, imageInsertLeft: -80, titleInsertLeft: -60)
+  }
 
     override func viewDidLoad() {
       super.viewDidLoad()
       self.configureWatchKitSesstion()
-    }
+      setUpButtons()
+  }
+
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    setUpButtons()
+  }
 
   @IBOutlet weak var mainlabel: UILabel!
 //    this button takes the user to the search page
