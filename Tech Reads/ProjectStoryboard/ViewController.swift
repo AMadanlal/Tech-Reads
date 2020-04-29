@@ -21,13 +21,13 @@ class ViewController: UIViewController {
   var articleToUse: NewsSource.Article?
 
   func setUpButtons() {
-    setButtonBorder(button: btnSearchOutlet)
+    setStandardButtonBorder(button: btnSearchOutlet)
     setProperSpacing(in: btnSearchOutlet, imageInsertLeft: -40, titleInsertLeft: -60)
-    setButtonBorder(button: btnGameOutlet)
+    setStandardButtonBorder(button: btnGameOutlet)
     setProperSpacing(in: btnGameOutlet, imageInsertLeft: -40, titleInsertLeft: -60)
-    setButtonBorder(button: btnTechOutlet)
+    setStandardButtonBorder(button: btnTechOutlet)
     setProperSpacing(in: btnTechOutlet, imageInsertLeft: -40, titleInsertLeft: -60)
-    setButtonBorder(button: btnPreferenceOutlet)
+    setStandardButtonBorder(button: btnPreferenceOutlet)
     setProperSpacing(in: btnPreferenceOutlet, imageInsertLeft: -80, titleInsertLeft: -60)
   }
 

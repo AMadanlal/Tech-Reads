@@ -44,10 +44,10 @@ class GameSearchView: UIViewController, UITextViewDelegate {
   }
 
   func setUI() {
-    self.view.layer.borderColor = UIColor.blue.cgColor
+    self.view.layer.borderColor = UIColor.systemBlue.cgColor
     self.view.layer.cornerRadius = 30.0
     self.view.layer.borderWidth = 5.0
-    setLabelBorder(label: titleLabel)
+    setStandardLabelBorder(label: titleLabel)
     setButtonBorder(button: btnGameOutlet)
     setProperSpacing(in: btnGameOutlet, imageInsertLeft: -20, titleInsertLeft: -50)
     setButtonBorder(button: btnTechOutlet)

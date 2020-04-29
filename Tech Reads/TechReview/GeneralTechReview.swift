@@ -32,10 +32,10 @@ class GeneralTechReview: UIViewController, TechNewsPresenterView {
     }
 
   func setUpUI() {
-    setTextViewBorder(field: techView)
-    setButtonBorder(button: btnSourceOutlet)
+    setStandardTextViewBorder(field: txtNewsDetails)
+    setStandardButtonBorder(button: btnSourceOutlet)
     setProperSpacing(in: btnSourceOutlet, imageInsertLeft: 0, titleInsertLeft: -20)
-    setButtonBorder(button: btnNextOutlet)
+    setStandardButtonBorder(button: btnNextOutlet)
   }
 
   override func viewDidLayoutSubviews() {
