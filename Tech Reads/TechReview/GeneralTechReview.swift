@@ -57,6 +57,11 @@ class GeneralTechReview: UIViewController, TechNewsPresenterView {
     imgView.image(fromUrl: imageUrl)
   }
 
+  func popUpWarning(title: String, message: String) {
+    let alert = alertPopupBox(title: title, message: message)
+    self.present(alert, animated: true, completion: nil)
+  }
+
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      if segue.identifier == "sourceLink" {
       let segueDest = segue.destination as? WebView

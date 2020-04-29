@@ -22,6 +22,9 @@ class TechResultsPresenter {
     switch result {
     case .failure(let error):
       print(error)
+       DispatchQueue.main.async {
+        self.view?.popUpWarning(title: "Error", message: "Data couldnt be obtained")
+      }
     case.success(let details):
       self.newsArticles = details
       self.techNewsItems = details.articles.map { item in

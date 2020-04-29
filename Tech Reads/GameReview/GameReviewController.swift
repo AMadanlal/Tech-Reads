@@ -9,7 +9,12 @@
 import UIKit
 import TechReadsPod
 
-class GameReviewController: UIViewController, GamePresenterView {
+class GameReviewController: UIViewController, GamePresenterViewExtention {
+
+  func popUpWarning(title: String, message: String) {
+    let alert = alertPopupBox(title: title, message: message)
+    self.present(alert, animated: true, completion: nil)
+  }
 
   @IBOutlet weak var lblMain: UILabel!
   @IBOutlet weak var gameReviewText: UITextView!

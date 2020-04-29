@@ -37,6 +37,9 @@ class TechNewsPresenter {
     switch result {
     case .failure(let error):
     print(error)
+    DispatchQueue.main.async {
+      self.view?.popUpWarning(title: "Error", message: "Data couldnt be obtained")
+      }
     case.success(let details):
     self.newsArticles = details
     self.newsArticle = newsApi.getRandomArticle(allArticles: details)

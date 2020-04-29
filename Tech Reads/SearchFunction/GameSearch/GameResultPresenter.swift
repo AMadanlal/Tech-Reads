@@ -22,6 +22,9 @@ class GameResultsPresenter {
       switch result {
       case .failure(let error):
         print(error)
+        DispatchQueue.main.async {
+          self.view?.popUpWarning(title: "Error", message: "Data couldnt be obtained")
+        }
       case.success(let details):
         self.gameList = details
         self.gameItems = details.result.map { item in

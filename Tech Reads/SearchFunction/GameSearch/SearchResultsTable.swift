@@ -71,6 +71,11 @@ class SearchResultsTable: UITableViewController, GameResultsPresenterView {
     tableView.reloadData()
   }
 
+  func popUpWarning(title: String, message: String) {
+    let alert = alertPopupBox(title: title, message: message)
+    self.present(alert, animated: true, completion: nil)
+  }
+
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
   if segue.identifier == gameDetailSegue {
     let segueDest = segue.destination as? GameReviewController
