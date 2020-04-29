@@ -225,7 +225,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="bf2-aU-0FP"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="LE4-e1-cxl" id="6Lt-po-VHm"/>
@@ -873,7 +873,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IYQ-PX-OD5">
                                                 <rect key="frame" x="0.0" y="92" width="382" height="306"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eS-v8-B4R">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eS-v8-B4R">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="148"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Select one of the Gaming Platforms below and Click on Save Preferences to save the result:">
@@ -931,6 +931,10 @@
                                         <subviews>
                                             <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="GjS-bF-zS3">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="161"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="161" id="A7o-3a-pwi"/>
+                                                    <constraint firstAttribute="width" constant="382" id="Vrt-Vf-gRq"/>
+                                                </constraints>
                                             </pickerView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="FiK-cc-z5M">
                                                 <rect key="frame" x="0.0" y="202" width="382" height="196"/>
@@ -981,11 +985,21 @@
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="vUv-Ki-Rfg" firstAttribute="top" secondItem="2h3-vr-OaN" secondAttribute="bottom" constant="40" id="rdE-ZQ-HyZ"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="2h3-vr-OaN" firstAttribute="top" secondItem="GjS-bF-zS3" secondAttribute="bottom" constant="41" id="Ej0-Li-Mle"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="vUv-Ki-Rfg" secondAttribute="bottom" constant="50" id="hvj-1q-hhk"/>
+                                </constraints>
                                 <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                             </stackView>
                         </subviews>
@@ -1047,8 +1061,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sZQ-p7-oTp"/>
-        <segue reference="dDl-tE-BEK"/>
+        <segue reference="uKz-MC-vK4"/>
+        <segue reference="RXr-x6-QGj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
